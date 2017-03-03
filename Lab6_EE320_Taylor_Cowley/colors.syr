@@ -1,0 +1,603 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.19 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.19 secs
+ 
+--> Reading design: colors.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "colors.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "colors"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : colors
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "//fs-caedm/tcowley0/EE 320/Lab5_EE320_Taylor_Cowley/vga_timing.vhd" in Library work.
+Architecture behavioral of Entity vga_timing is up to date.
+Compiling vhdl file "//fs-caedm/tcowley0/EE 320/Lab6_EE320_Taylor_Cowley/colors.vhd" in Library work.
+Architecture yolo of Entity colors is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <colors> in library <work> (architecture <yolo>).
+
+Analyzing hierarchy for entity <vga_timing> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <colors> in library <work> (Architecture <yolo>).
+WARNING:Xst:753 - "//fs-caedm/tcowley0/EE 320/Lab6_EE320_Taylor_Cowley/colors.vhd" line 88: Unconnected output port 'last_column' of component 'vga_timing'.
+WARNING:Xst:753 - "//fs-caedm/tcowley0/EE 320/Lab6_EE320_Taylor_Cowley/colors.vhd" line 88: Unconnected output port 'last_row' of component 'vga_timing'.
+WARNING:Xst:2211 - "//fs-caedm/tcowley0/EE 320/Lab6_EE320_Taylor_Cowley/colors.vhd" line 189: Instantiating black box module <chipscope_icon>.
+WARNING:Xst:2211 - "//fs-caedm/tcowley0/EE 320/Lab6_EE320_Taylor_Cowley/colors.vhd" line 197: Instantiating black box module <chipscope_ila>.
+Entity <colors> analyzed. Unit <colors> generated.
+
+Analyzing Entity <vga_timing> in library <work> (Architecture <behavioral>).
+Entity <vga_timing> analyzed. Unit <vga_timing> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <vga_timing>.
+    Related source file is "//fs-caedm/tcowley0/EE 320/Lab5_EE320_Taylor_Cowley/vga_timing.vhd".
+    Found 1-bit register for signal <last_row>.
+    Found 1-bit register for signal <last_column>.
+    Found 1-bit register for signal <HS>.
+    Found 1-bit register for signal <VS>.
+    Found 1-bit register for signal <blank_x>.
+    Found 1-bit register for signal <blank_y>.
+    Found 10-bit up counter for signal <column_counter>.
+    Found 1-bit register for signal <pixel_en>.
+    Found 10-bit up counter for signal <row_counter>.
+    Summary:
+	inferred   2 Counter(s).
+	inferred   7 D-type flip-flop(s).
+Unit <vga_timing> synthesized.
+
+
+Synthesizing Unit <colors>.
+    Related source file is "//fs-caedm/tcowley0/EE 320/Lab6_EE320_Taylor_Cowley/colors.vhd".
+WARNING:Xst:1780 - Signal <vR> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <vG> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <vB> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found 1-bit register for signal <Hsync>.
+    Found 1-bit register for signal <Vsync>.
+    Found 3-bit register for signal <vgaRed>.
+    Found 3-bit register for signal <vgaGreen>.
+    Found 2-bit register for signal <vgaBlue>.
+    Found 10-bit comparator less for signal <bars_blue_disp$cmp_lt0000> created at line 121.
+    Found 10-bit comparator less for signal <bars_blue_disp$cmp_lt0001> created at line 121.
+    Found 10-bit comparator less for signal <bars_blue_disp$cmp_lt0002> created at line 121.
+    Found 10-bit comparator less for signal <bars_blue_disp$cmp_lt0003> created at line 121.
+    Found 10-bit comparator less for signal <bars_blue_disp$cmp_lt0004> created at line 121.
+    Found 10-bit comparator less for signal <bars_blue_disp$cmp_lt0005> created at line 121.
+    Found 10-bit comparator less for signal <bars_blue_disp$cmp_lt0006> created at line 121.
+    Found 10-bit comparator less for signal <bars_green_disp$cmp_lt0000> created at line 117.
+    Found 10-bit comparator greatequal for signal <cust_blu$cmp_ge0000> created at line 177.
+    Found 10-bit comparator greatequal for signal <cust_blu$cmp_ge0001> created at line 177.
+    Found 10-bit comparator greatequal for signal <cust_blu$cmp_ge0002> created at line 177.
+    Found 10-bit comparator less for signal <cust_blu$cmp_lt0000> created at line 177.
+    Found 10-bit comparator less for signal <cust_blu$cmp_lt0001> created at line 177.
+    Found 10-bit comparator less for signal <cust_blu$cmp_lt0002> created at line 177.
+    Found 10-bit comparator less for signal <cust_blu$cmp_lt0003> created at line 177.
+    Found 10-bit comparator greatequal for signal <cust_gre$cmp_ge0000> created at line 171.
+    Found 10-bit comparator greatequal for signal <cust_gre$cmp_ge0001> created at line 171.
+    Found 10-bit comparator greatequal for signal <cust_gre$cmp_ge0002> created at line 171.
+    Found 10-bit comparator greatequal for signal <cust_gre$cmp_ge0003> created at line 171.
+    Found 10-bit comparator greatequal for signal <cust_gre$cmp_ge0004> created at line 171.
+    Found 10-bit comparator less for signal <cust_gre$cmp_lt0000> created at line 171.
+    Found 10-bit comparator less for signal <cust_gre$cmp_lt0001> created at line 171.
+    Found 10-bit comparator less for signal <cust_gre$cmp_lt0002> created at line 171.
+    Found 10-bit comparator less for signal <cust_gre$cmp_lt0003> created at line 171.
+    Found 10-bit comparator greatequal for signal <cust_red$cmp_ge0000> created at line 167.
+    Found 10-bit comparator greatequal for signal <cust_red$cmp_ge0001> created at line 167.
+    Found 10-bit comparator greatequal for signal <cust_red$cmp_ge0002> created at line 167.
+    Found 10-bit comparator less for signal <cust_red$cmp_lt0000> created at line 167.
+    Found 10-bit comparator less for signal <cust_red$cmp_lt0001> created at line 167.
+    Found 10-bit comparator less for signal <cust_red$cmp_lt0002> created at line 167.
+    Found 10-bit comparator greatequal for signal <fro_on$cmp_ge0000> created at line 151.
+    Found 10-bit comparator less for signal <fro_on$cmp_lt0000> created at line 151.
+    Found 10-bit comparator greatequal for signal <tre_on$cmp_ge0000> created at line 145.
+    Found 10-bit comparator less for signal <tre_on$cmp_lt0000> created at line 145.
+    Found 10-bit comparator greatequal for signal <two_on$cmp_ge0000> created at line 139.
+    Found 10-bit comparator greatequal for signal <two_on$cmp_ge0001> created at line 139.
+    Found 10-bit comparator less for signal <two_on$cmp_lt0000> created at line 139.
+    Found 10-bit comparator less for signal <two_on$cmp_lt0001> created at line 139.
+    Summary:
+	inferred  10 D-type flip-flop(s).
+	inferred  38 Comparator(s).
+Unit <colors> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 2
+ 10-bit up counter                                     : 2
+# Registers                                            : 12
+ 1-bit register                                        : 9
+ 2-bit register                                        : 1
+ 3-bit register                                        : 2
+# Comparators                                          : 38
+ 10-bit comparator greatequal                          : 15
+ 10-bit comparator less                                : 23
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <chipscope_icon.ngc>.
+Reading core <chipscope_ila.ngc>.
+Loading core <chipscope_icon> for timing and area information for instance <ICON_inst>.
+Loading core <chipscope_ila> for timing and area information for instance <ILA_inst>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 2
+ 10-bit up counter                                     : 2
+# Registers                                            : 17
+ Flip-Flops                                            : 17
+# Comparators                                          : 38
+ 10-bit comparator greatequal                          : 15
+ 10-bit comparator less                                : 23
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <colors> ...
+
+Optimizing unit <vga_timing> ...
+WARNING:Xst:2677 - Node <vga_timer/last_column> of sequential type is unconnected in block <colors>.
+WARNING:Xst:2677 - Node <vga_timer/last_row> of sequential type is unconnected in block <colors>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block colors, actual ratio is 8.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 35
+ Flip-Flops                                            : 35
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : colors.ngr
+Top Level Output File Name         : colors
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 35
+
+Cell Usage :
+# BELS                             : 626
+#      GND                         : 3
+#      INV                         : 10
+#      LUT1                        : 74
+#      LUT2                        : 61
+#      LUT2_D                      : 4
+#      LUT2_L                      : 2
+#      LUT3                        : 48
+#      LUT3_D                      : 4
+#      LUT3_L                      : 4
+#      LUT4                        : 172
+#      LUT4_D                      : 13
+#      LUT4_L                      : 15
+#      MUXCY                       : 18
+#      MUXCY_L                     : 74
+#      MUXF5                       : 36
+#      MUXF6                       : 9
+#      VCC                         : 3
+#      XORCY                       : 76
+# FlipFlops/Latches                : 359
+#      FD                          : 42
+#      FDC                         : 2
+#      FDCE                        : 46
+#      FDE                         : 35
+#      FDP                         : 33
+#      FDPE                        : 68
+#      FDR                         : 46
+#      FDRE                        : 72
+#      FDRS                        : 4
+#      FDS                         : 10
+#      LDC                         : 1
+# RAMS                             : 5
+#      RAMB16_S1_S9                : 5
+# Shift Registers                  : 99
+#      SRL16                       : 32
+#      SRL16E                      : 1
+#      SRLC16E                     : 66
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 34
+#      IBUF                        : 12
+#      OBUF                        : 22
+# Others                           : 1
+#      BSCAN_SPARTAN3              : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                      393  out of   4656     8%  
+ Number of Slice Flip Flops:            359  out of   9312     3%  
+ Number of 4 input LUTs:                506  out of   9312     5%  
+    Number used as logic:               407
+    Number used as Shift registers:      99
+ Number of IOs:                          35
+ Number of bonded IOBs:                  35  out of    232    15%  
+ Number of BRAMs:                         5  out of     20    25%  
+ Number of GCLKs:                         2  out of     24     8%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+--------------------------------------------------------------------------------+-----------------------------------------------------+-------+
+Clock Signal                                                                    | Clock buffer(FF name)                               | Load  |
+--------------------------------------------------------------------------------+-----------------------------------------------------+-------+
+ICON_inst/U0/U_ICON/I_YES_BSCAN.U_BS/DRCK1                                      | BUFG                                                | 154   |
+ICON_inst/U0/iUPDATE_OUT                                                        | NONE(ICON_inst/U0/U_ICON/U_iDATA_CMD)               | 1     |
+clk                                                                             | BUFGP                                               | 312   |
+ICON_inst/CONTROL0<13>(ICON_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[9].U_LCE:O)| NONE(*)(ILA_inst/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC)| 1     |
+--------------------------------------------------------------------------------+-----------------------------------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+-------+
+Control Signal                                                                                             | Buffer(FF name)                                                                                                      | Load  |
+-----------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+-------+
+ICON_inst/CONTROL0<20>(ICON_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[0].U_HCE:O)                           | NONE(ILA_inst/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_SRL16.U_GANDX_SRL16/F_TW[0].U_TREG)| 64    |
+ILA_inst/N0(ILA_inst/XST_GND:G)                                                                            | NONE(ILA_inst/U0/I_NO_D.U_ILA/U_RST/U_POR)                                                                           | 33    |
+btn<3>                                                                                                     | IBUF                                                                                                                 | 25    |
+ICON_inst/U0/U_ICON/U_CMD/iSEL_n(ICON_inst/U0/U_ICON/U_CMD/U_SEL_n:O)                                      | NONE(ICON_inst/U0/U_ICON/U_CMD/G_TARGET[10].I_NE0.U_TARGET)                                                          | 10    |
+ILA_inst/U0/I_NO_D.U_ILA/U_RST/U_ARM_XFER/iCLR(ILA_inst/U0/I_NO_D.U_ILA/U_RST/U_ARM_XFER/U_CLEAR:O)        | NONE(ILA_inst/U0/I_NO_D.U_ILA/U_RST/U_ARM_XFER/U_DOUT0)                                                              | 4     |
+ILA_inst/U0/I_NO_D.U_ILA/U_RST/U_HALT_XFER/iCLR(ILA_inst/U0/I_NO_D.U_ILA/U_RST/U_HALT_XFER/U_CLEAR:O)      | NONE(ILA_inst/U0/I_NO_D.U_ILA/U_RST/U_HALT_XFER/U_DOUT0)                                                             | 4     |
+ILA_inst/U0/I_NO_D.U_ILA/U_STAT/U_DSL1/iCLR(ILA_inst/U0/I_NO_D.U_ILA/U_STAT/U_DSL1/U_CLEAR:O)              | NONE(ILA_inst/U0/I_NO_D.U_ILA/U_STAT/U_DSL1/U_DOUT0)                                                                 | 4     |
+ILA_inst/U0/I_NO_D.U_ILA/iARM(ILA_inst/U0/I_NO_D.U_ILA/U_RST/U_ARM_XFER/U_GEN_DELAY[3].U_FD:Q)             | NONE(ILA_inst/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_FDCE)                                                                   | 2     |
+ICON_inst/CONTROL0<13>(ICON_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[9].U_LCE:O)                           | NONE(ILA_inst/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_FDPE)                                                                   | 1     |
+ICON_inst/U0/U_ICON/iSEL_n(ICON_inst/U0/U_ICON/U_iSEL_n:O)                                                 | NONE(ICON_inst/U0/U_ICON/U_iDATA_CMD)                                                                                | 1     |
+ILA_inst/U0/I_NO_D.U_ILA/U_STAT/ACTRESET_pulse(ILA_inst/U0/I_NO_D.U_ILA/U_STAT/U_RESET_EDGE/I_H2L.U_DOUT:Q)| NONE(ILA_inst/U0/I_NO_D.U_ILA/U_STAT/U_RISING)                                                                       | 1     |
+ILA_inst/U0/I_NO_D.U_ILA/iRESET<1>(ILA_inst/U0/I_NO_D.U_ILA/U_RST/G_RST[1].U_RST:Q)                        | NONE(ILA_inst/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_OREG.I_YES_OREG.U_OREG)                                | 1     |
+-----------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 9.302ns (Maximum Frequency: 107.501MHz)
+   Minimum input arrival time before clock: 8.201ns
+   Maximum output required time after clock: 4.283ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'ICON_inst/U0/U_ICON/I_YES_BSCAN.U_BS/DRCK1'
+  Clock period: 9.302ns (frequency: 107.501MHz)
+  Total number of paths / destination ports: 2623 / 363
+-------------------------------------------------------------------------
+Delay:               9.302ns (Levels of Logic = 5)
+  Source:            ICON_inst/U0/U_ICON/U_CMD/G_TARGET[12].I_NE0.U_TARGET (FF)
+  Destination:       ILA_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.I_RDADDR/U_HC/G[13].U_FDRE (FF)
+  Source Clock:      ICON_inst/U0/U_ICON/I_YES_BSCAN.U_BS/DRCK1 rising
+  Destination Clock: ICON_inst/U0/U_ICON/I_YES_BSCAN.U_BS/DRCK1 rising
+
+  Data Path: ICON_inst/U0/U_ICON/U_CMD/G_TARGET[12].I_NE0.U_TARGET to ILA_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.I_RDADDR/U_HC/G[13].U_FDRE
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            19   0.591   1.260  U0/U_ICON/U_CMD/G_TARGET[12].I_NE0.U_TARGET (U0/U_ICON/iCORE_ID<0>)
+     LUT4:I0->O           32   0.704   1.297  U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[0].U_LUT (U0/U_ICON/iCORE_ID_SEL<0>)
+     LUT4:I2->O           15   0.704   1.021  U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[10].U_LCE (CONTROL0<14>)
+     end scope: 'ICON_inst'
+     begin scope: 'ILA_inst'
+     LUT4:I3->O            4   0.704   0.762  U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.I_RDADDR/I_NI_GT_1.I3.U_LUT (U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.I_RDADDR/lowAddr_rst)
+     LUT2:I0->O           14   0.704   1.000  U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.I_RDADDR/I_NI_GT_1.U_highAddr_ce (U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.I_RDADDR/highAddr_ce)
+     FDRE:CE                   0.555          U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.I_RDADDR/U_HC/G[13].U_FDRE
+    ----------------------------------------
+    Total                      9.302ns (3.962ns logic, 5.340ns route)
+                                       (42.6% logic, 57.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'ICON_inst/U0/iUPDATE_OUT'
+  Clock period: 2.554ns (frequency: 391.543MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               2.554ns (Levels of Logic = 1)
+  Source:            ICON_inst/U0/U_ICON/U_iDATA_CMD (FF)
+  Destination:       ICON_inst/U0/U_ICON/U_iDATA_CMD (FF)
+  Source Clock:      ICON_inst/U0/iUPDATE_OUT rising
+  Destination Clock: ICON_inst/U0/iUPDATE_OUT rising
+
+  Data Path: ICON_inst/U0/U_ICON/U_iDATA_CMD to ICON_inst/U0/U_ICON/U_iDATA_CMD
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              3   0.591   0.531  U0/U_ICON/U_iDATA_CMD (U0/U_ICON/iDATA_CMD)
+     INV:I->O              1   0.704   0.420  U0/U_ICON/U_iDATA_CMD_n (U0/U_ICON/iDATA_CMD_n)
+     FDC:D                     0.308          U0/U_ICON/U_iDATA_CMD
+    ----------------------------------------
+    Total                      2.554ns (1.603ns logic, 0.951ns route)
+                                       (62.8% logic, 37.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 8.982ns (frequency: 111.334MHz)
+  Total number of paths / destination ports: 4604 / 522
+-------------------------------------------------------------------------
+Delay:               8.982ns (Levels of Logic = 8)
+  Source:            vga_timer/row_counter_8 (FF)
+  Destination:       ILA_inst/U0/I_TQ0.G_TW[4].U_TQ (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: vga_timer/row_counter_8 to ILA_inst/U0/I_TQ0.G_TW[4].U_TQ
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            12   0.591   1.136  vga_timer/row_counter_8 (vga_timer/row_counter_8)
+     LUT2_D:I0->O          4   0.704   0.591  two_on_and0000211 (N69)
+     LUT4:I3->O            6   0.704   0.748  cust_gre_cmp_lt00001 (cust_gre_cmp_lt0000)
+     LUT3:I1->O            1   0.704   0.000  gre<0>2167_SW1_F (N55)
+     MUXF5:I0->O           1   0.321   0.424  gre<0>2167_SW1 (N43)
+     LUT4_L:I3->LO         1   0.704   0.104  gre<0>2208_SW0 (N22)
+     LUT4:I3->O            3   0.704   0.535  gre<0>2258 (gre<0>2258)
+     LUT4:I3->O            2   0.704   0.000  gre<2>1 (gre<2>)
+     begin scope: 'ILA_inst'
+     FDP:D                     0.308          U0/I_TQ0.G_TW[4].U_TQ
+    ----------------------------------------
+    Total                      8.982ns (5.444ns logic, 3.538ns route)
+                                       (60.6% logic, 39.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'ICON_inst/U0/U_ICON/I_YES_BSCAN.U_BS/DRCK1'
+  Total number of paths / destination ports: 199 / 175
+-------------------------------------------------------------------------
+Offset:              8.201ns (Levels of Logic = 5)
+  Source:            ICON_inst/U0/U_ICON/I_YES_BSCAN.U_BS/I_SPARTAN3.ISYN.I_USE_SOFTBSCAN_EQ0.I_3.U_BS:SHIFT (PAD)
+  Destination:       ILA_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.I_RDADDR/U_HC/G[13].U_FDRE (FF)
+  Destination Clock: ICON_inst/U0/U_ICON/I_YES_BSCAN.U_BS/DRCK1 rising
+
+  Data Path: ICON_inst/U0/U_ICON/I_YES_BSCAN.U_BS/I_SPARTAN3.ISYN.I_USE_SOFTBSCAN_EQ0.I_3.U_BS:SHIFT to ILA_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.I_RDADDR/U_HC/G[13].U_FDRE
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    BSCAN_SPARTAN3:SHIFT    3   0.000   0.610  U0/U_ICON/I_YES_BSCAN.U_BS/I_SPARTAN3.ISYN.I_USE_SOFTBSCAN_EQ0.I_3.U_BS (U0/iSHIFT_OUT)
+     LUT2:I1->O           32   0.704   1.437  U0/U_ICON/U_CTRL_OUT/U_DATA_VALID (U0/U_ICON/U_CTRL_OUT/iDATA_VALID)
+     LUT4:I0->O           15   0.704   1.021  U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[10].U_LCE (CONTROL0<14>)
+     end scope: 'ICON_inst'
+     begin scope: 'ILA_inst'
+     LUT4:I3->O            4   0.704   0.762  U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.I_RDADDR/I_NI_GT_1.I3.U_LUT (U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.I_RDADDR/lowAddr_rst)
+     LUT2:I0->O           14   0.704   1.000  U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.I_RDADDR/I_NI_GT_1.U_highAddr_ce (U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.I_RDADDR/highAddr_ce)
+     FDRE:CE                   0.555          U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.I_RDADDR/U_HC/G[13].U_FDRE
+    ----------------------------------------
+    Total                      8.201ns (3.371ns logic, 4.830ns route)
+                                       (41.1% logic, 58.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 160 / 16
+-------------------------------------------------------------------------
+Offset:              6.748ns (Levels of Logic = 6)
+  Source:            btn<2> (PAD)
+  Destination:       ILA_inst/U0/I_TQ0.G_TW[7].U_TQ (FF)
+  Destination Clock: clk rising
+
+  Data Path: btn<2> to ILA_inst/U0/I_TQ0.G_TW[7].U_TQ
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   1.218   0.706  btn_2_IBUF (btn_2_IBUF)
+     LUT4:I0->O            4   0.704   0.666  blu<0>221 (N28)
+     LUT2:I1->O            1   0.704   0.499  red<0>2161 (red<0>2161)
+     LUT4:I1->O            3   0.704   0.535  red<0>2164 (red<0>2164)
+     LUT4:I3->O            2   0.704   0.000  red<2>1 (red<2>)
+     begin scope: 'ILA_inst'
+     FDP:D                     0.308          U0/I_TQ0.G_TW[7].U_TQ
+    ----------------------------------------
+    Total                      6.748ns (4.342ns logic, 2.406ns route)
+                                       (64.3% logic, 35.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 10 / 10
+-------------------------------------------------------------------------
+Offset:              4.283ns (Levels of Logic = 1)
+  Source:            Vsync (FF)
+  Destination:       Vsync (PAD)
+  Source Clock:      clk rising
+
+  Data Path: Vsync to Vsync
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.591   0.420  Vsync (Vsync_OBUF)
+     OBUF:I->O                 3.272          Vsync_OBUF (Vsync)
+    ----------------------------------------
+    Total                      4.283ns (3.863ns logic, 0.420ns route)
+                                       (90.2% logic, 9.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'ICON_inst/U0/U_ICON/I_YES_BSCAN.U_BS/DRCK1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.591ns (Levels of Logic = 0)
+  Source:            ICON_inst/U0/U_ICON/U_TDO_reg (FF)
+  Destination:       ICON_inst/U0/U_ICON/I_YES_BSCAN.U_BS/I_SPARTAN3.ISYN.I_USE_SOFTBSCAN_EQ0.I_3.U_BS:TDO1 (PAD)
+  Source Clock:      ICON_inst/U0/U_ICON/I_YES_BSCAN.U_BS/DRCK1 rising
+
+  Data Path: ICON_inst/U0/U_ICON/U_TDO_reg to ICON_inst/U0/U_ICON/I_YES_BSCAN.U_BS/I_SPARTAN3.ISYN.I_USE_SOFTBSCAN_EQ0.I_3.U_BS:TDO1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              0   0.591   0.000  U0/U_ICON/U_TDO_reg (U0/U_ICON/iTDO)
+    BSCAN_SPARTAN3:TDO1        0.000          U0/U_ICON/I_YES_BSCAN.U_BS/I_SPARTAN3.ISYN.I_USE_SOFTBSCAN_EQ0.I_3.U_BS
+    ----------------------------------------
+    Total                      0.591ns (0.591ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 13.00 secs
+Total CPU time to Xst completion: 12.48 secs
+ 
+--> 
+
+Total memory usage is 284752 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    9 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

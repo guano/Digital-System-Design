@@ -1,0 +1,15 @@
+V3 9
+FL "//fs-caedm/tcowley0/EE 320/Lab5_EE320_Taylor_Cowley/vga_timing.vhd" 2016/02/10.16:11:38 P.20131013
+EN work/vga_timing 1456605367 \
+      FL "//fs-caedm/tcowley0/EE 320/Lab5_EE320_Taylor_Cowley/vga_timing.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/vga_timing/Behavioral 1456605368 \
+      FL "//fs-caedm/tcowley0/EE 320/Lab5_EE320_Taylor_Cowley/vga_timing.vhd" \
+      EN work/vga_timing 1456605367
+FL "//fs-caedm/tcowley0/EE 320/Lab6_EE320_Taylor_Cowley/colors.vhd" 2016/02/18.18:07:10 P.20131013
+EN work/colors 1456605369 \
+      FL "//fs-caedm/tcowley0/EE 320/Lab6_EE320_Taylor_Cowley/colors.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/colors/yolo 1456605370 \
+      FL "//fs-caedm/tcowley0/EE 320/Lab6_EE320_Taylor_Cowley/colors.vhd" \
+      EN work/colors 1456605369 CP vga_timing CP chipscope_icon CP chipscope_ila

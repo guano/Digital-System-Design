@@ -1,0 +1,2 @@
+vhdl work "../Lab5_EE320_Taylor_Cowley/vga_timing.vhd"
+vhdl work "colors.vhd"

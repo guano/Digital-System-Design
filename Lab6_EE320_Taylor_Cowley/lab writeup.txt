@@ -1,0 +1,65 @@
+
+EXERCISE 1
+
+red_disp   <= 	"000" when pixel_x < 320 else "111";
+green_disp <= 	"000" when pixel_x < 159 else 
+					"111" when pixel_x < 320 else
+					"000" when pixel_x < 480 else
+					"111";
+blue_disp  <= 	"00"  when pixel_x < 80  else;  -- blue is always zero for this particular display
+					"11"  when pixel_x < 160  else
+					"00"  when pixel_x < 240  else
+					"11"  when pixel_x < 320  else
+					"00"  when pixel_x < 400  else
+					"11"  when pixel_x < 480  else
+					"00"  when pixel_x < 560  else
+					"11";
+
+
+EXERCISE 2
+
+				
+	one_on <= '1' when pixel_x >= 180 and pixel_x < 280 and
+		pixel_y >= 100 and pixel_y < 200 else
+		'0';
+	one_rgb <= "111" & "000" & "00"; -- red
+
+
+	two_on <= '1' when pixel_x >= 400 and pixel_x <500 and
+		pixel_y >= 100 and pixel_y <200 else
+		'0';
+	two_rgb <= "000" & "111" & "00"; -- green
+
+	
+	tre_on <= '1' when pixel_x >= 180 and pixel_x <280 and
+		pixel_y >= 300 and pixel_y <400 else
+		'0';
+	tre_rgb <= "111" & "111" & "00"; -- yellow
+	
+	
+	fro_on <= '1' when pixel_x >= 400 and pixel_x <500 and
+		pixel_y >= 300 and pixel_y <400 else
+		'0';
+	fro_rgb <= "111" & "000" & "11"; -- magenta
+
+-- Default value when no object is being displayed
+	background_rgb <= "11111111";
+
+	rgb_out <=  one_rgb  when one_on = '1' else
+				two_rgb  when two_on = '1' else
+				tre_rgb  when tre_on = '1' else
+				fro_rgb  when fro_on = '1' else
+				background_rgb;
+
+
+
+EXERCISE 5
+clock cycles of horiz sync: 192
+
+
+0x280 pixel x
+0x000
+
+
+
+

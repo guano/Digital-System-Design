@@ -1,0 +1,48 @@
+xst -intstyle ise -ifn "J:/EE 320/Lab6_EE320_Taylor_Cowley/colors.xst" -ofn "J:/EE 320/Lab6_EE320_Taylor_Cowley/colors.syr" 
+xst -intstyle ise -ifn "J:/EE 320/Lab6_EE320_Taylor_Cowley/colors.xst" -ofn "J:/EE 320/Lab6_EE320_Taylor_Cowley/colors.syr" 
+xst -intstyle ise -ifn "J:/EE 320/Lab6_EE320_Taylor_Cowley/colors.xst" -ofn "J:/EE 320/Lab6_EE320_Taylor_Cowley/colors.syr" 
+xst -intstyle ise -ifn "J:/EE 320/Lab6_EE320_Taylor_Cowley/colors.xst" -ofn "J:/EE 320/Lab6_EE320_Taylor_Cowley/colors.syr" 
+xst -intstyle ise -ifn "J:/EE 320/Lab6_EE320_Taylor_Cowley/colors.xst" -ofn "J:/EE 320/Lab6_EE320_Taylor_Cowley/colors.syr" 
+xst -intstyle ise -ifn "J:/EE 320/Lab6_EE320_Taylor_Cowley/colors.xst" -ofn "J:/EE 320/Lab6_EE320_Taylor_Cowley/colors.syr" 
+xst -intstyle ise -ifn "J:/EE 320/Lab6_EE320_Taylor_Cowley/colors.xst" -ofn "J:/EE 320/Lab6_EE320_Taylor_Cowley/colors.syr" 
+xst -intstyle ise -ifn "J:/EE 320/Lab6_EE320_Taylor_Cowley/colors.xst" -ofn "J:/EE 320/Lab6_EE320_Taylor_Cowley/colors.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Spartan3EMaster.ucf -p xc3s500e-fg320-4 "colors.ngc" colors.ngd  
+xst -intstyle ise -ifn "J:/EE 320/Lab6_EE320_Taylor_Cowley/colors.xst" -ofn "J:/EE 320/Lab6_EE320_Taylor_Cowley/colors.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Spartan3EMaster.ucf -p xc3s500e-fg320-4 "colors.ngc" colors.ngd  
+xst -intstyle ise -ifn "J:/EE 320/Lab6_EE320_Taylor_Cowley/colors.xst" -ofn "J:/EE 320/Lab6_EE320_Taylor_Cowley/colors.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Spartan3EMaster.ucf -p xc3s500e-fg320-4 "colors.ngc" colors.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o colors_map.ncd colors.ngd colors.pcf 
+par -w -intstyle ise -ol high -t 1 colors_map.ncd colors.ncd colors.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml colors.twx colors.ncd -o colors.twr colors.pcf -ucf Spartan3EMaster.ucf 
+xst -intstyle ise -ifn "J:/EE 320/Lab6_EE320_Taylor_Cowley/colors.xst" -ofn "J:/EE 320/Lab6_EE320_Taylor_Cowley/colors.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Spartan3EMaster.ucf -p xc3s500e-fg320-4 "colors.ngc" colors.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o colors_map.ncd colors.ngd colors.pcf 
+par -w -intstyle ise -ol high -t 1 colors_map.ncd colors.ncd colors.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml colors.twx colors.ncd -o colors.twr colors.pcf -ucf Spartan3EMaster.ucf 
+bitgen -intstyle ise -f colors.ut colors.ncd 
+xst -intstyle ise -ifn "J:/EE 320/Lab6_EE320_Taylor_Cowley/colors.xst" -ofn "J:/EE 320/Lab6_EE320_Taylor_Cowley/colors.syr" 
+xst -intstyle ise -ifn "J:/EE 320/Lab6_EE320_Taylor_Cowley/colors.xst" -ofn "J:/EE 320/Lab6_EE320_Taylor_Cowley/colors.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Spartan3EMaster.ucf -p xc3s500e-fg320-4 "colors.ngc" colors.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o colors_map.ncd colors.ngd colors.pcf 
+par -w -intstyle ise -ol high -t 1 colors_map.ncd colors.ncd colors.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml colors.twx colors.ncd -o colors.twr colors.pcf -ucf Spartan3EMaster.ucf 
+bitgen -intstyle ise -f colors.ut colors.ncd 
+xst -intstyle ise -ifn "J:/EE 320/Lab6_EE320_Taylor_Cowley/colors.xst" -ofn "J:/EE 320/Lab6_EE320_Taylor_Cowley/colors.syr" 
+xst -intstyle ise -ifn "J:/EE 320/Lab6_EE320_Taylor_Cowley/colors.xst" -ofn "J:/EE 320/Lab6_EE320_Taylor_Cowley/colors.syr" 
+xst -intstyle ise -ifn "J:/EE 320/Lab6_EE320_Taylor_Cowley/colors.xst" -ofn "J:/EE 320/Lab6_EE320_Taylor_Cowley/colors.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Spartan3EMaster.ucf -p xc3s500e-fg320-4 "colors.ngc" colors.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o colors_map.ncd colors.ngd colors.pcf 
+par -w -intstyle ise -ol high -t 1 colors_map.ncd colors.ncd colors.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml colors.twx colors.ncd -o colors.twr colors.pcf -ucf Spartan3EMaster.ucf 
+bitgen -intstyle ise -f colors.ut colors.ncd 
+xst -intstyle ise -ifn "J:/EE 320/Lab6_EE320_Taylor_Cowley/colors.xst" -ofn "J:/EE 320/Lab6_EE320_Taylor_Cowley/colors.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Spartan3EMaster.ucf -p xc3s500e-fg320-4 "colors.ngc" colors.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o colors_map.ncd colors.ngd colors.pcf 
+par -w -intstyle ise -ol high -t 1 colors_map.ncd colors.ncd colors.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml colors.twx colors.ncd -o colors.twr colors.pcf -ucf Spartan3EMaster.ucf 
+bitgen -intstyle ise -f colors.ut colors.ncd 
+xst -intstyle ise -ifn "J:/EE 320/Lab6_EE320_Taylor_Cowley/colors.xst" -ofn "J:/EE 320/Lab6_EE320_Taylor_Cowley/colors.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Spartan3EMaster.ucf -p xc3s500e-fg320-4 "colors.ngc" colors.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o colors_map.ncd colors.ngd colors.pcf 
+par -w -intstyle ise -ol high -t 1 colors_map.ncd colors.ncd colors.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml colors.twx colors.ncd -o colors.twr colors.pcf -ucf Spartan3EMaster.ucf 

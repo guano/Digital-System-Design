@@ -1,0 +1,124 @@
+INFO:ChipScope Pro Analyzer    Version: 14.7 P.20131013 (Build 14700.13.286.464)
+
+COMMAND:open_cable
+INFO:Started ChipScope host (localhost:50001)
+INFO:Successfully opened connection to server: localhost:50001 (localhost/127.0.0.1)
+INFO:Trying to open Xilinx Platform USB Cable on port USB2
+INFO:Trying to open Digilent USB JTAG Cable on port (no port specified)
+INFO:Successfully opened Digilent USB JTAG Cable
+INFO:Cable: Onboard USB, Port: 0, Speed: 1600000 Hz
+INFO Internal Data:Scanning 'DEV:0 MyDevice0 (XC3S500E) User Chain:1' - 16102100e6010101
+INFO:Found 1 Core Unit in the JTAG device Chain.
+COMMAND:reset_trigger_settings 0 0
+COMMAND:set_window_capture 0 0 0 1 2048 0
+COMMAND:set_match_function 0 0 0 0 3 1 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+COMMAND:set_trigger_condition 0 0 3 1 5555
+COMMAND:set_storage_condition 0 0 FFFF
+COMMAND:run 0 0
+COMMAND:upload 0 0
+INFO - Device 0 Unit 0: Sample Buffer is full
+INFO - Device 0 Unit 0:Waveform captured Feb 18, 2016 4:50:02 PM
+COMMAND:reset_trigger_settings 0 0
+COMMAND:set_window_capture 0 0 0 1 2048 0
+COMMAND:set_match_function 0 0 0 0 3 1 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+COMMAND:set_trigger_condition 0 0 3 1 5555
+COMMAND:set_storage_condition 0 0 FFFF
+COMMAND:run 0 0
+COMMAND:upload 0 0
+INFO - Device 0 Unit 0: Sample Buffer is full
+INFO - Device 0 Unit 0:Waveform captured Feb 18, 2016 4:51:34 PM
+COMMAND:reset_trigger_settings 0 0
+COMMAND:set_window_capture 0 0 0 1 2048 0
+COMMAND:set_match_function 0 0 0 0 3 1 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+COMMAND:set_trigger_condition 0 0 3 1 5555
+COMMAND:set_storage_condition 0 0 FFFF
+COMMAND:run 0 0
+COMMAND:upload 0 0
+INFO - Device 0 Unit 0: Sample Buffer is full
+INFO - Device 0 Unit 0:Waveform #1 captured Feb 18, 2016 4:58:49 PM
+COMMAND:upload 0 0
+INFO - Device 0 Unit 0: Sample Buffer is full
+INFO - Device 0 Unit 0:Waveform #2 captured Feb 18, 2016 4:58:50 PM
+COMMAND:upload 0 0
+INFO - Device 0 Unit 0: Sample Buffer is full
+INFO - Device 0 Unit 0:Waveform #3 captured Feb 18, 2016 4:58:51 PM
+COMMAND:upload 0 0
+INFO - Device 0 Unit 0: Sample Buffer is full
+INFO - Device 0 Unit 0:Waveform #4 captured Feb 18, 2016 4:58:52 PM
+COMMAND:upload 0 0
+INFO - Device 0 Unit 0: Sample Buffer is full
+INFO - Device 0 Unit 0:Waveform #5 captured Feb 18, 2016 4:58:53 PM
+COMMAND:upload 0 0
+INFO - Device 0 Unit 0: Sample Buffer is full
+INFO - Device 0 Unit 0:Waveform #6 captured Feb 18, 2016 4:58:54 PM
+COMMAND:stop 0 0
+COMMAND:reset_trigger_settings 0 0
+COMMAND:set_window_capture 0 0 0 1 2048 0
+COMMAND:set_match_function 0 0 0 0 3 1 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+COMMAND:set_trigger_condition 0 0 3 1 5555
+COMMAND:set_storage_condition 0 0 FFFF
+COMMAND:run 0 0
+COMMAND:upload 0 0
+INFO - Device 0 Unit 0: Sample Buffer is full
+INFO - Device 0 Unit 0:Waveform #1 captured Feb 18, 2016 5:45:51 PM
+COMMAND:reset_trigger_settings 0 0
+COMMAND:set_window_capture 0 0 0 1 2048 0
+COMMAND:set_match_function 0 0 0 0 3 1 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+COMMAND:set_trigger_condition 0 0 3 1 5555
+COMMAND:set_storage_condition 0 0 FFFF
+COMMAND:run 0 0
+COMMAND:upload 0 0
+INFO - Device 0 Unit 0: Sample Buffer is full
+INFO - Device 0 Unit 0:Waveform #1 captured Feb 18, 2016 5:45:52 PM
+COMMAND:upload 0 0
+INFO - Device 0 Unit 0: Sample Buffer is full
+INFO - Device 0 Unit 0:Waveform #2 captured Feb 18, 2016 5:45:53 PM
+COMMAND:upload 0 0
+INFO - Device 0 Unit 0: Sample Buffer is full
+COMMAND:stop 0 0
+INFO - Device 0 Unit 0:Waveform #3 captured Feb 18, 2016 5:45:54 PM
+COMMAND:reset_trigger_settings 0 0
+COMMAND:set_window_capture 0 0 0 1 2048 0
+COMMAND:set_match_function 0 0 0 0 3 1 XXXXXXXX00000000000000000000XXXX
+COMMAND:set_trigger_condition 0 0 3 1 5555
+COMMAND:set_storage_condition 0 0 FFFF
+COMMAND:run 0 0
+COMMAND:upload 0 0
+INFO - Device 0 Unit 0: Sample Buffer is full
+INFO - Device 0 Unit 0:Waveform captured Feb 18, 2016 5:47:52 PM
+COMMAND:reset_trigger_settings 0 0
+COMMAND:set_window_capture 0 0 0 1 2048 0
+COMMAND:set_match_function 0 0 0 0 3 1 XXXXXXXX00000000000000000000XXXX
+COMMAND:set_trigger_condition 0 0 3 1 5555
+COMMAND:set_storage_condition 0 0 FFFF
+COMMAND:run 0 0
+COMMAND:upload 0 0
+INFO - Device 0 Unit 0: Sample Buffer is full
+INFO - Device 0 Unit 0:Waveform captured Feb 18, 2016 5:48:41 PM
+COMMAND:reset_trigger_settings 0 0
+COMMAND:set_window_capture 0 0 0 1 2048 0
+COMMAND:set_match_function 0 0 0 0 3 1 11111000XXXXXXXXXXXXXXXXXXXXXXXX
+COMMAND:set_trigger_condition 0 0 3 1 5555
+COMMAND:set_storage_condition 0 0 FFFF
+COMMAND:run 0 0
+COMMAND:upload 0 0
+INFO - Device 0 Unit 0: Sample Buffer is full
+INFO - Device 0 Unit 0:Waveform captured Feb 18, 2016 5:51:00 PM
+COMMAND:reset_trigger_settings 0 0
+COMMAND:set_window_capture 0 0 0 1 2048 0
+COMMAND:set_match_function 0 0 0 0 3 1 00000111XXXXXXXXXX0010011000XXXX
+COMMAND:set_trigger_condition 0 0 3 1 5555
+COMMAND:set_storage_condition 0 0 FFFF
+COMMAND:run 0 0
+COMMAND:upload 0 0
+INFO - Device 0 Unit 0: Sample Buffer is full
+INFO - Device 0 Unit 0:Waveform captured Feb 18, 2016 5:59:09 PM
+COMMAND:reset_trigger_settings 0 0
+COMMAND:set_window_capture 0 0 0 1 2048 0
+COMMAND:set_match_function 0 0 0 0 3 1 00111111XXXXXXXXXX0111101010XXXX
+COMMAND:set_trigger_condition 0 0 3 1 5555
+COMMAND:set_storage_condition 0 0 FFFF
+COMMAND:run 0 0
+COMMAND:upload 0 0
+INFO - Device 0 Unit 0: Sample Buffer is full
+INFO - Device 0 Unit 0:Waveform captured Feb 18, 2016 6:03:08 PM
