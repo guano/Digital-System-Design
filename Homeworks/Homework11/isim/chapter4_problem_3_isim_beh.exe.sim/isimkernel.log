@@ -1,0 +1,31 @@
+Command line:
+   chapter4_problem_3_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  35536
+
+Mon Mar 21 19:36:55 2016
+
+
+ Elaboration Time: 0.156001 sec
+
+ Current Memory Usage: 854.499 Meg
+
+ Total Signals          : 17
+ Total Nets             : 91
+ Total Signal Drivers   : 9
+ Total Blocks           : 3
+ Total Primitive Blocks : 3
+ Total Processes        : 9
+ Total Traceable Variables  : 13
+ Total Scalar Nets and Variables : 574
+In process chapter4_problem_3.vhd:55 
+ Target Size 3 and source size 8 for array dimension 0 does not match. 
+
+
+ Total Simulation Time: 0.187201 sec
+
+ Current Memory Usage: 854.499 Meg
+
+Mon Mar 21 19:37:08 2016
+

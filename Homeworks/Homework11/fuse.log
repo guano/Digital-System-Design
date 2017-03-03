@@ -1,0 +1,20 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -o J:/EE 320/Homework11/chapter4_problem_3_isim_beh.exe -prj J:/EE 320/Homework11/chapter4_problem_3_beh.prj work.chapter4_problem_3 
+ISim P.20131013 (signature 0x8ef4fb42)
+Number of CPUs detected in this system: 24
+Turning on mult-threading, number of parallel sub-compilation jobs: 48 
+Determining compilation order of HDL files
+Parsing VHDL file "J:/EE 320/Homework11/chapter4_problem_3.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 151640 KB
+Fuse CPU Usage: 795 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling architecture behavioral of entity chapter4_problem_3
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 4 VHDL Units
+Built simulation executable J:/EE 320/Homework11/chapter4_problem_3_isim_beh.exe
+Fuse Memory Usage: 193416 KB
+Fuse CPU Usage: 1310 ms

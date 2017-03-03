@@ -1,0 +1,22 @@
+prop delay of:
+	xor: 						4 ns
+	n-bit incrementor: 	6n ns
+	setup time: 			2 ns
+	clock-to-q: 			3 ns
+
+
+a.) 4-bit LFSR vs binary counter
+	LFSR:	2 + 3 + 6*4 + 4*1 = 33 ns/clock = 30.3 MHz
+	Binary Counter: 
+
+b.) 8-bit LFSR vs binary counter
+	LFSR:	2 + 3 + 6*8 + 4*1 = 57 ns/clock = 17.54 MHz
+	Binary Counter:
+
+c.) 16-bit LFSR vs binary counter
+	LFSR: 2 + 3 + 6*16 + 4*3 = 113 ns/clock = 8.85 MHz
+	Binary Counter:
+
+d.) 64-bit LFSR vs binary counter
+	LFSR: 2 + 3 + 6*64 + 4*3 = 401 ns/clock = 2.494 MHz
+	Binary Counter:

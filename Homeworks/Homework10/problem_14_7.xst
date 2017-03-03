@@ -1,0 +1,5 @@
+set -tmpdir "J:/EE 320/Homework10/xst/projnav.tmp"
+set -xsthdpdir "J:/EE 320/Homework10/xst"
+elaborate
+-ifn problem_14_7.prj
+-ifmt mixed

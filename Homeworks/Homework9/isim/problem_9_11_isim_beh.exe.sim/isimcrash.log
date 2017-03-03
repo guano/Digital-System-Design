@@ -1,0 +1,5 @@
+Exception at PC 0x1009EDBC
+Attemped to read address 0x00000020
+Printing stacktrace...
+
+Done

@@ -1,0 +1,25 @@
+Taylor Cowley
+EE 320 Hw 12
+
+16.1-16.2
+1. 16.1
+	86.96 MHz
+
+2. 	4.5 ns
+
+3.	-3.5ns <= Tskew <= 4.5ns
+
+
+16.3-16.5
+
+1. Text problem 16.2
+	a. The MTBF is 111% (or 11% bigger)
+	b. The MTBF is 111% (or 11% bigger)
+2. Text problem 16.4
+	a. 4.27 * 10^8 s
+	b. 6.67 * 10^12 s
+	c. 1.046 * 10^11 s
+	d. 2.214 * 10^11 s
+	e. 3.099 * 10^12 s
+	f. 7.398 * 10^15 s
+

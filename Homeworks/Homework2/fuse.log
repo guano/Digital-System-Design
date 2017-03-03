@@ -1,0 +1,18 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -o J:/EE 320/Homework2/hw_4_6_isim_beh.exe -prj J:/EE 320/Homework2/hw_4_6_beh.prj work.hw_4_6 
+ISim P.20131013 (signature 0x8ef4fb42)
+Number of CPUs detected in this system: 24
+Turning on mult-threading, number of parallel sub-compilation jobs: 48 
+Determining compilation order of HDL files
+Parsing VHDL file "J:/EE 320/Homework2/hw_4_6.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 151444 KB
+Fuse CPU Usage: 748 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling architecture win of entity hw_4_6
+Time Resolution for simulation is 1ps.
+Compiled 3 VHDL Units
+Built simulation executable J:/EE 320/Homework2/hw_4_6_isim_beh.exe
+Fuse Memory Usage: 187716 KB
+Fuse CPU Usage: 967 ms

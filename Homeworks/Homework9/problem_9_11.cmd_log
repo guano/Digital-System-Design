@@ -1,0 +1,9 @@
+xst -intstyle ise -ifn "J:/EE 320/Homework9/problem_9_11.xst" -ofn "J:/EE 320/Homework9/problem_9_11.syr" 
+xst -intstyle ise -ifn "J:/EE 320/Homework9/problem_9_11.xst" -ofn "J:/EE 320/Homework9/problem_9_11.syr" 
+xst -intstyle ise -ifn "J:/EE 320/Homework9/problem_9_11.xst" -ofn "J:/EE 320/Homework9/problem_9_11.syr" 
+xst -intstyle ise -ifn "J:/EE 320/Homework9/problem_9_11.xst" -ofn "J:/EE 320/Homework9/problem_9_11.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "problem_9_11.ngc" problem_9_11.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o problem_9_11_map.ncd problem_9_11.ngd problem_9_11.pcf 
+par -w -intstyle ise -ol high -t 1 problem_9_11_map.ncd problem_9_11.ncd problem_9_11.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml problem_9_11.twx problem_9_11.ncd -o problem_9_11.twr problem_9_11.pcf 
+bitgen -intstyle ise -f problem_9_11.ut problem_9_11.ncd 
