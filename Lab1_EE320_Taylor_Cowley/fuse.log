@@ -1,0 +1,20 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -o J:/EE 320/Lab1_EE320_Taylor_Cowley/even_detector_testbench_isim_beh.exe -prj J:/EE 320/Lab1_EE320_Taylor_Cowley/even_detector_testbench_beh.prj work.even_detector_testbench 
+ISim P.20131013 (signature 0x8ef4fb42)
+Number of CPUs detected in this system: 24
+Turning on mult-threading, number of parallel sub-compilation jobs: 48 
+Determining compilation order of HDL files
+Parsing VHDL file "J:/EE 320/Lab1_EE320_Taylor_Cowley/listing_2_1.vhd" into library work
+Parsing VHDL file "J:/EE 320/Lab1_EE320_Taylor_Cowley/list_0207.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 150848 KB
+Fuse CPU Usage: 733 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling architecture sop_arch of entity even_detector [even_detector_default]
+Compiling architecture tb_arch of entity even_detector_testbench
+Time Resolution for simulation is 1ps.
+Compiled 5 VHDL Units
+Built simulation executable J:/EE 320/Lab1_EE320_Taylor_Cowley/even_detector_testbench_isim_beh.exe
+Fuse Memory Usage: 188208 KB
+Fuse CPU Usage: 951 ms

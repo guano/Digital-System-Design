@@ -1,0 +1,34 @@
+# User Constraints file for Listing 2.1
+#
+# A user constraings file is used to specify the pin locations of the
+# top-level signals. The format for a pin location mapping is as follows:
+#
+#		NET "<port name>" LOC=<PIN LOCATION>
+#
+#	Note that the keywords NET and LOC are case sensitive. Make sure you
+#	capitalize these keywords when creating .ucf files
+#
+#	this constraints file will map the first three switches (SW0, SW1, SW2)
+#	to the a input and the first LED (LD0) to the output, even
+#
+
+#Attach a(0) to the switch 0 (SW0)
+NET "a<0>" LOC=K17;
+
+#Attach a(1) to switch 1 (SW1)
+NET "a<1>" LOC=H18;
+
+#attach a(2) to switch 2 (SW2)
+NET "a<2>" LOC=K18;
+
+#attach even output to LED 0 (LD0)
+NET "even" LOC=J14;
+
+
+
+#attach all of b to the buttons
+NET "b<0>" LOC=B18;
+NET "b<1>" LOC=E18;
+NET "b<2>" LOC=D18;
+#attach even output to LED 1 (LD1)
+NET "odd" LOC=J15;

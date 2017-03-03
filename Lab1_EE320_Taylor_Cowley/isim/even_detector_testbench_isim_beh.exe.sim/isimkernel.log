@@ -1,0 +1,28 @@
+Command line:
+   even_detector_testbench_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  1232
+
+Thu Jan 07 16:16:46 2016
+
+
+ Elaboration Time: 0.249602 sec
+
+ Current Memory Usage: 852.615 Meg
+
+ Total Signals          : 8
+ Total Nets             : 8
+ Total Signal Drivers   : 6
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 7
+ Total Traceable Variables  : 8
+ Total Scalar Nets and Variables : 368
+
+ Total Simulation Time: 0.265202 sec
+
+ Current Memory Usage: 695.067 Meg
+
+Thu Jan 07 17:17:46 2016
+

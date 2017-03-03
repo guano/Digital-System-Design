@@ -1,0 +1,8 @@
+V3 3
+FL "//fs-caedm/tcowley0/EE 320/Lab1_EE320_Taylor_Cowley/listing_2_1.vhd" 2016/01/07.17:00:23 P.20131013
+EN work/even_detector 1452211231 \
+      FL "//fs-caedm/tcowley0/EE 320/Lab1_EE320_Taylor_Cowley/listing_2_1.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/even_detector/sop_arch 1452211232 \
+      FL "//fs-caedm/tcowley0/EE 320/Lab1_EE320_Taylor_Cowley/listing_2_1.vhd" \
+      EN work/even_detector 1452211231
