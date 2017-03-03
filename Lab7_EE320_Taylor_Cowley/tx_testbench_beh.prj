@@ -1,0 +1,2 @@
+vhdl work "tx.vhd"
+vhdl work "tx_testbench.vhd"

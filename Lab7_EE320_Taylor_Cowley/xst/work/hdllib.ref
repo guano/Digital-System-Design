@@ -1,0 +1,6 @@
+AR seven_segment_control best "//fs-caedm/tcowley0/EE 320/Lab7_EE320_Taylor_Cowley/seven_seg_control.vhd" sub00/vhpl03 1456521803
+EN seven_segment_control NULL "//fs-caedm/tcowley0/EE 320/Lab7_EE320_Taylor_Cowley/seven_seg_control.vhd" sub00/vhpl02 1456521802
+AR tx taylor "//fs-caedm/tcowley0/EE 320/Lab7_EE320_Taylor_Cowley/tx.vhd" sub00/vhpl01 1456521801
+EN top NULL "//fs-caedm/tcowley0/EE 320/Lab7_EE320_Taylor_Cowley/top.vhd" sub00/vhpl04 1456521804
+AR top winner "//fs-caedm/tcowley0/EE 320/Lab7_EE320_Taylor_Cowley/top.vhd" sub00/vhpl05 1456521805
+EN tx NULL "//fs-caedm/tcowley0/EE 320/Lab7_EE320_Taylor_Cowley/tx.vhd" sub00/vhpl00 1456521800

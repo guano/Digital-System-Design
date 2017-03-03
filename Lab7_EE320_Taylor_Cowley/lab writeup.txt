@@ -1,0 +1,95 @@
+Question:
+What is the purpose of the ST-3232 chip used on the Nexys2 board?
+
+	It converts the logic from the FPGA into the proper RS-232 voltages- we can just give it logic 0 or logic 1 and it will transmit it properly.
+	
+	
+Question:
+What is the purpose of the “start” bit in the serial protocol?
+
+	It signals the start of a character frame but does not contain data.
+
+
+Question:
+In what order are the bits sent over the UART? Least significant bit (LSB) first or Most significant bit
+(MSB) first?
+	
+	The bits are sent least significant to most significant.
+
+
+
+Question:
+For a 19,200 baud system serial communication link, how long does it take to transfer an 8-bit character
+(including the start and stop bits)?	
+
+	10 * 52.1 us = 521 usec
+
+
+
+Question:
+At 19200 baud, how many characters per second can be transmitted?
+
+	19200 baud / 10 symbols per character = 1920 characters per second
+
+
+Question:
+What percent of transmission time is overhead (time of the start and stop bits divided by the total frame
+time)?
+
+	2/10 = 20%
+
+Question:
+Suppose a file of 10,000 bytes is to be sent over a line at 19200 bps.  How much time will it take in
+seconds?
+
+	10000 bytes = 100,000 symbols (including start and stop). 100,000 / 19200 = 5.208 seconds
+
+
+
+
+Part 2
+
+Question:
+What is the purpose of the BIT_TIMER_COUNT constant used within the bit-timer circuit?
+	It is what we need to count up to to measure the proper time for the baud period.
+2604 cycles/ baud period
+	
+
+
+Question:
+Why should the “transmit out” signal be registered with a flip-flop?
+
+	Because it goes straight to the computer. We have to have it synchronous without any glitches.
+
+
+Question:
+What is the purpose of the RETRN state in the state machine?
+
+	First, it is to be temptation for the student who really wants to spell things correctly but doesn't know that "return" is a VHDL reserved word. We need a state here because we are waiting for the "send character" to go low. - We only want to send one character at a time.
+
+
+Question:
+What value should be asserted on the TX output during the IDLE and RETRN states?
+
+	A '1'.
+
+
+
+PART 3
+
+Question:
+How long does the simulation take to complete? (i.e., when the “Test Done” message is printed)
+
+
+Successfully transmitted the following byte:10101010 at time 1281078.328 ns
+Successfully transmitted the following byte:01101001 at time 1932119.99 ns
+ISim>  run 1ms
+Successfully transmitted the following byte:11111111 at time 2583161.652 ns
+ISim>  run 1ms
+Successfully transmitted the following byte:00000000 at time 3234203.314 ns
+ISim>  run 1ms
+ISim>  run 1ms
+ISim>  run 1ms
+Successfully transmitted the following byte:11110000
+--- Test Done ---:6072814.996 ns
+

@@ -1,0 +1,21 @@
+V3 11
+FL "//fs-caedm/tcowley0/EE 320/Lab7_EE320_Taylor_Cowley/seven_seg_control.vhd" 2016/02/04.16:10:50 P.20131013
+EN work/seven_segment_control 1456521802 \
+      FL "//fs-caedm/tcowley0/EE 320/Lab7_EE320_Taylor_Cowley/seven_seg_control.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/seven_segment_control/best 1456521803 \
+      FL "//fs-caedm/tcowley0/EE 320/Lab7_EE320_Taylor_Cowley/seven_seg_control.vhd" \
+      EN work/seven_segment_control 1456521802
+FL "//fs-caedm/tcowley0/EE 320/Lab7_EE320_Taylor_Cowley/top.vhd" 2016/02/26.14:23:12 P.20131013
+EN work/top 1456521804 \
+      FL "//fs-caedm/tcowley0/EE 320/Lab7_EE320_Taylor_Cowley/top.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/top/winner 1456521805 \
+      FL "//fs-caedm/tcowley0/EE 320/Lab7_EE320_Taylor_Cowley/top.vhd" \
+      EN work/top 1456521804 CP work/tx CP seven_segment_control
+FL "//fs-caedm/tcowley0/EE 320/Lab7_EE320_Taylor_Cowley/tx.vhd" 2016/02/25.19:07:28 P.20131013
+EN work/tx 1456521800 \
+      FL "//fs-caedm/tcowley0/EE 320/Lab7_EE320_Taylor_Cowley/tx.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/tx/taylor 1456521801 \
+      FL "//fs-caedm/tcowley0/EE 320/Lab7_EE320_Taylor_Cowley/tx.vhd" EN work/tx 1456521800

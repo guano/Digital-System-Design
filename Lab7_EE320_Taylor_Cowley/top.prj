@@ -1,0 +1,3 @@
+vhdl work "tx.vhd"
+vhdl work "seven_seg_control.vhd"
+vhdl work "top.vhd"
