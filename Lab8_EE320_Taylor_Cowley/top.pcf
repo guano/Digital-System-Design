@@ -1,0 +1,91 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Fri Mar 04 12:35:20 2016
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "Led<3>" LOCATE = SITE "K14" LEVEL 1;
+COMP "an<0>" LOCATE = SITE "F17" LEVEL 1;
+COMP "Led<4>" LOCATE = SITE "E17" LEVEL 1;
+COMP "an<1>" LOCATE = SITE "H17" LEVEL 1;
+COMP "Led<5>" LOCATE = SITE "P15" LEVEL 1;
+COMP "an<2>" LOCATE = SITE "C18" LEVEL 1;
+COMP "Led<6>" LOCATE = SITE "F4" LEVEL 1;
+COMP "btn<0>" LOCATE = SITE "B18" LEVEL 1;
+COMP "an<3>" LOCATE = SITE "F15" LEVEL 1;
+COMP "Led<7>" LOCATE = SITE "R4" LEVEL 1;
+COMP "dp" LOCATE = SITE "C17" LEVEL 1;
+COMP "btn<1>" LOCATE = SITE "D18" LEVEL 1;
+COMP "clk" LOCATE = SITE "B8" LEVEL 1;
+COMP "btn<2>" LOCATE = SITE "E18" LEVEL 1;
+COMP "seg<0>" LOCATE = SITE "L18" LEVEL 1;
+COMP "seg<1>" LOCATE = SITE "F18" LEVEL 1;
+COMP "seg<2>" LOCATE = SITE "D17" LEVEL 1;
+COMP "sw<0>" LOCATE = SITE "G18" LEVEL 1;
+COMP "seg<3>" LOCATE = SITE "D16" LEVEL 1;
+COMP "sw<1>" LOCATE = SITE "H18" LEVEL 1;
+COMP "seg<4>" LOCATE = SITE "G14" LEVEL 1;
+COMP "sw<2>" LOCATE = SITE "K18" LEVEL 1;
+COMP "seg<5>" LOCATE = SITE "J17" LEVEL 1;
+COMP "sw<3>" LOCATE = SITE "K17" LEVEL 1;
+COMP "seg<6>" LOCATE = SITE "H14" LEVEL 1;
+COMP "sw<4>" LOCATE = SITE "L14" LEVEL 1;
+COMP "sw<5>" LOCATE = SITE "L13" LEVEL 1;
+COMP "sw<6>" LOCATE = SITE "N17" LEVEL 1;
+COMP "sw<7>" LOCATE = SITE "R17" LEVEL 1;
+COMP "reset" LOCATE = SITE "H13" LEVEL 1;
+COMP "RsRx" LOCATE = SITE "U6" LEVEL 1;
+COMP "RsTx" LOCATE = SITE "P9" LEVEL 1;
+COMP "Led<0>" LOCATE = SITE "J14" LEVEL 1;
+COMP "Led<1>" LOCATE = SITE "J15" LEVEL 1;
+COMP "Led<2>" LOCATE = SITE "K15" LEVEL 1;
+NET "clk_BUFGP/IBUFG" BEL "clk_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+TIMEGRP clk = BEL "received_data2_0" BEL "received_data2_1" BEL
+        "received_data2_2" BEL "received_data2_3" BEL "received_data2_4" BEL
+        "received_data2_5" BEL "received_data2_6" BEL "received_data2_7" BEL
+        "received_data3_0" BEL "received_data3_1" BEL "received_data3_2" BEL
+        "received_data3_3" BEL "received_data3_4" BEL "received_data3_5" BEL
+        "received_data3_6" BEL "received_data3_7" BEL "debounce_timer_0" BEL
+        "debounce_timer_1" BEL "debounce_timer_2" BEL "debounce_timer_3" BEL
+        "debounce_timer_4" BEL "debounce_timer_5" BEL "debounce_timer_6" BEL
+        "debounce_timer_7" BEL "debounce_timer_8" BEL "debounce_timer_9" BEL
+        "debounce_timer_10" BEL "debounce_timer_11" BEL "debounce_timer_12"
+        BEL "debounce_timer_13" BEL "debounce_timer_14" BEL
+        "debounce_timer_15" BEL "debounce_timer_16" BEL "debounce_timer_17"
+        BEL "debounce_timer_18" BEL "debounce_timer_19" BEL
+        "utx/state_reg_FSM_FFd11" BEL "utx/state_reg_FSM_FFd12" BEL
+        "utx/state_reg_FSM_FFd2" BEL "utx/state_reg_FSM_FFd1" BEL "utx/tx_out"
+        BEL "utx/tx_out_reg" BEL "utx/shift_value_7" BEL "utx/shift_value_6"
+        BEL "utx/shift_value_5" BEL "utx/shift_value_4" BEL
+        "utx/shift_value_3" BEL "utx/shift_value_2" BEL "utx/shift_value_1"
+        BEL "utx/shift_value_0" BEL "utx/tx_bit" BEL "utx/bit_timer_11" BEL
+        "utx/bit_timer_10" BEL "utx/bit_timer_9" BEL "utx/bit_timer_8" BEL
+        "utx/bit_timer_7" BEL "utx/bit_timer_6" BEL "utx/bit_timer_5" BEL
+        "utx/bit_timer_4" BEL "utx/bit_timer_3" BEL "utx/bit_timer_2" BEL
+        "utx/bit_timer_1" BEL "utx/bit_timer_0" BEL "urx/state_reg_FSM_FFd2"
+        BEL "urx/state_reg_FSM_FFd1" BEL "urx/state_reg_FSM_FFd3" BEL
+        "urx/data_out_reg_7" BEL "urx/data_out_reg_6" BEL "urx/data_out_reg_5"
+        BEL "urx/data_out_reg_4" BEL "urx/data_out_reg_3" BEL
+        "urx/data_out_reg_2" BEL "urx/data_out_reg_1" BEL "urx/data_out_reg_0"
+        BEL "urx/bit_number_2" BEL "urx/bit_number_1" BEL "urx/bit_number_0"
+        BEL "urx/data_strobe_reg" BEL "urx/bit_timer_11" BEL
+        "urx/bit_timer_10" BEL "urx/bit_timer_9" BEL "urx/bit_timer_8" BEL
+        "urx/bit_timer_7" BEL "urx/bit_timer_6" BEL "urx/bit_timer_5" BEL
+        "urx/bit_timer_4" BEL "urx/bit_timer_3" BEL "urx/bit_timer_2" BEL
+        "urx/bit_timer_1" BEL "urx/bit_timer_0" BEL "urx/rx_bit" BEL
+        "urx/rx_one_and_half_bit" BEL "YEAH_CONTROL/counter_14" BEL
+        "YEAH_CONTROL/counter_13" BEL "YEAH_CONTROL/counter_12" BEL
+        "YEAH_CONTROL/counter_11" BEL "YEAH_CONTROL/counter_10" BEL
+        "YEAH_CONTROL/counter_9" BEL "YEAH_CONTROL/counter_8" BEL
+        "YEAH_CONTROL/counter_7" BEL "YEAH_CONTROL/counter_6" BEL
+        "YEAH_CONTROL/counter_5" BEL "YEAH_CONTROL/counter_4" BEL
+        "YEAH_CONTROL/counter_3" BEL "YEAH_CONTROL/counter_2" BEL
+        "YEAH_CONTROL/counter_1" BEL "YEAH_CONTROL/counter_0" BEL
+        "utx/state_reg_FSM_FFd10" BEL "utx/state_reg_FSM_FFd8" BEL
+        "utx/state_reg_FSM_FFd7" BEL "utx/state_reg_FSM_FFd9" BEL
+        "utx/state_reg_FSM_FFd5" BEL "utx/state_reg_FSM_FFd4" BEL
+        "utx/state_reg_FSM_FFd6" BEL "utx/state_reg_FSM_FFd3" BEL
+        "Mshreg_receiver_in2/SRL16E" BEL "receiver_in2" BEL
+        "clk_BUFGP/BUFG.GCLKMUX" BEL "clk_BUFGP/BUFG";
+TS_clk = PERIOD TIMEGRP "clk" 20 ns HIGH 50%;
+SCHEMATIC END;
+

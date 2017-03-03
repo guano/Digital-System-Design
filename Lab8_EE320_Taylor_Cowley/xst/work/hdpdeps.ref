@@ -1,0 +1,34 @@
+V3 18
+FL "//fs-caedm/tcowley0/EE 320/Lab8_EE320_Taylor_Cowley/rx.vhd" 2016/03/04.11:54:02 P.20131013
+EN work/rx 1457120098 \
+      FL "//fs-caedm/tcowley0/EE 320/Lab8_EE320_Taylor_Cowley/rx.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/rx/taylor 1457120099 \
+      FL "//fs-caedm/tcowley0/EE 320/Lab8_EE320_Taylor_Cowley/rx.vhd" EN work/rx 1457120098
+FL "//fs-caedm/tcowley0/EE 320/Lab8_EE320_Taylor_Cowley/seven_seg_control.vhd" 2016/02/04.16:10:50 P.20131013
+EN work/seven_segment_control 1457120100 \
+      FL "//fs-caedm/tcowley0/EE 320/Lab8_EE320_Taylor_Cowley/seven_seg_control.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/seven_segment_control/best 1457120101 \
+      FL "//fs-caedm/tcowley0/EE 320/Lab8_EE320_Taylor_Cowley/seven_seg_control.vhd" \
+      EN work/seven_segment_control 1457120100
+FL "//fs-caedm/tcowley0/EE 320/Lab8_EE320_Taylor_Cowley/top.vhd" 2016/03/03.18:38:15 P.20131013
+EN work/top 1457120102 \
+      FL "//fs-caedm/tcowley0/EE 320/Lab8_EE320_Taylor_Cowley/top.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/top/YOLO 1457120103 \
+      FL "//fs-caedm/tcowley0/EE 320/Lab8_EE320_Taylor_Cowley/top.vhd" \
+      EN work/top 1457120102 CP work/tx CP work/rx CP seven_segment_control
+FL "//fs-caedm/tcowley0/EE 320/Lab8_EE320_Taylor_Cowley/top_better.vhd" 2016/03/04.12:31:53 P.20131013
+EN work/top_better 1457119926 \
+      FL "//fs-caedm/tcowley0/EE 320/Lab8_EE320_Taylor_Cowley/top_better.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/top_better/taylor 1457119927 \
+      FL "//fs-caedm/tcowley0/EE 320/Lab8_EE320_Taylor_Cowley/top_better.vhd" \
+      EN work/top_better 1457119926 CP seven_segment_control
+FL "//fs-caedm/tcowley0/EE 320/Lab8_EE320_Taylor_Cowley/tx.vhd" 2016/03/02.17:08:17 P.20131013
+EN work/tx 1457120096 \
+      FL "//fs-caedm/tcowley0/EE 320/Lab8_EE320_Taylor_Cowley/tx.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/tx/taylor 1457120097 \
+      FL "//fs-caedm/tcowley0/EE 320/Lab8_EE320_Taylor_Cowley/tx.vhd" EN work/tx 1457120096

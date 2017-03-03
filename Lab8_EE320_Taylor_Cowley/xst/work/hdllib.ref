@@ -1,0 +1,10 @@
+EN top_better NULL "//fs-caedm/tcowley0/EE 320/Lab8_EE320_Taylor_Cowley/top_better.vhd" sub00/vhpl08 1457119926
+AR top_better taylor "//fs-caedm/tcowley0/EE 320/Lab8_EE320_Taylor_Cowley/top_better.vhd" sub00/vhpl09 1457119927
+AR seven_segment_control best "//fs-caedm/tcowley0/EE 320/Lab8_EE320_Taylor_Cowley/seven_seg_control.vhd" sub00/vhpl03 1457120101
+EN seven_segment_control NULL "//fs-caedm/tcowley0/EE 320/Lab8_EE320_Taylor_Cowley/seven_seg_control.vhd" sub00/vhpl02 1457120100
+AR tx taylor "//fs-caedm/tcowley0/EE 320/Lab8_EE320_Taylor_Cowley/tx.vhd" sub00/vhpl01 1457120097
+EN top NULL "//fs-caedm/tcowley0/EE 320/Lab8_EE320_Taylor_Cowley/top.vhd" sub00/vhpl04 1457120102
+AR rx taylor "//fs-caedm/tcowley0/EE 320/Lab8_EE320_Taylor_Cowley/rx.vhd" sub00/vhpl06 1457120099
+EN rx NULL "//fs-caedm/tcowley0/EE 320/Lab8_EE320_Taylor_Cowley/rx.vhd" sub00/vhpl05 1457120098
+EN tx NULL "//fs-caedm/tcowley0/EE 320/Lab8_EE320_Taylor_Cowley/tx.vhd" sub00/vhpl00 1457120096
+AR top yolo "//fs-caedm/tcowley0/EE 320/Lab8_EE320_Taylor_Cowley/top.vhd" sub00/vhpl07 1457120103
