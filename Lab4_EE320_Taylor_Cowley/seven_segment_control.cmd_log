@@ -1,0 +1,4 @@
+vhdtdtfi -lib work seven_seg_control.vhd -prj seven_segment_top -o seven_segment_control.spl -module seven_segment_control -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e seven_segment_control.spl {J:/EE 320/Lab4_EE320_Taylor_Cowley/seven_segment_control.sym} 
+vhdtdtfi -prj seven_segment_top -o "J:/EE 320/Lab4_EE320_Taylor_Cowley/seven_segment_control.vhi" -module seven_segment_control -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work seven_seg_control.vhd 
+vhdtdtfi -prj seven_segment_top -o "J:/EE 320/Lab4_EE320_Taylor_Cowley/seven_segment_control.vhi" -module seven_segment_control -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work seven_seg_control.vhd 

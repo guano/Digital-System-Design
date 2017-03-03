@@ -1,0 +1,4 @@
+EN seven_segment_top NULL "//fs-caedm/tcowley0/EE 320/Lab4_EE320_Taylor_Cowley/seven_segment_top.vhd" sub00/vhpl02 1455495626
+AR seven_segment_control best "//fs-caedm/tcowley0/EE 320/Lab4_EE320_Taylor_Cowley/seven_seg_control.vhd" sub00/vhpl01 1455495625
+AR seven_segment_top yolo "//fs-caedm/tcowley0/EE 320/Lab4_EE320_Taylor_Cowley/seven_segment_top.vhd" sub00/vhpl03 1455495627
+EN seven_segment_control NULL "//fs-caedm/tcowley0/EE 320/Lab4_EE320_Taylor_Cowley/seven_seg_control.vhd" sub00/vhpl00 1455495624

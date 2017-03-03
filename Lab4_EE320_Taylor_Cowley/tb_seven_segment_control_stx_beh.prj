@@ -1,0 +1,2 @@
+vhdl isim_temp "seven_seg_control.vhd"
+vhdl isim_temp "tb_seven_segment_control.vhd"

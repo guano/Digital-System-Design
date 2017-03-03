@@ -1,0 +1,10 @@
+[Inputs]
+clk
+=data_in[15:0]=
+=dp_in[3:0]=
+=blank[3:0]=
+[Outputs]
+dp
+=seg[6:0]=
+=an[3:0]=
+[BiDir]

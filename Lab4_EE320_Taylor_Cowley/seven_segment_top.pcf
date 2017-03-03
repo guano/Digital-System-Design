@@ -1,0 +1,61 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Thu Feb 04 17:18:15 2016
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "an<0>" LOCATE = SITE "F17" LEVEL 1;
+COMP "an<1>" LOCATE = SITE "H17" LEVEL 1;
+COMP "an<2>" LOCATE = SITE "C18" LEVEL 1;
+COMP "btn<0>" LOCATE = SITE "B18" LEVEL 1;
+COMP "an<3>" LOCATE = SITE "F15" LEVEL 1;
+COMP "dp" LOCATE = SITE "C17" LEVEL 1;
+COMP "btn<1>" LOCATE = SITE "D18" LEVEL 1;
+COMP "clk" LOCATE = SITE "B8" LEVEL 1;
+COMP "btn<2>" LOCATE = SITE "E18" LEVEL 1;
+COMP "btn<3>" LOCATE = SITE "H13" LEVEL 1;
+COMP "seg<0>" LOCATE = SITE "L18" LEVEL 1;
+COMP "seg<1>" LOCATE = SITE "F18" LEVEL 1;
+COMP "seg<2>" LOCATE = SITE "D17" LEVEL 1;
+COMP "sw<0>" LOCATE = SITE "G18" LEVEL 1;
+COMP "seg<3>" LOCATE = SITE "D16" LEVEL 1;
+COMP "sw<1>" LOCATE = SITE "H18" LEVEL 1;
+COMP "seg<4>" LOCATE = SITE "G14" LEVEL 1;
+COMP "sw<2>" LOCATE = SITE "K18" LEVEL 1;
+COMP "seg<5>" LOCATE = SITE "J17" LEVEL 1;
+COMP "sw<3>" LOCATE = SITE "K17" LEVEL 1;
+COMP "seg<6>" LOCATE = SITE "H14" LEVEL 1;
+COMP "sw<4>" LOCATE = SITE "L14" LEVEL 1;
+COMP "sw<5>" LOCATE = SITE "L13" LEVEL 1;
+COMP "sw<6>" LOCATE = SITE "N17" LEVEL 1;
+COMP "sw<7>" LOCATE = SITE "R17" LEVEL 1;
+NET "clk_BUFGP/IBUFG" BEL "clk_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+TIMEGRP clk = BEL "ssc_blank_0" BEL "ssc_blank_2" BEL "ssc_dp_0" BEL
+        "ssc_dp_1" BEL "ssc_dp_3" BEL "counter_32_bit_0" BEL
+        "counter_32_bit_1" BEL "counter_32_bit_2" BEL "counter_32_bit_3" BEL
+        "counter_32_bit_4" BEL "counter_32_bit_5" BEL "counter_32_bit_6" BEL
+        "counter_32_bit_7" BEL "counter_32_bit_8" BEL "counter_32_bit_9" BEL
+        "counter_32_bit_10" BEL "counter_32_bit_11" BEL "counter_32_bit_12"
+        BEL "counter_32_bit_13" BEL "counter_32_bit_14" BEL
+        "counter_32_bit_15" BEL "counter_32_bit_16" BEL "counter_32_bit_17"
+        BEL "counter_32_bit_18" BEL "counter_32_bit_19" BEL
+        "counter_32_bit_20" BEL "counter_32_bit_21" BEL "counter_32_bit_22"
+        BEL "counter_32_bit_23" BEL "counter_32_bit_24" BEL
+        "counter_32_bit_25" BEL "counter_32_bit_26" BEL "counter_32_bit_27"
+        BEL "counter_32_bit_28" BEL "counter_32_bit_29" BEL
+        "counter_32_bit_30" BEL "counter_32_bit_31" BEL
+        "YEAH_CONTROL/counter_14" BEL "YEAH_CONTROL/counter_13" BEL
+        "YEAH_CONTROL/counter_12" BEL "YEAH_CONTROL/counter_11" BEL
+        "YEAH_CONTROL/counter_10" BEL "YEAH_CONTROL/counter_9" BEL
+        "YEAH_CONTROL/counter_8" BEL "YEAH_CONTROL/counter_7" BEL
+        "YEAH_CONTROL/counter_6" BEL "YEAH_CONTROL/counter_5" BEL
+        "YEAH_CONTROL/counter_4" BEL "YEAH_CONTROL/counter_3" BEL
+        "YEAH_CONTROL/counter_2" BEL "YEAH_CONTROL/counter_1" BEL
+        "YEAH_CONTROL/counter_0" BEL "ssc_data_0" BEL "ssc_data_1" BEL
+        "ssc_data_2" BEL "ssc_data_3" BEL "ssc_data_5" BEL "ssc_data_6" BEL
+        "ssc_data_7" BEL "ssc_data_8" BEL "ssc_data_9" BEL "ssc_data_10" BEL
+        "ssc_data_11" BEL "ssc_data_12" BEL "ssc_data_13" BEL "ssc_data_14"
+        BEL "ssc_data_15" BEL "ssc_data_4" BEL "clk_BUFGP/BUFG.GCLKMUX" BEL
+        "clk_BUFGP/BUFG";
+TS_clk = PERIOD TIMEGRP "clk" 20 ns HIGH 50%;
+SCHEMATIC END;
+

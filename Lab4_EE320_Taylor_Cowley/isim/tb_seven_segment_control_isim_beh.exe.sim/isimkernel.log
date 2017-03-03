@@ -1,0 +1,10 @@
+Command line:
+   tb_seven_segment_control_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  57342
+
+Thu Feb 04 15:12:48 2016
+
+
+ Elaboration Time: 0.140402 sec

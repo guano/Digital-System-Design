@@ -1,0 +1,2 @@
+vhdl work "seven_seg_control.vhd"
+vhdl work "seven_segment_top.vhd"

@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "J:/EE 320/Lab4_EE320_Taylor_Cowley/seven_segment_top_isim_beh.exe" -prj "J:/EE 320/Lab4_EE320_Taylor_Cowley/seven_segment_top_beh.prj" "work.seven_segment_top" 

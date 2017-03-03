@@ -1,0 +1,15 @@
+V3 7
+FL "//fs-caedm/tcowley0/EE 320/Lab4_EE320_Taylor_Cowley/seven_segment_top.vhd" 2016/02/04.16:48:38 P.20131013
+EN work/seven_segment_top 1455495626 \
+      FL "//fs-caedm/tcowley0/EE 320/Lab4_EE320_Taylor_Cowley/seven_segment_top.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/seven_segment_top/yolo 1455495627 \
+      FL "//fs-caedm/tcowley0/EE 320/Lab4_EE320_Taylor_Cowley/seven_segment_top.vhd" \
+      EN work/seven_segment_top 1455495626 CP seven_segment_control
+FL "//fs-caedm/tcowley0/EE 320/Lab4_EE320_Taylor_Cowley/seven_seg_control.vhd" 2016/02/04.16:10:50 P.20131013
+EN work/seven_segment_control 1455495624 \
+      FL "//fs-caedm/tcowley0/EE 320/Lab4_EE320_Taylor_Cowley/seven_seg_control.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/seven_segment_control/best 1455495625 \
+      FL "//fs-caedm/tcowley0/EE 320/Lab4_EE320_Taylor_Cowley/seven_seg_control.vhd" \
+      EN work/seven_segment_control 1455495624

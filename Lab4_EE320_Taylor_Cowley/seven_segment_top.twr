@@ -1,0 +1,931 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 4
+-n 3 -fastpaths -xml seven_segment_top.twx seven_segment_top.ncd -o
+seven_segment_top.twr seven_segment_top.pcf -ucf Spartan3EMaster.ucf
+
+Design file:              seven_segment_top.ncd
+Physical constraint file: seven_segment_top.pcf
+Device,package,speed:     xc3s500e,fg320,-4 (PRODUCTION 1.27 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+================================================================================
+Timing constraint: TS_clk = PERIOD TIMEGRP "clk" 20 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 694 paths analyzed, 159 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   4.966ns.
+--------------------------------------------------------------------------------
+
+Paths for end point counter_32_bit_31 (SLICE_X65Y68.CIN), 30 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     15.034ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               counter_32_bit_0 (FF)
+  Destination:          counter_32_bit_31 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      4.956ns (Levels of Logic = 16)
+  Clock Path Skew:      -0.010ns (0.058 - 0.068)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: counter_32_bit_0 to counter_32_bit_31
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X65Y53.XQ      Tcko                  0.591   counter_32_bit<0>
+                                                       counter_32_bit_0
+    SLICE_X65Y53.F1      net (fanout=3)        0.549   counter_32_bit<0>
+    SLICE_X65Y53.COUT    Topcyf                1.162   counter_32_bit<0>
+                                                       Mcount_counter_32_bit_lut<0>_INV_0
+                                                       Mcount_counter_32_bit_cy<0>
+                                                       Mcount_counter_32_bit_cy<1>
+    SLICE_X65Y54.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<1>
+    SLICE_X65Y54.COUT    Tbyp                  0.118   counter_32_bit<2>
+                                                       Mcount_counter_32_bit_cy<2>
+                                                       Mcount_counter_32_bit_cy<3>
+    SLICE_X65Y55.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<3>
+    SLICE_X65Y55.COUT    Tbyp                  0.118   counter_32_bit<4>
+                                                       Mcount_counter_32_bit_cy<4>
+                                                       Mcount_counter_32_bit_cy<5>
+    SLICE_X65Y56.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<5>
+    SLICE_X65Y56.COUT    Tbyp                  0.118   counter_32_bit<6>
+                                                       Mcount_counter_32_bit_cy<6>
+                                                       Mcount_counter_32_bit_cy<7>
+    SLICE_X65Y57.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<7>
+    SLICE_X65Y57.COUT    Tbyp                  0.118   counter_32_bit<8>
+                                                       Mcount_counter_32_bit_cy<8>
+                                                       Mcount_counter_32_bit_cy<9>
+    SLICE_X65Y58.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<9>
+    SLICE_X65Y58.COUT    Tbyp                  0.118   counter_32_bit<10>
+                                                       Mcount_counter_32_bit_cy<10>
+                                                       Mcount_counter_32_bit_cy<11>
+    SLICE_X65Y59.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<11>
+    SLICE_X65Y59.COUT    Tbyp                  0.118   counter_32_bit<12>
+                                                       Mcount_counter_32_bit_cy<12>
+                                                       Mcount_counter_32_bit_cy<13>
+    SLICE_X65Y60.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<13>
+    SLICE_X65Y60.COUT    Tbyp                  0.118   counter_32_bit<14>
+                                                       Mcount_counter_32_bit_cy<14>
+                                                       Mcount_counter_32_bit_cy<15>
+    SLICE_X65Y61.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<15>
+    SLICE_X65Y61.COUT    Tbyp                  0.118   counter_32_bit<16>
+                                                       Mcount_counter_32_bit_cy<16>
+                                                       Mcount_counter_32_bit_cy<17>
+    SLICE_X65Y62.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<17>
+    SLICE_X65Y62.COUT    Tbyp                  0.118   counter_32_bit<18>
+                                                       Mcount_counter_32_bit_cy<18>
+                                                       Mcount_counter_32_bit_cy<19>
+    SLICE_X65Y63.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<19>
+    SLICE_X65Y63.COUT    Tbyp                  0.118   counter_32_bit<20>
+                                                       Mcount_counter_32_bit_cy<20>
+                                                       Mcount_counter_32_bit_cy<21>
+    SLICE_X65Y64.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<21>
+    SLICE_X65Y64.COUT    Tbyp                  0.118   counter_32_bit<22>
+                                                       Mcount_counter_32_bit_cy<22>
+                                                       Mcount_counter_32_bit_cy<23>
+    SLICE_X65Y65.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<23>
+    SLICE_X65Y65.COUT    Tbyp                  0.118   counter_32_bit<24>
+                                                       Mcount_counter_32_bit_cy<24>
+                                                       Mcount_counter_32_bit_cy<25>
+    SLICE_X65Y66.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<25>
+    SLICE_X65Y66.COUT    Tbyp                  0.118   counter_32_bit<26>
+                                                       Mcount_counter_32_bit_cy<26>
+                                                       Mcount_counter_32_bit_cy<27>
+    SLICE_X65Y67.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<27>
+    SLICE_X65Y67.COUT    Tbyp                  0.118   counter_32_bit<28>
+                                                       Mcount_counter_32_bit_cy<28>
+                                                       Mcount_counter_32_bit_cy<29>
+    SLICE_X65Y68.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<29>
+    SLICE_X65Y68.CLK     Tcinck                1.002   counter_32_bit<30>
+                                                       Mcount_counter_32_bit_cy<30>
+                                                       Mcount_counter_32_bit_xor<31>
+                                                       counter_32_bit_31
+    -------------------------------------------------  ---------------------------
+    Total                                      4.956ns (4.407ns logic, 0.549ns route)
+                                                       (88.9% logic, 11.1% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     15.154ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               counter_32_bit_2 (FF)
+  Destination:          counter_32_bit_31 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      4.838ns (Levels of Logic = 15)
+  Clock Path Skew:      -0.008ns (0.058 - 0.066)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: counter_32_bit_2 to counter_32_bit_31
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X65Y54.XQ      Tcko                  0.591   counter_32_bit<2>
+                                                       counter_32_bit_2
+    SLICE_X65Y54.F1      net (fanout=3)        0.549   counter_32_bit<2>
+    SLICE_X65Y54.COUT    Topcyf                1.162   counter_32_bit<2>
+                                                       counter_32_bit<2>_rt
+                                                       Mcount_counter_32_bit_cy<2>
+                                                       Mcount_counter_32_bit_cy<3>
+    SLICE_X65Y55.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<3>
+    SLICE_X65Y55.COUT    Tbyp                  0.118   counter_32_bit<4>
+                                                       Mcount_counter_32_bit_cy<4>
+                                                       Mcount_counter_32_bit_cy<5>
+    SLICE_X65Y56.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<5>
+    SLICE_X65Y56.COUT    Tbyp                  0.118   counter_32_bit<6>
+                                                       Mcount_counter_32_bit_cy<6>
+                                                       Mcount_counter_32_bit_cy<7>
+    SLICE_X65Y57.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<7>
+    SLICE_X65Y57.COUT    Tbyp                  0.118   counter_32_bit<8>
+                                                       Mcount_counter_32_bit_cy<8>
+                                                       Mcount_counter_32_bit_cy<9>
+    SLICE_X65Y58.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<9>
+    SLICE_X65Y58.COUT    Tbyp                  0.118   counter_32_bit<10>
+                                                       Mcount_counter_32_bit_cy<10>
+                                                       Mcount_counter_32_bit_cy<11>
+    SLICE_X65Y59.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<11>
+    SLICE_X65Y59.COUT    Tbyp                  0.118   counter_32_bit<12>
+                                                       Mcount_counter_32_bit_cy<12>
+                                                       Mcount_counter_32_bit_cy<13>
+    SLICE_X65Y60.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<13>
+    SLICE_X65Y60.COUT    Tbyp                  0.118   counter_32_bit<14>
+                                                       Mcount_counter_32_bit_cy<14>
+                                                       Mcount_counter_32_bit_cy<15>
+    SLICE_X65Y61.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<15>
+    SLICE_X65Y61.COUT    Tbyp                  0.118   counter_32_bit<16>
+                                                       Mcount_counter_32_bit_cy<16>
+                                                       Mcount_counter_32_bit_cy<17>
+    SLICE_X65Y62.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<17>
+    SLICE_X65Y62.COUT    Tbyp                  0.118   counter_32_bit<18>
+                                                       Mcount_counter_32_bit_cy<18>
+                                                       Mcount_counter_32_bit_cy<19>
+    SLICE_X65Y63.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<19>
+    SLICE_X65Y63.COUT    Tbyp                  0.118   counter_32_bit<20>
+                                                       Mcount_counter_32_bit_cy<20>
+                                                       Mcount_counter_32_bit_cy<21>
+    SLICE_X65Y64.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<21>
+    SLICE_X65Y64.COUT    Tbyp                  0.118   counter_32_bit<22>
+                                                       Mcount_counter_32_bit_cy<22>
+                                                       Mcount_counter_32_bit_cy<23>
+    SLICE_X65Y65.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<23>
+    SLICE_X65Y65.COUT    Tbyp                  0.118   counter_32_bit<24>
+                                                       Mcount_counter_32_bit_cy<24>
+                                                       Mcount_counter_32_bit_cy<25>
+    SLICE_X65Y66.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<25>
+    SLICE_X65Y66.COUT    Tbyp                  0.118   counter_32_bit<26>
+                                                       Mcount_counter_32_bit_cy<26>
+                                                       Mcount_counter_32_bit_cy<27>
+    SLICE_X65Y67.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<27>
+    SLICE_X65Y67.COUT    Tbyp                  0.118   counter_32_bit<28>
+                                                       Mcount_counter_32_bit_cy<28>
+                                                       Mcount_counter_32_bit_cy<29>
+    SLICE_X65Y68.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<29>
+    SLICE_X65Y68.CLK     Tcinck                1.002   counter_32_bit<30>
+                                                       Mcount_counter_32_bit_cy<30>
+                                                       Mcount_counter_32_bit_xor<31>
+                                                       counter_32_bit_31
+    -------------------------------------------------  ---------------------------
+    Total                                      4.838ns (4.289ns logic, 0.549ns route)
+                                                       (88.7% logic, 11.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     15.206ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               counter_32_bit_3 (FF)
+  Destination:          counter_32_bit_31 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      4.786ns (Levels of Logic = 15)
+  Clock Path Skew:      -0.008ns (0.058 - 0.066)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: counter_32_bit_3 to counter_32_bit_31
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X65Y54.YQ      Tcko                  0.587   counter_32_bit<2>
+                                                       counter_32_bit_3
+    SLICE_X65Y54.G2      net (fanout=3)        0.662   counter_32_bit<3>
+    SLICE_X65Y54.COUT    Topcyg                1.001   counter_32_bit<2>
+                                                       counter_32_bit<3>_rt
+                                                       Mcount_counter_32_bit_cy<3>
+    SLICE_X65Y55.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<3>
+    SLICE_X65Y55.COUT    Tbyp                  0.118   counter_32_bit<4>
+                                                       Mcount_counter_32_bit_cy<4>
+                                                       Mcount_counter_32_bit_cy<5>
+    SLICE_X65Y56.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<5>
+    SLICE_X65Y56.COUT    Tbyp                  0.118   counter_32_bit<6>
+                                                       Mcount_counter_32_bit_cy<6>
+                                                       Mcount_counter_32_bit_cy<7>
+    SLICE_X65Y57.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<7>
+    SLICE_X65Y57.COUT    Tbyp                  0.118   counter_32_bit<8>
+                                                       Mcount_counter_32_bit_cy<8>
+                                                       Mcount_counter_32_bit_cy<9>
+    SLICE_X65Y58.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<9>
+    SLICE_X65Y58.COUT    Tbyp                  0.118   counter_32_bit<10>
+                                                       Mcount_counter_32_bit_cy<10>
+                                                       Mcount_counter_32_bit_cy<11>
+    SLICE_X65Y59.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<11>
+    SLICE_X65Y59.COUT    Tbyp                  0.118   counter_32_bit<12>
+                                                       Mcount_counter_32_bit_cy<12>
+                                                       Mcount_counter_32_bit_cy<13>
+    SLICE_X65Y60.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<13>
+    SLICE_X65Y60.COUT    Tbyp                  0.118   counter_32_bit<14>
+                                                       Mcount_counter_32_bit_cy<14>
+                                                       Mcount_counter_32_bit_cy<15>
+    SLICE_X65Y61.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<15>
+    SLICE_X65Y61.COUT    Tbyp                  0.118   counter_32_bit<16>
+                                                       Mcount_counter_32_bit_cy<16>
+                                                       Mcount_counter_32_bit_cy<17>
+    SLICE_X65Y62.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<17>
+    SLICE_X65Y62.COUT    Tbyp                  0.118   counter_32_bit<18>
+                                                       Mcount_counter_32_bit_cy<18>
+                                                       Mcount_counter_32_bit_cy<19>
+    SLICE_X65Y63.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<19>
+    SLICE_X65Y63.COUT    Tbyp                  0.118   counter_32_bit<20>
+                                                       Mcount_counter_32_bit_cy<20>
+                                                       Mcount_counter_32_bit_cy<21>
+    SLICE_X65Y64.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<21>
+    SLICE_X65Y64.COUT    Tbyp                  0.118   counter_32_bit<22>
+                                                       Mcount_counter_32_bit_cy<22>
+                                                       Mcount_counter_32_bit_cy<23>
+    SLICE_X65Y65.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<23>
+    SLICE_X65Y65.COUT    Tbyp                  0.118   counter_32_bit<24>
+                                                       Mcount_counter_32_bit_cy<24>
+                                                       Mcount_counter_32_bit_cy<25>
+    SLICE_X65Y66.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<25>
+    SLICE_X65Y66.COUT    Tbyp                  0.118   counter_32_bit<26>
+                                                       Mcount_counter_32_bit_cy<26>
+                                                       Mcount_counter_32_bit_cy<27>
+    SLICE_X65Y67.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<27>
+    SLICE_X65Y67.COUT    Tbyp                  0.118   counter_32_bit<28>
+                                                       Mcount_counter_32_bit_cy<28>
+                                                       Mcount_counter_32_bit_cy<29>
+    SLICE_X65Y68.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<29>
+    SLICE_X65Y68.CLK     Tcinck                1.002   counter_32_bit<30>
+                                                       Mcount_counter_32_bit_cy<30>
+                                                       Mcount_counter_32_bit_xor<31>
+                                                       counter_32_bit_31
+    -------------------------------------------------  ---------------------------
+    Total                                      4.786ns (4.124ns logic, 0.662ns route)
+                                                       (86.2% logic, 13.8% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point counter_32_bit_29 (SLICE_X65Y67.CIN), 28 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     15.152ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               counter_32_bit_0 (FF)
+  Destination:          counter_32_bit_29 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      4.838ns (Levels of Logic = 15)
+  Clock Path Skew:      -0.010ns (0.058 - 0.068)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: counter_32_bit_0 to counter_32_bit_29
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X65Y53.XQ      Tcko                  0.591   counter_32_bit<0>
+                                                       counter_32_bit_0
+    SLICE_X65Y53.F1      net (fanout=3)        0.549   counter_32_bit<0>
+    SLICE_X65Y53.COUT    Topcyf                1.162   counter_32_bit<0>
+                                                       Mcount_counter_32_bit_lut<0>_INV_0
+                                                       Mcount_counter_32_bit_cy<0>
+                                                       Mcount_counter_32_bit_cy<1>
+    SLICE_X65Y54.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<1>
+    SLICE_X65Y54.COUT    Tbyp                  0.118   counter_32_bit<2>
+                                                       Mcount_counter_32_bit_cy<2>
+                                                       Mcount_counter_32_bit_cy<3>
+    SLICE_X65Y55.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<3>
+    SLICE_X65Y55.COUT    Tbyp                  0.118   counter_32_bit<4>
+                                                       Mcount_counter_32_bit_cy<4>
+                                                       Mcount_counter_32_bit_cy<5>
+    SLICE_X65Y56.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<5>
+    SLICE_X65Y56.COUT    Tbyp                  0.118   counter_32_bit<6>
+                                                       Mcount_counter_32_bit_cy<6>
+                                                       Mcount_counter_32_bit_cy<7>
+    SLICE_X65Y57.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<7>
+    SLICE_X65Y57.COUT    Tbyp                  0.118   counter_32_bit<8>
+                                                       Mcount_counter_32_bit_cy<8>
+                                                       Mcount_counter_32_bit_cy<9>
+    SLICE_X65Y58.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<9>
+    SLICE_X65Y58.COUT    Tbyp                  0.118   counter_32_bit<10>
+                                                       Mcount_counter_32_bit_cy<10>
+                                                       Mcount_counter_32_bit_cy<11>
+    SLICE_X65Y59.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<11>
+    SLICE_X65Y59.COUT    Tbyp                  0.118   counter_32_bit<12>
+                                                       Mcount_counter_32_bit_cy<12>
+                                                       Mcount_counter_32_bit_cy<13>
+    SLICE_X65Y60.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<13>
+    SLICE_X65Y60.COUT    Tbyp                  0.118   counter_32_bit<14>
+                                                       Mcount_counter_32_bit_cy<14>
+                                                       Mcount_counter_32_bit_cy<15>
+    SLICE_X65Y61.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<15>
+    SLICE_X65Y61.COUT    Tbyp                  0.118   counter_32_bit<16>
+                                                       Mcount_counter_32_bit_cy<16>
+                                                       Mcount_counter_32_bit_cy<17>
+    SLICE_X65Y62.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<17>
+    SLICE_X65Y62.COUT    Tbyp                  0.118   counter_32_bit<18>
+                                                       Mcount_counter_32_bit_cy<18>
+                                                       Mcount_counter_32_bit_cy<19>
+    SLICE_X65Y63.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<19>
+    SLICE_X65Y63.COUT    Tbyp                  0.118   counter_32_bit<20>
+                                                       Mcount_counter_32_bit_cy<20>
+                                                       Mcount_counter_32_bit_cy<21>
+    SLICE_X65Y64.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<21>
+    SLICE_X65Y64.COUT    Tbyp                  0.118   counter_32_bit<22>
+                                                       Mcount_counter_32_bit_cy<22>
+                                                       Mcount_counter_32_bit_cy<23>
+    SLICE_X65Y65.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<23>
+    SLICE_X65Y65.COUT    Tbyp                  0.118   counter_32_bit<24>
+                                                       Mcount_counter_32_bit_cy<24>
+                                                       Mcount_counter_32_bit_cy<25>
+    SLICE_X65Y66.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<25>
+    SLICE_X65Y66.COUT    Tbyp                  0.118   counter_32_bit<26>
+                                                       Mcount_counter_32_bit_cy<26>
+                                                       Mcount_counter_32_bit_cy<27>
+    SLICE_X65Y67.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<27>
+    SLICE_X65Y67.CLK     Tcinck                1.002   counter_32_bit<28>
+                                                       Mcount_counter_32_bit_cy<28>
+                                                       Mcount_counter_32_bit_xor<29>
+                                                       counter_32_bit_29
+    -------------------------------------------------  ---------------------------
+    Total                                      4.838ns (4.289ns logic, 0.549ns route)
+                                                       (88.7% logic, 11.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     15.272ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               counter_32_bit_2 (FF)
+  Destination:          counter_32_bit_29 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      4.720ns (Levels of Logic = 14)
+  Clock Path Skew:      -0.008ns (0.058 - 0.066)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: counter_32_bit_2 to counter_32_bit_29
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X65Y54.XQ      Tcko                  0.591   counter_32_bit<2>
+                                                       counter_32_bit_2
+    SLICE_X65Y54.F1      net (fanout=3)        0.549   counter_32_bit<2>
+    SLICE_X65Y54.COUT    Topcyf                1.162   counter_32_bit<2>
+                                                       counter_32_bit<2>_rt
+                                                       Mcount_counter_32_bit_cy<2>
+                                                       Mcount_counter_32_bit_cy<3>
+    SLICE_X65Y55.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<3>
+    SLICE_X65Y55.COUT    Tbyp                  0.118   counter_32_bit<4>
+                                                       Mcount_counter_32_bit_cy<4>
+                                                       Mcount_counter_32_bit_cy<5>
+    SLICE_X65Y56.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<5>
+    SLICE_X65Y56.COUT    Tbyp                  0.118   counter_32_bit<6>
+                                                       Mcount_counter_32_bit_cy<6>
+                                                       Mcount_counter_32_bit_cy<7>
+    SLICE_X65Y57.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<7>
+    SLICE_X65Y57.COUT    Tbyp                  0.118   counter_32_bit<8>
+                                                       Mcount_counter_32_bit_cy<8>
+                                                       Mcount_counter_32_bit_cy<9>
+    SLICE_X65Y58.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<9>
+    SLICE_X65Y58.COUT    Tbyp                  0.118   counter_32_bit<10>
+                                                       Mcount_counter_32_bit_cy<10>
+                                                       Mcount_counter_32_bit_cy<11>
+    SLICE_X65Y59.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<11>
+    SLICE_X65Y59.COUT    Tbyp                  0.118   counter_32_bit<12>
+                                                       Mcount_counter_32_bit_cy<12>
+                                                       Mcount_counter_32_bit_cy<13>
+    SLICE_X65Y60.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<13>
+    SLICE_X65Y60.COUT    Tbyp                  0.118   counter_32_bit<14>
+                                                       Mcount_counter_32_bit_cy<14>
+                                                       Mcount_counter_32_bit_cy<15>
+    SLICE_X65Y61.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<15>
+    SLICE_X65Y61.COUT    Tbyp                  0.118   counter_32_bit<16>
+                                                       Mcount_counter_32_bit_cy<16>
+                                                       Mcount_counter_32_bit_cy<17>
+    SLICE_X65Y62.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<17>
+    SLICE_X65Y62.COUT    Tbyp                  0.118   counter_32_bit<18>
+                                                       Mcount_counter_32_bit_cy<18>
+                                                       Mcount_counter_32_bit_cy<19>
+    SLICE_X65Y63.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<19>
+    SLICE_X65Y63.COUT    Tbyp                  0.118   counter_32_bit<20>
+                                                       Mcount_counter_32_bit_cy<20>
+                                                       Mcount_counter_32_bit_cy<21>
+    SLICE_X65Y64.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<21>
+    SLICE_X65Y64.COUT    Tbyp                  0.118   counter_32_bit<22>
+                                                       Mcount_counter_32_bit_cy<22>
+                                                       Mcount_counter_32_bit_cy<23>
+    SLICE_X65Y65.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<23>
+    SLICE_X65Y65.COUT    Tbyp                  0.118   counter_32_bit<24>
+                                                       Mcount_counter_32_bit_cy<24>
+                                                       Mcount_counter_32_bit_cy<25>
+    SLICE_X65Y66.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<25>
+    SLICE_X65Y66.COUT    Tbyp                  0.118   counter_32_bit<26>
+                                                       Mcount_counter_32_bit_cy<26>
+                                                       Mcount_counter_32_bit_cy<27>
+    SLICE_X65Y67.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<27>
+    SLICE_X65Y67.CLK     Tcinck                1.002   counter_32_bit<28>
+                                                       Mcount_counter_32_bit_cy<28>
+                                                       Mcount_counter_32_bit_xor<29>
+                                                       counter_32_bit_29
+    -------------------------------------------------  ---------------------------
+    Total                                      4.720ns (4.171ns logic, 0.549ns route)
+                                                       (88.4% logic, 11.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     15.324ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               counter_32_bit_3 (FF)
+  Destination:          counter_32_bit_29 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      4.668ns (Levels of Logic = 14)
+  Clock Path Skew:      -0.008ns (0.058 - 0.066)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: counter_32_bit_3 to counter_32_bit_29
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X65Y54.YQ      Tcko                  0.587   counter_32_bit<2>
+                                                       counter_32_bit_3
+    SLICE_X65Y54.G2      net (fanout=3)        0.662   counter_32_bit<3>
+    SLICE_X65Y54.COUT    Topcyg                1.001   counter_32_bit<2>
+                                                       counter_32_bit<3>_rt
+                                                       Mcount_counter_32_bit_cy<3>
+    SLICE_X65Y55.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<3>
+    SLICE_X65Y55.COUT    Tbyp                  0.118   counter_32_bit<4>
+                                                       Mcount_counter_32_bit_cy<4>
+                                                       Mcount_counter_32_bit_cy<5>
+    SLICE_X65Y56.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<5>
+    SLICE_X65Y56.COUT    Tbyp                  0.118   counter_32_bit<6>
+                                                       Mcount_counter_32_bit_cy<6>
+                                                       Mcount_counter_32_bit_cy<7>
+    SLICE_X65Y57.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<7>
+    SLICE_X65Y57.COUT    Tbyp                  0.118   counter_32_bit<8>
+                                                       Mcount_counter_32_bit_cy<8>
+                                                       Mcount_counter_32_bit_cy<9>
+    SLICE_X65Y58.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<9>
+    SLICE_X65Y58.COUT    Tbyp                  0.118   counter_32_bit<10>
+                                                       Mcount_counter_32_bit_cy<10>
+                                                       Mcount_counter_32_bit_cy<11>
+    SLICE_X65Y59.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<11>
+    SLICE_X65Y59.COUT    Tbyp                  0.118   counter_32_bit<12>
+                                                       Mcount_counter_32_bit_cy<12>
+                                                       Mcount_counter_32_bit_cy<13>
+    SLICE_X65Y60.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<13>
+    SLICE_X65Y60.COUT    Tbyp                  0.118   counter_32_bit<14>
+                                                       Mcount_counter_32_bit_cy<14>
+                                                       Mcount_counter_32_bit_cy<15>
+    SLICE_X65Y61.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<15>
+    SLICE_X65Y61.COUT    Tbyp                  0.118   counter_32_bit<16>
+                                                       Mcount_counter_32_bit_cy<16>
+                                                       Mcount_counter_32_bit_cy<17>
+    SLICE_X65Y62.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<17>
+    SLICE_X65Y62.COUT    Tbyp                  0.118   counter_32_bit<18>
+                                                       Mcount_counter_32_bit_cy<18>
+                                                       Mcount_counter_32_bit_cy<19>
+    SLICE_X65Y63.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<19>
+    SLICE_X65Y63.COUT    Tbyp                  0.118   counter_32_bit<20>
+                                                       Mcount_counter_32_bit_cy<20>
+                                                       Mcount_counter_32_bit_cy<21>
+    SLICE_X65Y64.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<21>
+    SLICE_X65Y64.COUT    Tbyp                  0.118   counter_32_bit<22>
+                                                       Mcount_counter_32_bit_cy<22>
+                                                       Mcount_counter_32_bit_cy<23>
+    SLICE_X65Y65.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<23>
+    SLICE_X65Y65.COUT    Tbyp                  0.118   counter_32_bit<24>
+                                                       Mcount_counter_32_bit_cy<24>
+                                                       Mcount_counter_32_bit_cy<25>
+    SLICE_X65Y66.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<25>
+    SLICE_X65Y66.COUT    Tbyp                  0.118   counter_32_bit<26>
+                                                       Mcount_counter_32_bit_cy<26>
+                                                       Mcount_counter_32_bit_cy<27>
+    SLICE_X65Y67.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<27>
+    SLICE_X65Y67.CLK     Tcinck                1.002   counter_32_bit<28>
+                                                       Mcount_counter_32_bit_cy<28>
+                                                       Mcount_counter_32_bit_xor<29>
+                                                       counter_32_bit_29
+    -------------------------------------------------  ---------------------------
+    Total                                      4.668ns (4.006ns logic, 0.662ns route)
+                                                       (85.8% logic, 14.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point counter_32_bit_27 (SLICE_X65Y66.CIN), 26 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     15.270ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               counter_32_bit_0 (FF)
+  Destination:          counter_32_bit_27 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      4.720ns (Levels of Logic = 14)
+  Clock Path Skew:      -0.010ns (0.058 - 0.068)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: counter_32_bit_0 to counter_32_bit_27
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X65Y53.XQ      Tcko                  0.591   counter_32_bit<0>
+                                                       counter_32_bit_0
+    SLICE_X65Y53.F1      net (fanout=3)        0.549   counter_32_bit<0>
+    SLICE_X65Y53.COUT    Topcyf                1.162   counter_32_bit<0>
+                                                       Mcount_counter_32_bit_lut<0>_INV_0
+                                                       Mcount_counter_32_bit_cy<0>
+                                                       Mcount_counter_32_bit_cy<1>
+    SLICE_X65Y54.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<1>
+    SLICE_X65Y54.COUT    Tbyp                  0.118   counter_32_bit<2>
+                                                       Mcount_counter_32_bit_cy<2>
+                                                       Mcount_counter_32_bit_cy<3>
+    SLICE_X65Y55.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<3>
+    SLICE_X65Y55.COUT    Tbyp                  0.118   counter_32_bit<4>
+                                                       Mcount_counter_32_bit_cy<4>
+                                                       Mcount_counter_32_bit_cy<5>
+    SLICE_X65Y56.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<5>
+    SLICE_X65Y56.COUT    Tbyp                  0.118   counter_32_bit<6>
+                                                       Mcount_counter_32_bit_cy<6>
+                                                       Mcount_counter_32_bit_cy<7>
+    SLICE_X65Y57.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<7>
+    SLICE_X65Y57.COUT    Tbyp                  0.118   counter_32_bit<8>
+                                                       Mcount_counter_32_bit_cy<8>
+                                                       Mcount_counter_32_bit_cy<9>
+    SLICE_X65Y58.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<9>
+    SLICE_X65Y58.COUT    Tbyp                  0.118   counter_32_bit<10>
+                                                       Mcount_counter_32_bit_cy<10>
+                                                       Mcount_counter_32_bit_cy<11>
+    SLICE_X65Y59.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<11>
+    SLICE_X65Y59.COUT    Tbyp                  0.118   counter_32_bit<12>
+                                                       Mcount_counter_32_bit_cy<12>
+                                                       Mcount_counter_32_bit_cy<13>
+    SLICE_X65Y60.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<13>
+    SLICE_X65Y60.COUT    Tbyp                  0.118   counter_32_bit<14>
+                                                       Mcount_counter_32_bit_cy<14>
+                                                       Mcount_counter_32_bit_cy<15>
+    SLICE_X65Y61.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<15>
+    SLICE_X65Y61.COUT    Tbyp                  0.118   counter_32_bit<16>
+                                                       Mcount_counter_32_bit_cy<16>
+                                                       Mcount_counter_32_bit_cy<17>
+    SLICE_X65Y62.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<17>
+    SLICE_X65Y62.COUT    Tbyp                  0.118   counter_32_bit<18>
+                                                       Mcount_counter_32_bit_cy<18>
+                                                       Mcount_counter_32_bit_cy<19>
+    SLICE_X65Y63.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<19>
+    SLICE_X65Y63.COUT    Tbyp                  0.118   counter_32_bit<20>
+                                                       Mcount_counter_32_bit_cy<20>
+                                                       Mcount_counter_32_bit_cy<21>
+    SLICE_X65Y64.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<21>
+    SLICE_X65Y64.COUT    Tbyp                  0.118   counter_32_bit<22>
+                                                       Mcount_counter_32_bit_cy<22>
+                                                       Mcount_counter_32_bit_cy<23>
+    SLICE_X65Y65.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<23>
+    SLICE_X65Y65.COUT    Tbyp                  0.118   counter_32_bit<24>
+                                                       Mcount_counter_32_bit_cy<24>
+                                                       Mcount_counter_32_bit_cy<25>
+    SLICE_X65Y66.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<25>
+    SLICE_X65Y66.CLK     Tcinck                1.002   counter_32_bit<26>
+                                                       Mcount_counter_32_bit_cy<26>
+                                                       Mcount_counter_32_bit_xor<27>
+                                                       counter_32_bit_27
+    -------------------------------------------------  ---------------------------
+    Total                                      4.720ns (4.171ns logic, 0.549ns route)
+                                                       (88.4% logic, 11.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     15.390ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               counter_32_bit_2 (FF)
+  Destination:          counter_32_bit_27 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      4.602ns (Levels of Logic = 13)
+  Clock Path Skew:      -0.008ns (0.058 - 0.066)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: counter_32_bit_2 to counter_32_bit_27
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X65Y54.XQ      Tcko                  0.591   counter_32_bit<2>
+                                                       counter_32_bit_2
+    SLICE_X65Y54.F1      net (fanout=3)        0.549   counter_32_bit<2>
+    SLICE_X65Y54.COUT    Topcyf                1.162   counter_32_bit<2>
+                                                       counter_32_bit<2>_rt
+                                                       Mcount_counter_32_bit_cy<2>
+                                                       Mcount_counter_32_bit_cy<3>
+    SLICE_X65Y55.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<3>
+    SLICE_X65Y55.COUT    Tbyp                  0.118   counter_32_bit<4>
+                                                       Mcount_counter_32_bit_cy<4>
+                                                       Mcount_counter_32_bit_cy<5>
+    SLICE_X65Y56.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<5>
+    SLICE_X65Y56.COUT    Tbyp                  0.118   counter_32_bit<6>
+                                                       Mcount_counter_32_bit_cy<6>
+                                                       Mcount_counter_32_bit_cy<7>
+    SLICE_X65Y57.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<7>
+    SLICE_X65Y57.COUT    Tbyp                  0.118   counter_32_bit<8>
+                                                       Mcount_counter_32_bit_cy<8>
+                                                       Mcount_counter_32_bit_cy<9>
+    SLICE_X65Y58.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<9>
+    SLICE_X65Y58.COUT    Tbyp                  0.118   counter_32_bit<10>
+                                                       Mcount_counter_32_bit_cy<10>
+                                                       Mcount_counter_32_bit_cy<11>
+    SLICE_X65Y59.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<11>
+    SLICE_X65Y59.COUT    Tbyp                  0.118   counter_32_bit<12>
+                                                       Mcount_counter_32_bit_cy<12>
+                                                       Mcount_counter_32_bit_cy<13>
+    SLICE_X65Y60.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<13>
+    SLICE_X65Y60.COUT    Tbyp                  0.118   counter_32_bit<14>
+                                                       Mcount_counter_32_bit_cy<14>
+                                                       Mcount_counter_32_bit_cy<15>
+    SLICE_X65Y61.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<15>
+    SLICE_X65Y61.COUT    Tbyp                  0.118   counter_32_bit<16>
+                                                       Mcount_counter_32_bit_cy<16>
+                                                       Mcount_counter_32_bit_cy<17>
+    SLICE_X65Y62.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<17>
+    SLICE_X65Y62.COUT    Tbyp                  0.118   counter_32_bit<18>
+                                                       Mcount_counter_32_bit_cy<18>
+                                                       Mcount_counter_32_bit_cy<19>
+    SLICE_X65Y63.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<19>
+    SLICE_X65Y63.COUT    Tbyp                  0.118   counter_32_bit<20>
+                                                       Mcount_counter_32_bit_cy<20>
+                                                       Mcount_counter_32_bit_cy<21>
+    SLICE_X65Y64.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<21>
+    SLICE_X65Y64.COUT    Tbyp                  0.118   counter_32_bit<22>
+                                                       Mcount_counter_32_bit_cy<22>
+                                                       Mcount_counter_32_bit_cy<23>
+    SLICE_X65Y65.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<23>
+    SLICE_X65Y65.COUT    Tbyp                  0.118   counter_32_bit<24>
+                                                       Mcount_counter_32_bit_cy<24>
+                                                       Mcount_counter_32_bit_cy<25>
+    SLICE_X65Y66.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<25>
+    SLICE_X65Y66.CLK     Tcinck                1.002   counter_32_bit<26>
+                                                       Mcount_counter_32_bit_cy<26>
+                                                       Mcount_counter_32_bit_xor<27>
+                                                       counter_32_bit_27
+    -------------------------------------------------  ---------------------------
+    Total                                      4.602ns (4.053ns logic, 0.549ns route)
+                                                       (88.1% logic, 11.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     15.442ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               counter_32_bit_3 (FF)
+  Destination:          counter_32_bit_27 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      4.550ns (Levels of Logic = 13)
+  Clock Path Skew:      -0.008ns (0.058 - 0.066)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: counter_32_bit_3 to counter_32_bit_27
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X65Y54.YQ      Tcko                  0.587   counter_32_bit<2>
+                                                       counter_32_bit_3
+    SLICE_X65Y54.G2      net (fanout=3)        0.662   counter_32_bit<3>
+    SLICE_X65Y54.COUT    Topcyg                1.001   counter_32_bit<2>
+                                                       counter_32_bit<3>_rt
+                                                       Mcount_counter_32_bit_cy<3>
+    SLICE_X65Y55.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<3>
+    SLICE_X65Y55.COUT    Tbyp                  0.118   counter_32_bit<4>
+                                                       Mcount_counter_32_bit_cy<4>
+                                                       Mcount_counter_32_bit_cy<5>
+    SLICE_X65Y56.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<5>
+    SLICE_X65Y56.COUT    Tbyp                  0.118   counter_32_bit<6>
+                                                       Mcount_counter_32_bit_cy<6>
+                                                       Mcount_counter_32_bit_cy<7>
+    SLICE_X65Y57.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<7>
+    SLICE_X65Y57.COUT    Tbyp                  0.118   counter_32_bit<8>
+                                                       Mcount_counter_32_bit_cy<8>
+                                                       Mcount_counter_32_bit_cy<9>
+    SLICE_X65Y58.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<9>
+    SLICE_X65Y58.COUT    Tbyp                  0.118   counter_32_bit<10>
+                                                       Mcount_counter_32_bit_cy<10>
+                                                       Mcount_counter_32_bit_cy<11>
+    SLICE_X65Y59.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<11>
+    SLICE_X65Y59.COUT    Tbyp                  0.118   counter_32_bit<12>
+                                                       Mcount_counter_32_bit_cy<12>
+                                                       Mcount_counter_32_bit_cy<13>
+    SLICE_X65Y60.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<13>
+    SLICE_X65Y60.COUT    Tbyp                  0.118   counter_32_bit<14>
+                                                       Mcount_counter_32_bit_cy<14>
+                                                       Mcount_counter_32_bit_cy<15>
+    SLICE_X65Y61.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<15>
+    SLICE_X65Y61.COUT    Tbyp                  0.118   counter_32_bit<16>
+                                                       Mcount_counter_32_bit_cy<16>
+                                                       Mcount_counter_32_bit_cy<17>
+    SLICE_X65Y62.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<17>
+    SLICE_X65Y62.COUT    Tbyp                  0.118   counter_32_bit<18>
+                                                       Mcount_counter_32_bit_cy<18>
+                                                       Mcount_counter_32_bit_cy<19>
+    SLICE_X65Y63.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<19>
+    SLICE_X65Y63.COUT    Tbyp                  0.118   counter_32_bit<20>
+                                                       Mcount_counter_32_bit_cy<20>
+                                                       Mcount_counter_32_bit_cy<21>
+    SLICE_X65Y64.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<21>
+    SLICE_X65Y64.COUT    Tbyp                  0.118   counter_32_bit<22>
+                                                       Mcount_counter_32_bit_cy<22>
+                                                       Mcount_counter_32_bit_cy<23>
+    SLICE_X65Y65.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<23>
+    SLICE_X65Y65.COUT    Tbyp                  0.118   counter_32_bit<24>
+                                                       Mcount_counter_32_bit_cy<24>
+                                                       Mcount_counter_32_bit_cy<25>
+    SLICE_X65Y66.CIN     net (fanout=1)        0.000   Mcount_counter_32_bit_cy<25>
+    SLICE_X65Y66.CLK     Tcinck                1.002   counter_32_bit<26>
+                                                       Mcount_counter_32_bit_cy<26>
+                                                       Mcount_counter_32_bit_xor<27>
+                                                       counter_32_bit_27
+    -------------------------------------------------  ---------------------------
+    Total                                      4.550ns (3.888ns logic, 0.662ns route)
+                                                       (85.5% logic, 14.5% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_clk = PERIOD TIMEGRP "clk" 20 ns HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point ssc_data_8 (SLICE_X64Y63.F3), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.368ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               counter_32_bit_24 (FF)
+  Destination:          ssc_data_8 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.366ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.002ns (0.001 - 0.003)
+  Source Clock:         clk_BUFGP rising at 20.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: counter_32_bit_24 to ssc_data_8
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X65Y65.XQ      Tcko                  0.473   counter_32_bit<24>
+                                                       counter_32_bit_24
+    SLICE_X64Y63.F3      net (fanout=2)        0.333   counter_32_bit<24>
+    SLICE_X64Y63.CLK     Tckf        (-Th)    -0.560   ssc_data<8>
+                                                       ssc_data_mux0004<7>11
+                                                       ssc_data_8
+    -------------------------------------------------  ---------------------------
+    Total                                      1.366ns (1.033ns logic, 0.333ns route)
+                                                       (75.6% logic, 24.4% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point ssc_data_15 (SLICE_X64Y66.F2), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.376ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               counter_32_bit_31 (FF)
+  Destination:          ssc_data_15 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.376ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 20.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: counter_32_bit_31 to ssc_data_15
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X65Y68.YQ      Tcko                  0.470   counter_32_bit<30>
+                                                       counter_32_bit_31
+    SLICE_X64Y66.F2      net (fanout=2)        0.346   counter_32_bit<31>
+    SLICE_X64Y66.CLK     Tckf        (-Th)    -0.560   ssc_data<15>
+                                                       ssc_data_mux0004<0>11
+                                                       ssc_data_15
+    -------------------------------------------------  ---------------------------
+    Total                                      1.376ns (1.030ns logic, 0.346ns route)
+                                                       (74.9% logic, 25.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point ssc_data_10 (SLICE_X64Y60.G1), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.425ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               counter_32_bit_10 (FF)
+  Destination:          ssc_data_10 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.422ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.003ns (0.002 - 0.005)
+  Source Clock:         clk_BUFGP rising at 20.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: counter_32_bit_10 to ssc_data_10
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X65Y58.XQ      Tcko                  0.473   counter_32_bit<10>
+                                                       counter_32_bit_10
+    SLICE_X64Y60.G1      net (fanout=2)        0.389   counter_32_bit<10>
+    SLICE_X64Y60.CLK     Tckg        (-Th)    -0.560   ssc_data<14>
+                                                       ssc_data_mux0004<5>11
+                                                       ssc_data_10
+    -------------------------------------------------  ---------------------------
+    Total                                      1.422ns (1.033ns logic, 0.389ns route)
+                                                       (72.6% logic, 27.4% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_clk = PERIOD TIMEGRP "clk" 20 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 18.348ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 20.000ns
+  Low pulse: 10.000ns
+  Low pulse limit: 0.826ns (Tcl)
+  Physical resource: ssc_data<0>/CLK
+  Logical resource: ssc_data_0/CK
+  Location pin: SLICE_X64Y58.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 18.348ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 10.000ns
+  High pulse limit: 0.826ns (Tch)
+  Physical resource: ssc_data<0>/CLK
+  Logical resource: ssc_data_0/CK
+  Location pin: SLICE_X64Y58.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 18.348ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 1.652ns (605.327MHz) (Tcp)
+  Physical resource: ssc_data<0>/CLK
+  Logical resource: ssc_data_0/CK
+  Location pin: SLICE_X64Y58.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    4.966|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 694 paths, 0 nets, and 153 connections
+
+Design statistics:
+   Minimum period:   4.966ns{1}   (Maximum frequency: 201.369MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Thu Feb 04 17:18:55 2016 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 168 MB
+
+
+
