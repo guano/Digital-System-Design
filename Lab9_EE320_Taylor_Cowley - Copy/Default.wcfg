@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="J:/EE 320/Lab9_EE320_Taylor_Cowley/tb_sramController_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="tb_sramcontroller" />
+            <top_module name="textio" />
+            <top_module name="vl_types" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="52" />
+   <wvobject fp_name="/tb_sramcontroller/sram_ce" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">sram_ce</obj_property>
+      <obj_property name="ObjectShortName">sram_ce</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_sramcontroller/sram_we" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">sram_we</obj_property>
+      <obj_property name="ObjectShortName">sram_we</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_sramcontroller/sram_oe" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">sram_oe</obj_property>
+      <obj_property name="ObjectShortName">sram_oe</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_sramcontroller/sram_ub" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">sram_ub</obj_property>
+      <obj_property name="ObjectShortName">sram_ub</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_sramcontroller/sram_lb" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">sram_lb</obj_property>
+      <obj_property name="ObjectShortName">sram_lb</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_sramcontroller/sram_adv" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">sram_adv</obj_property>
+      <obj_property name="ObjectShortName">sram_adv</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_sramcontroller/sram_cre" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">sram_cre</obj_property>
+      <obj_property name="ObjectShortName">sram_cre</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_sramcontroller/sram_clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">sram_clk</obj_property>
+      <obj_property name="ObjectShortName">sram_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_sramcontroller/mem" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">mem</obj_property>
+      <obj_property name="ObjectShortName">mem</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_sramcontroller/rw" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rw</obj_property>
+      <obj_property name="ObjectShortName">rw</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_sramcontroller/ready" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ready</obj_property>
+      <obj_property name="ObjectShortName">ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_sramcontroller/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_sramcontroller/tb_rst" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">tb_rst</obj_property>
+      <obj_property name="ObjectShortName">tb_rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_sramcontroller/addr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">addr[22:0]</obj_property>
+      <obj_property name="ObjectShortName">addr[22:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_sramcontroller/sram_addr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">sram_addr[22:0]</obj_property>
+      <obj_property name="ObjectShortName">sram_addr[22:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_sramcontroller/write_data" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">write_data[15:0]</obj_property>
+      <obj_property name="ObjectShortName">write_data[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_sramcontroller/read_data" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">read_data[15:0]</obj_property>
+      <obj_property name="ObjectShortName">read_data[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_sramcontroller/sram_data" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">sram_data[15:0]</obj_property>
+      <obj_property name="ObjectShortName">sram_data[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_sramcontroller/data_valid" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">data_valid</obj_property>
+      <obj_property name="ObjectShortName">data_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_sramcontroller/ready_has_gone_high" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ready_has_gone_high</obj_property>
+      <obj_property name="ObjectShortName">ready_has_gone_high</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_sramcontroller/clk_rate" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">clk_rate</obj_property>
+      <obj_property name="ObjectShortName">clk_rate</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_sramcontroller/clk_period" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">clk_period</obj_property>
+      <obj_property name="ObjectShortName">clk_period</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_sramcontroller/half_clock_period" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">half_clock_period</obj_property>
+      <obj_property name="ObjectShortName">half_clock_period</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_sramcontroller/sramCtl/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_sramcontroller/sramCtl/rst" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_sramcontroller/sramCtl/addr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">addr[22:0]</obj_property>
+      <obj_property name="ObjectShortName">addr[22:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_sramcontroller/sramCtl/data_m2s" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">data_m2s[15:0]</obj_property>
+      <obj_property name="ObjectShortName">data_m2s[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_sramcontroller/sramCtl/mem" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">mem</obj_property>
+      <obj_property name="ObjectShortName">mem</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_sramcontroller/sramCtl/rw" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rw</obj_property>
+      <obj_property name="ObjectShortName">rw</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_sramcontroller/sramCtl/data_s2m" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">data_s2m[15:0]</obj_property>
+      <obj_property name="ObjectShortName">data_s2m[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_sramcontroller/sramCtl/data_valid" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">data_valid</obj_property>
+      <obj_property name="ObjectShortName">data_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_sramcontroller/sramCtl/ready" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ready</obj_property>
+      <obj_property name="ObjectShortName">ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_sramcontroller/sramCtl/memadr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">memadr[22:0]</obj_property>
+      <obj_property name="ObjectShortName">memadr[22:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_sramcontroller/sramCtl/memoe" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">memoe</obj_property>
+      <obj_property name="ObjectShortName">memoe</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_sramcontroller/sramCtl/memwr" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">memwr</obj_property>
+      <obj_property name="ObjectShortName">memwr</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_sramcontroller/sramCtl/ramcs" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ramcs</obj_property>
+      <obj_property name="ObjectShortName">ramcs</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_sramcontroller/sramCtl/ramlb" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ramlb</obj_property>
+      <obj_property name="ObjectShortName">ramlb</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_sramcontroller/sramCtl/ramub" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ramub</obj_property>
+      <obj_property name="ObjectShortName">ramub</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_sramcontroller/sramCtl/ramclk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ramclk</obj_property>
+      <obj_property name="ObjectShortName">ramclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_sramcontroller/sramCtl/ramadv" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ramadv</obj_property>
+      <obj_property name="ObjectShortName">ramadv</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_sramcontroller/sramCtl/ramcre" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ramcre</obj_property>
+      <obj_property name="ObjectShortName">ramcre</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_sramcontroller/sramCtl/memdb" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">memdb[15:0]</obj_property>
+      <obj_property name="ObjectShortName">memdb[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_sramcontroller/sramCtl/state" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">state</obj_property>
+      <obj_property name="ObjectShortName">state</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_sramcontroller/sramCtl/state_next" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">state_next</obj_property>
+      <obj_property name="ObjectShortName">state_next</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_sramcontroller/sramCtl/tri_en" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">tri_en</obj_property>
+      <obj_property name="ObjectShortName">tri_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_sramcontroller/sramCtl/raddr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">raddr[22:0]</obj_property>
+      <obj_property name="ObjectShortName">raddr[22:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_sramcontroller/sramCtl/raddr_next" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">raddr_next[22:0]</obj_property>
+      <obj_property name="ObjectShortName">raddr_next[22:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_sramcontroller/sramCtl/rs2m" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">rs2m[15:0]</obj_property>
+      <obj_property name="ObjectShortName">rs2m[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_sramcontroller/sramCtl/rs2m_next" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">rs2m_next[15:0]</obj_property>
+      <obj_property name="ObjectShortName">rs2m_next[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_sramcontroller/sramCtl/rm2s" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">rm2s[15:0]</obj_property>
+      <obj_property name="ObjectShortName">rm2s[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_sramcontroller/sramCtl/rm2s_next" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">rm2s_next[15:0]</obj_property>
+      <obj_property name="ObjectShortName">rm2s_next[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_sramcontroller/sramCtl/d" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">d[15:0]</obj_property>
+      <obj_property name="ObjectShortName">d[15:0]</obj_property>
+   </wvobject>
+</wave_config>

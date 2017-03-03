@@ -1,0 +1,3 @@
+vhdl work "sramController.vhd"
+vhdl work "seven_seg_control.vhd"
+vhdl work "memory_top.vhd"

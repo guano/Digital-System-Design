@@ -1,0 +1,47 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to J:/EE 320/Lab9_EE320_Taylor_Cowley/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.17 secs
+ 
+--> Parameter xsthdpdir set to J:/EE 320/Lab9_EE320_Taylor_Cowley/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.18 secs
+ 
+--> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "//fs-caedm/tcowley0/EE 320/Lab9_EE320_Taylor_Cowley/sramController.vhd" in Library work.
+Architecture yolo of Entity sramcontroller is up to date.
+Compiling vhdl file "//fs-caedm/tcowley0/EE 320/Lab9_EE320_Taylor_Cowley/tb_sramController.vhd" in Library work.
+Entity <tb_sramController> compiled.
+ERROR:HDLParsers:1015 - "//fs-caedm/tcowley0/EE 320/Lab9_EE320_Taylor_Cowley/tb_sramController.vhd" Line 104. Wait for statement unsupported.
+ERROR:HDLParsers:1015 - "//fs-caedm/tcowley0/EE 320/Lab9_EE320_Taylor_Cowley/tb_sramController.vhd" Line 107. Wait for statement unsupported.
+ERROR:HDLParsers:1015 - "//fs-caedm/tcowley0/EE 320/Lab9_EE320_Taylor_Cowley/tb_sramController.vhd" Line 110. Wait for statement unsupported.
+ERROR:HDLParsers:1015 - "//fs-caedm/tcowley0/EE 320/Lab9_EE320_Taylor_Cowley/tb_sramController.vhd" Line 148. Wait for statement unsupported.
+ERROR:HDLParsers:1015 - "//fs-caedm/tcowley0/EE 320/Lab9_EE320_Taylor_Cowley/tb_sramController.vhd" Line 159. Wait for statement unsupported.
+ERROR:HDLParsers:1015 - "//fs-caedm/tcowley0/EE 320/Lab9_EE320_Taylor_Cowley/tb_sramController.vhd" Line 163. Wait for statement unsupported.
+ERROR:HDLParsers:1015 - "//fs-caedm/tcowley0/EE 320/Lab9_EE320_Taylor_Cowley/tb_sramController.vhd" Line 188. Wait for statement unsupported.
+ERROR:HDLParsers:1015 - "//fs-caedm/tcowley0/EE 320/Lab9_EE320_Taylor_Cowley/tb_sramController.vhd" Line 201. Wait for statement unsupported.
+ERROR:HDLParsers:1015 - "//fs-caedm/tcowley0/EE 320/Lab9_EE320_Taylor_Cowley/tb_sramController.vhd" Line 205. Wait for statement unsupported.
+ERROR:HDLParsers:1015 - "//fs-caedm/tcowley0/EE 320/Lab9_EE320_Taylor_Cowley/tb_sramController.vhd" Line 253. Wait for statement unsupported.
+ERROR:HDLParsers:709 - "//fs-caedm/tcowley0/EE 320/Lab9_EE320_Taylor_Cowley/tb_sramController.vhd" Line 288. cellram is not an entity name
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 1.19 secs
+ 
+--> 
+
+Total memory usage is 214564 kilobytes
+
+Number of errors   :   11 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

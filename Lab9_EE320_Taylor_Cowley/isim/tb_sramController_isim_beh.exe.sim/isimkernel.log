@@ -1,0 +1,28 @@
+Command line:
+   tb_sramController_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  50445
+
+Mon Mar 14 14:03:15 2016
+
+
+ Elaboration Time: 0.249602 sec
+
+ Current Memory Usage: 1318.1 Meg
+
+ Total Signals          : 159
+ Total Nets             : 516
+ Total Signal Drivers   : 100
+ Total Blocks           : 19
+ Total Primitive Blocks : 14
+ Total Processes        : 115
+ Total Traceable Variables  : 307
+ Total Scalar Nets and Variables : 23303
+
+ Total Simulation Time: 0.327603 sec
+
+ Current Memory Usage: 688.923 Meg
+
+Mon Mar 14 14:46:52 2016
+

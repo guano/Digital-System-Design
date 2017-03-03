@@ -1,0 +1,3 @@
+vhdl work "sramController.vhd"
+verilog work "cellram.v"
+vhdl work "tb_sramController.vhd"
