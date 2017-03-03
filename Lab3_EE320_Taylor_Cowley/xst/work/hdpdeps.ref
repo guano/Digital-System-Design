@@ -1,0 +1,8 @@
+V3 3
+FL "//fs-caedm/tcowley0/EE 320/Lab3_EE320_Taylor_Cowley/seven_seg_decode.vhd" 2016/01/22.17:31:25 P.20131013
+EN work/seven_seg_decode 1453509494 \
+      FL "//fs-caedm/tcowley0/EE 320/Lab3_EE320_Taylor_Cowley/seven_seg_decode.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/seven_seg_decode/concurrent 1453509495 \
+      FL "//fs-caedm/tcowley0/EE 320/Lab3_EE320_Taylor_Cowley/seven_seg_decode.vhd" \
+      EN work/seven_seg_decode 1453509494

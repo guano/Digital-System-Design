@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "J:/EE 320/Lab3_EE320_Taylor_Cowley/seven_seg_decode.xst" -ofn "J:/EE 320/Lab3_EE320_Taylor_Cowley/seven_seg_decode.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Spartan3EMaster.ucf -p xc3s500e-fg320-4 "seven_seg_decode.ngc" seven_seg_decode.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o seven_seg_decode_map.ncd seven_seg_decode.ngd seven_seg_decode.pcf 
+par -w -intstyle ise -ol high -t 1 seven_seg_decode_map.ncd seven_seg_decode.ncd seven_seg_decode.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml seven_seg_decode.twx seven_seg_decode.ncd -o seven_seg_decode.twr seven_seg_decode.pcf -ucf Spartan3EMaster.ucf 
+bitgen -intstyle ise -f seven_seg_decode.ut seven_seg_decode.ncd 

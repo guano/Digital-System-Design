@@ -1,0 +1,2 @@
+vhdl isim_temp "seven_seg_decode.vhd"
+vhdl isim_temp "seven_seg_decode_testbench.vhd"

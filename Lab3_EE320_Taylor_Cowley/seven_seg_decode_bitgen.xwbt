@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=J:\EE 320\Lab3_EE320_Taylor_Cowley\seven_seg_decode.ncd
+OUTFILE=J:\EE 320\Lab3_EE320_Taylor_Cowley\seven_seg_decode.bit
+FAMILY=Spartan3E
+PART=xc3s500e-4fg320
+WORKINGDIR=J:\EE 320\Lab3_EE320_Taylor_Cowley
+LICENSE=ISE
+USER_INFO=174672765_175170704_210573231_041

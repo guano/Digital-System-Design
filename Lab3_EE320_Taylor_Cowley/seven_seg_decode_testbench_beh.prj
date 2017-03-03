@@ -1,0 +1,2 @@
+vhdl work "seven_seg_decode.vhd"
+vhdl work "seven_seg_decode_testbench.vhd"
