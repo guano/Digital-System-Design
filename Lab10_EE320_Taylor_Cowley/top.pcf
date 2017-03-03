@@ -1,0 +1,107 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Thu Mar 17 17:52:40 2016
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "an<0>" LOCATE = SITE "F17" LEVEL 1;
+COMP "an<1>" LOCATE = SITE "H17" LEVEL 1;
+COMP "an<2>" LOCATE = SITE "C18" LEVEL 1;
+COMP "led<0>" LOCATE = SITE "J14" LEVEL 1;
+COMP "btn<0>" LOCATE = SITE "B18" LEVEL 1;
+COMP "an<3>" LOCATE = SITE "F15" LEVEL 1;
+COMP "dp" LOCATE = SITE "C17" LEVEL 1;
+COMP "led<1>" LOCATE = SITE "J15" LEVEL 1;
+COMP "btn<1>" LOCATE = SITE "D18" LEVEL 1;
+COMP "led<2>" LOCATE = SITE "K15" LEVEL 1;
+COMP "clk" LOCATE = SITE "B8" LEVEL 1;
+COMP "btn<2>" LOCATE = SITE "E18" LEVEL 1;
+COMP "led<3>" LOCATE = SITE "K14" LEVEL 1;
+COMP "btn<3>" LOCATE = SITE "H13" LEVEL 1;
+COMP "led<4>" LOCATE = SITE "E17" LEVEL 1;
+COMP "led<5>" LOCATE = SITE "P15" LEVEL 1;
+COMP "led<6>" LOCATE = SITE "F4" LEVEL 1;
+COMP "led<7>" LOCATE = SITE "R4" LEVEL 1;
+COMP "vgaGreen<0>" LOCATE = SITE "N8" LEVEL 1;
+COMP "vgaGreen<1>" LOCATE = SITE "P8" LEVEL 1;
+COMP "vgaGreen<2>" LOCATE = SITE "P6" LEVEL 1;
+COMP "Hsync" LOCATE = SITE "T4" LEVEL 1;
+COMP "seg<0>" LOCATE = SITE "L18" LEVEL 1;
+COMP "seg<1>" LOCATE = SITE "F18" LEVEL 1;
+COMP "seg<2>" LOCATE = SITE "D17" LEVEL 1;
+COMP "sw<0>" LOCATE = SITE "G18" LEVEL 1;
+COMP "seg<3>" LOCATE = SITE "D16" LEVEL 1;
+COMP "sw<1>" LOCATE = SITE "H18" LEVEL 1;
+COMP "seg<4>" LOCATE = SITE "G14" LEVEL 1;
+COMP "sw<2>" LOCATE = SITE "K18" LEVEL 1;
+COMP "seg<5>" LOCATE = SITE "J17" LEVEL 1;
+COMP "sw<3>" LOCATE = SITE "K17" LEVEL 1;
+COMP "seg<6>" LOCATE = SITE "H14" LEVEL 1;
+COMP "sw<4>" LOCATE = SITE "L14" LEVEL 1;
+COMP "sw<5>" LOCATE = SITE "L13" LEVEL 1;
+COMP "Vsync" LOCATE = SITE "U3" LEVEL 1;
+COMP "vgaBlue<0>" LOCATE = SITE "U5" LEVEL 1;
+COMP "sw<6>" LOCATE = SITE "N17" LEVEL 1;
+COMP "vgaBlue<1>" LOCATE = SITE "U4" LEVEL 1;
+COMP "sw<7>" LOCATE = SITE "R17" LEVEL 1;
+COMP "vgaRed<0>" LOCATE = SITE "R9" LEVEL 1;
+COMP "vgaRed<1>" LOCATE = SITE "T8" LEVEL 1;
+COMP "vgaRed<2>" LOCATE = SITE "R8" LEVEL 1;
+NET "clk_BUFGP/IBUFG" BEL "clk_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+PIN yomama/char/Mram_char_ram1.A_pins<13> = BEL "yomama/char/Mram_char_ram1.A"
+        PINNAME CLKA;
+PIN yomama/char/Mram_char_ram1.B_pins<13> = BEL "yomama/char/Mram_char_ram1.B"
+        PINNAME CLKB;
+PIN yomama/char/Mram_char_ram2.A_pins<13> = BEL "yomama/char/Mram_char_ram2.A"
+        PINNAME CLKA;
+PIN yomama/char/Mram_char_ram2.B_pins<13> = BEL "yomama/char/Mram_char_ram2.B"
+        PINNAME CLKB;
+TIMEGRP clk = BEL "char_x_pos_next_0" BEL "char_x_pos_next_1" BEL
+        "char_x_pos_next_2" BEL "char_x_pos_next_3" BEL "char_x_pos_next_4"
+        BEL "char_x_pos_next_5" BEL "char_x_pos_next_6" BEL "char_we_next" BEL
+        "char_y_pos_next_0" BEL "char_y_pos_next_1" BEL "char_y_pos_next_2"
+        BEL "char_y_pos_next_3" BEL "char_y_pos_next_4" BEL "btn_out_0" BEL
+        "btn_out_1" BEL "btn_out_2" BEL "btn_out_3" BEL "char_y_pos_0" BEL
+        "char_y_pos_1" BEL "char_y_pos_2" BEL "char_y_pos_3" BEL
+        "char_y_pos_4" BEL "btn_hold_next" BEL "char_we" BEL "char_x_pos_0"
+        BEL "char_x_pos_1" BEL "char_x_pos_2" BEL "char_x_pos_3" BEL
+        "char_x_pos_4" BEL "char_x_pos_5" BEL "char_x_pos_6" BEL "btn_hold"
+        BEL "debounce_timer_0" BEL "debounce_timer_1" BEL "debounce_timer_2"
+        BEL "debounce_timer_3" BEL "debounce_timer_4" BEL "debounce_timer_5"
+        BEL "debounce_timer_6" BEL "debounce_timer_7" BEL "debounce_timer_8"
+        BEL "debounce_timer_9" BEL "debounce_timer_10" BEL "debounce_timer_11"
+        BEL "debounce_timer_12" BEL "debounce_timer_13" BEL
+        "debounce_timer_14" BEL "debounce_timer_15" BEL "debounce_timer_16"
+        BEL "debounce_timer_17" BEL "debounce_timer_18" BEL
+        "debounce_timer_19" BEL "YEAH_CONTROL/counter_0" BEL
+        "YEAH_CONTROL/counter_1" BEL "YEAH_CONTROL/counter_2" BEL
+        "YEAH_CONTROL/counter_3" BEL "YEAH_CONTROL/counter_4" BEL
+        "YEAH_CONTROL/counter_5" BEL "YEAH_CONTROL/counter_6" BEL
+        "YEAH_CONTROL/counter_7" BEL "YEAH_CONTROL/counter_8" BEL
+        "YEAH_CONTROL/counter_9" BEL "YEAH_CONTROL/counter_10" BEL
+        "YEAH_CONTROL/counter_11" BEL "YEAH_CONTROL/counter_12" BEL
+        "YEAH_CONTROL/counter_13" BEL "YEAH_CONTROL/counter_14" BEL
+        "vga_timer/column_counter_9" BEL "vga_timer/column_counter_8" BEL
+        "vga_timer/column_counter_7" BEL "vga_timer/column_counter_6" BEL
+        "vga_timer/column_counter_5" BEL "vga_timer/column_counter_4" BEL
+        "vga_timer/column_counter_3" BEL "vga_timer/column_counter_2" BEL
+        "vga_timer/column_counter_1" BEL "vga_timer/column_counter_0" BEL
+        "vga_timer/row_counter_9" BEL "vga_timer/row_counter_8" BEL
+        "vga_timer/row_counter_7" BEL "vga_timer/row_counter_6" BEL
+        "vga_timer/row_counter_5" BEL "vga_timer/row_counter_4" BEL
+        "vga_timer/row_counter_3" BEL "vga_timer/row_counter_2" BEL
+        "vga_timer/row_counter_1" BEL "vga_timer/row_counter_0" BEL
+        "vga_timer/blank_y" BEL "vga_timer/HS" BEL "vga_timer/pixel_en" BEL
+        "vga_timer/blank_x" BEL "vga_timer/VS" PIN
+        "yomama/char/Mram_char_ram1.A_pins<13>" PIN
+        "yomama/char/Mram_char_ram1.B_pins<13>" PIN
+        "yomama/char/Mram_char_ram2.A_pins<13>" PIN
+        "yomama/char/Mram_char_ram2.B_pins<13>" BEL
+        "yomama/font/Mrom_data_rom0000.A" BEL
+        "yomama/Mshreg_pixel_x_2_2/SRL16E" BEL "yomama/pixel_x_2_2" BEL
+        "Mshreg_VS2/SRL16E" BEL "VS2" BEL "Mshreg_HS2/SRL16E" BEL "HS2" BEL
+        "yomama/Mshreg_pixel_x_2_1/SRL16E" BEL "yomama/pixel_x_2_1" BEL
+        "yomama/Mshreg_pixel_x_2_0/SRL16E" BEL "yomama/pixel_x_2_0" BEL
+        "clk_BUFGP/BUFG.GCLKMUX" BEL "clk_BUFGP/BUFG";
+TS_clk = PERIOD TIMEGRP "clk" 20 ns HIGH 50%;
+SCHEMATIC END;
+

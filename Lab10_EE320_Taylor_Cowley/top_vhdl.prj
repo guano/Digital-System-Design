@@ -1,0 +1,6 @@
+vhdl work "\\fs-caedm\tcowley0\EE 320\Lab10_EE320_Taylor_Cowley\list_ch13_01_font_rom.vhd"
+vhdl work "\\fs-caedm\tcowley0\EE 320\Lab10_EE320_Taylor_Cowley\char_mem.vhd"
+vhdl work "\\fs-caedm\tcowley0\EE 320\Lab10_EE320_Taylor_Cowley\vga_timing.vhd"
+vhdl work "\\fs-caedm\tcowley0\EE 320\Lab10_EE320_Taylor_Cowley\seven_seg_control.vhd"
+vhdl work "\\fs-caedm\tcowley0\EE 320\Lab10_EE320_Taylor_Cowley\charGen.vhd"
+vhdl work "\\fs-caedm\tcowley0\EE 320\Lab10_EE320_Taylor_Cowley\top.vhd"

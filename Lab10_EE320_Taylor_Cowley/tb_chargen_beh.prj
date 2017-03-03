@@ -1,0 +1,4 @@
+vhdl work "list_ch13_01_font_rom.vhd"
+vhdl work "char_mem.vhd"
+vhdl work "charGen.vhd"
+vhdl work "tb_chargen.vhd"

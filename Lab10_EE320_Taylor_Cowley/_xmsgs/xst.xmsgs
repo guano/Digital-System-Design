@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="Xst" num="819" delta="old" >&quot;<arg fmt="%s" index="1">//fs-caedm/tcowley0/EE 320/Lab10_EE320_Taylor_Cowley/top.vhd</arg>&quot; line <arg fmt="%d" index="2">108</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+<arg fmt="%s" index="3">&lt;btn&gt;, &lt;btn_out&gt;</arg>
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">//fs-caedm/tcowley0/EE 320/Lab10_EE320_Taylor_Cowley/top.vhd</arg>&quot; line <arg fmt="%d" index="2">195</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">last_column</arg>&apos; of component &apos;<arg fmt="%s" index="4">vga_timing</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">//fs-caedm/tcowley0/EE 320/Lab10_EE320_Taylor_Cowley/top.vhd</arg>&quot; line <arg fmt="%d" index="2">195</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">last_row</arg>&apos; of component &apos;<arg fmt="%s" index="4">vga_timing</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">pixel_y&lt;9&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">pixel_x_2&lt;9:3&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">char_x_pixel</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">char_read_value&lt;7&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pixel_x_1_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">yomama</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pixel_x_1_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">yomama</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pixel_x_1_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">yomama</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pixel_x_1_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">yomama</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pixel_x_1_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">yomama</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pixel_x_1_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">yomama</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pixel_x_1_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">yomama</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pixel_x_2_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">yomama</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pixel_x_2_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">yomama</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pixel_x_2_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">yomama</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pixel_x_2_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">yomama</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pixel_x_2_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">yomama</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pixel_x_2_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">yomama</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pixel_x_2_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">yomama</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">Mram_char_ram</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3044" delta="old" >The ROM &lt;<arg fmt="%s" index="1">Mrom_data_rom0000</arg>&gt; will be implemented as a read-only BLOCK RAM, absorbing the register: &lt;<arg fmt="%s" index="2">addr_reg</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="3225" delta="old" >The RAM &lt;<arg fmt="%s" index="1">Mrom_data_rom0000</arg>&gt; will be implemented as BLOCK RAM
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pixel_x_1_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">charGen</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pixel_x_1_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">charGen</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pixel_x_1_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">charGen</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pixel_x_1_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">charGen</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pixel_x_1_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">charGen</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pixel_x_1_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">charGen</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pixel_x_1_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">charGen</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pixel_x_2_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">charGen</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pixel_x_2_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">charGen</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pixel_x_2_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">charGen</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pixel_x_2_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">charGen</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pixel_x_2_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">charGen</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pixel_x_2_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">charGen</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pixel_x_2_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">charGen</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">vga_timer/last_column</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">vga_timer/last_row</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">top</arg>&gt;.
+</msg>
+
+</messages>
+

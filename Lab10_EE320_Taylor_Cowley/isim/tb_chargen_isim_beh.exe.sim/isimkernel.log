@@ -1,0 +1,28 @@
+Command line:
+   tb_chargen_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  58900
+
+Thu Mar 17 17:50:36 2016
+
+
+ Elaboration Time: 0.234001 sec
+
+ Current Memory Usage: 1504.42 Meg
+
+ Total Signals          : 50
+ Total Nets             : 33025
+ Total Signal Drivers   : 30
+ Total Blocks           : 9
+ Total Primitive Blocks : 7
+ Total Processes        : 17
+ Total Traceable Variables  : 27
+ Total Scalar Nets and Variables : 66806
+
+ Total Simulation Time: 2.65202 sec
+
+ Current Memory Usage: 717.955 Meg
+
+Thu Mar 17 17:58:39 2016
+

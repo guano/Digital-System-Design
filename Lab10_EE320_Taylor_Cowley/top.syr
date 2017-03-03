@@ -1,0 +1,666 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.18 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.19 secs
+ 
+--> Reading design: top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "top.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "top"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "//fs-caedm/tcowley0/EE 320/Lab10_EE320_Taylor_Cowley/list_ch13_01_font_rom.vhd" in Library work.
+Architecture arch of Entity font_rom is up to date.
+Compiling vhdl file "//fs-caedm/tcowley0/EE 320/Lab10_EE320_Taylor_Cowley/char_mem.vhd" in Library work.
+Architecture arch of Entity char_mem is up to date.
+Compiling vhdl file "//fs-caedm/tcowley0/EE 320/Lab10_EE320_Taylor_Cowley/charGen.vhd" in Library work.
+Architecture taylor of Entity chargen is up to date.
+Compiling vhdl file "//fs-caedm/tcowley0/EE 320/Lab10_EE320_Taylor_Cowley/vga_timing.vhd" in Library work.
+Architecture behavioral of Entity vga_timing is up to date.
+Compiling vhdl file "//fs-caedm/tcowley0/EE 320/Lab10_EE320_Taylor_Cowley/seven_seg_control.vhd" in Library work.
+Architecture best of Entity seven_segment_control is up to date.
+Compiling vhdl file "//fs-caedm/tcowley0/EE 320/Lab10_EE320_Taylor_Cowley/top.vhd" in Library work.
+Entity <top> compiled.
+Entity <top> (Architecture <taylor>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <top> in library <work> (architecture <taylor>).
+
+Analyzing hierarchy for entity <charGen> in library <work> (architecture <taylor>).
+
+Analyzing hierarchy for entity <vga_timing> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <seven_segment_control> in library <work> (architecture <best>) with generics.
+	COUNTER_BITS = 15
+
+Analyzing hierarchy for entity <font_rom> in library <work> (architecture <arch>).
+
+Analyzing hierarchy for entity <char_mem> in library <work> (architecture <arch>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <top> in library <work> (Architecture <taylor>).
+WARNING:Xst:819 - "//fs-caedm/tcowley0/EE 320/Lab10_EE320_Taylor_Cowley/top.vhd" line 108: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <btn>, <btn_out>
+WARNING:Xst:753 - "//fs-caedm/tcowley0/EE 320/Lab10_EE320_Taylor_Cowley/top.vhd" line 195: Unconnected output port 'last_column' of component 'vga_timing'.
+WARNING:Xst:753 - "//fs-caedm/tcowley0/EE 320/Lab10_EE320_Taylor_Cowley/top.vhd" line 195: Unconnected output port 'last_row' of component 'vga_timing'.
+Entity <top> analyzed. Unit <top> generated.
+
+Analyzing Entity <charGen> in library <work> (Architecture <taylor>).
+Entity <charGen> analyzed. Unit <charGen> generated.
+
+Analyzing Entity <font_rom> in library <work> (Architecture <arch>).
+Entity <font_rom> analyzed. Unit <font_rom> generated.
+
+Analyzing Entity <char_mem> in library <work> (Architecture <arch>).
+Entity <char_mem> analyzed. Unit <char_mem> generated.
+
+Analyzing Entity <vga_timing> in library <work> (Architecture <behavioral>).
+Entity <vga_timing> analyzed. Unit <vga_timing> generated.
+
+Analyzing generic Entity <seven_segment_control> in library <work> (Architecture <best>).
+	COUNTER_BITS = 15
+Entity <seven_segment_control> analyzed. Unit <seven_segment_control> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <vga_timing>.
+    Related source file is "//fs-caedm/tcowley0/EE 320/Lab10_EE320_Taylor_Cowley/vga_timing.vhd".
+    Found 1-bit register for signal <last_row>.
+    Found 1-bit register for signal <last_column>.
+    Found 1-bit register for signal <HS>.
+    Found 1-bit register for signal <VS>.
+    Found 1-bit register for signal <blank_x>.
+    Found 1-bit register for signal <blank_y>.
+    Found 10-bit up counter for signal <column_counter>.
+    Found 1-bit register for signal <pixel_en>.
+    Found 10-bit up counter for signal <row_counter>.
+    Summary:
+	inferred   2 Counter(s).
+	inferred   7 D-type flip-flop(s).
+Unit <vga_timing> synthesized.
+
+
+Synthesizing Unit <seven_segment_control>.
+    Related source file is "//fs-caedm/tcowley0/EE 320/Lab10_EE320_Taylor_Cowley/seven_seg_control.vhd".
+    Found 16x7-bit ROM for signal <seg>.
+    Found 15-bit up counter for signal <counter>.
+    Found 4-bit 4-to-1 multiplexer for signal <decode_THIS>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   1 Counter(s).
+	inferred   4 Multiplexer(s).
+Unit <seven_segment_control> synthesized.
+
+
+Synthesizing Unit <font_rom>.
+    Related source file is "//fs-caedm/tcowley0/EE 320/Lab10_EE320_Taylor_Cowley/list_ch13_01_font_rom.vhd".
+    Found 2048x8-bit ROM for signal <data$rom0000> created at line 2213.
+    Found 11-bit register for signal <addr_reg>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred  11 D-type flip-flop(s).
+Unit <font_rom> synthesized.
+
+
+Synthesizing Unit <char_mem>.
+    Related source file is "//fs-caedm/tcowley0/EE 320/Lab10_EE320_Taylor_Cowley/char_mem.vhd".
+    Found 4096x8-bit dual-port RAM <Mram_char_ram> for signal <char_ram>.
+    Found 12-bit register for signal <read_a>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred  12 D-type flip-flop(s).
+Unit <char_mem> synthesized.
+
+
+Synthesizing Unit <charGen>.
+    Related source file is "//fs-caedm/tcowley0/EE 320/Lab10_EE320_Taylor_Cowley/charGen.vhd".
+WARNING:Xst:647 - Input <pixel_y<9>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:646 - Signal <pixel_x_2<9:3>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <char_x_pixel> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <char_read_value<7>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 1-bit 8-to-1 multiplexer for signal <pixel_out>.
+    Found 10-bit register for signal <pixel_x_1>.
+    Found 10-bit register for signal <pixel_x_2>.
+    Summary:
+	inferred  20 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <charGen> synthesized.
+
+
+Synthesizing Unit <top>.
+    Related source file is "//fs-caedm/tcowley0/EE 320/Lab10_EE320_Taylor_Cowley/top.vhd".
+    Found 1-bit register for signal <btn_hold>.
+    Found 1-bit register for signal <btn_hold_next>.
+    Found 4-bit register for signal <btn_out>.
+    Found 1-bit register for signal <char_we>.
+    Found 1-bit register for signal <char_we_next>.
+    Found 7-bit register for signal <char_x_pos>.
+    Found 7-bit register for signal <char_x_pos_next>.
+    Found 7-bit adder for signal <char_x_pos_next$addsub0000> created at line 166.
+    Found 7-bit comparator greatequal for signal <char_x_pos_next$cmp_ge0000> created at line 158.
+    Found 5-bit register for signal <char_y_pos>.
+    Found 5-bit register for signal <char_y_pos_next>.
+    Found 5-bit adder for signal <char_y_pos_next$addsub0000> created at line 163.
+    Found 5-bit comparator greatequal for signal <char_y_pos_next$cmp_ge0000> created at line 160.
+    Found 7-bit comparator less for signal <char_y_pos_next$cmp_lt0000> created at line 158.
+    Found 20-bit up counter for signal <debounce_timer>.
+    Found 4-bit comparator equal for signal <debounce_timer$cmp_eq0000> created at line 100.
+    Found 1-bit register for signal <HS1>.
+    Found 1-bit register for signal <HS2>.
+    Found 1-bit register for signal <VS1>.
+    Found 1-bit register for signal <VS2>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred  36 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred   4 Comparator(s).
+Unit <top> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 4096x8-bit dual-port RAM                              : 1
+# ROMs                                                 : 2
+ 16x7-bit ROM                                          : 1
+ 2048x8-bit ROM                                        : 1
+# Adders/Subtractors                                   : 2
+ 5-bit adder                                           : 1
+ 7-bit adder                                           : 1
+# Counters                                             : 4
+ 10-bit up counter                                     : 2
+ 15-bit up counter                                     : 1
+ 20-bit up counter                                     : 1
+# Registers                                            : 24
+ 1-bit register                                        : 15
+ 10-bit register                                       : 2
+ 11-bit register                                       : 1
+ 12-bit register                                       : 1
+ 4-bit register                                        : 1
+ 5-bit register                                        : 2
+ 7-bit register                                        : 2
+# Comparators                                          : 4
+ 4-bit comparator equal                                : 1
+ 5-bit comparator greatequal                           : 1
+ 7-bit comparator greatequal                           : 1
+ 7-bit comparator less                                 : 1
+# Multiplexers                                         : 2
+ 1-bit 8-to-1 multiplexer                              : 1
+ 4-bit 4-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:2677 - Node <pixel_x_1_3> of sequential type is unconnected in block <yomama>.
+WARNING:Xst:2677 - Node <pixel_x_1_4> of sequential type is unconnected in block <yomama>.
+WARNING:Xst:2677 - Node <pixel_x_1_5> of sequential type is unconnected in block <yomama>.
+WARNING:Xst:2677 - Node <pixel_x_1_6> of sequential type is unconnected in block <yomama>.
+WARNING:Xst:2677 - Node <pixel_x_1_7> of sequential type is unconnected in block <yomama>.
+WARNING:Xst:2677 - Node <pixel_x_1_8> of sequential type is unconnected in block <yomama>.
+WARNING:Xst:2677 - Node <pixel_x_1_9> of sequential type is unconnected in block <yomama>.
+WARNING:Xst:2677 - Node <pixel_x_2_3> of sequential type is unconnected in block <yomama>.
+WARNING:Xst:2677 - Node <pixel_x_2_4> of sequential type is unconnected in block <yomama>.
+WARNING:Xst:2677 - Node <pixel_x_2_5> of sequential type is unconnected in block <yomama>.
+WARNING:Xst:2677 - Node <pixel_x_2_6> of sequential type is unconnected in block <yomama>.
+WARNING:Xst:2677 - Node <pixel_x_2_7> of sequential type is unconnected in block <yomama>.
+WARNING:Xst:2677 - Node <pixel_x_2_8> of sequential type is unconnected in block <yomama>.
+WARNING:Xst:2677 - Node <pixel_x_2_9> of sequential type is unconnected in block <yomama>.
+
+Synthesizing (advanced) Unit <char_mem>.
+INFO:Xst:3226 - The RAM <Mram_char_ram> will be implemented as a BLOCK RAM, absorbing the following register(s): <read_a>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4096-word x 8-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <char_we>       | high     |
+    |     addrA          | connected to signal <char_write_addr> |          |
+    |     diA            | connected to signal <char_write_value> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 4096-word x 8-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <clk>           | rise     |
+    |     addrB          | connected to signal <char_read_addr> |          |
+    |     doB            | connected to signal <char_read_value> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <char_mem> synthesized (advanced).
+
+Synthesizing (advanced) Unit <font_rom>.
+INFO:Xst:3044 - The ROM <Mrom_data_rom0000> will be implemented as a read-only BLOCK RAM, absorbing the register: <addr_reg>.
+INFO:Xst:3225 - The RAM <Mrom_data_rom0000> will be implemented as BLOCK RAM
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 2048-word x 8-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <addr>          |          |
+    |     diA            | connected to internal node          |          |
+    |     doA            | connected to signal <data>          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <font_rom> synthesized (advanced).
+WARNING:Xst:2677 - Node <pixel_x_1_3> of sequential type is unconnected in block <charGen>.
+WARNING:Xst:2677 - Node <pixel_x_1_4> of sequential type is unconnected in block <charGen>.
+WARNING:Xst:2677 - Node <pixel_x_1_5> of sequential type is unconnected in block <charGen>.
+WARNING:Xst:2677 - Node <pixel_x_1_6> of sequential type is unconnected in block <charGen>.
+WARNING:Xst:2677 - Node <pixel_x_1_7> of sequential type is unconnected in block <charGen>.
+WARNING:Xst:2677 - Node <pixel_x_1_8> of sequential type is unconnected in block <charGen>.
+WARNING:Xst:2677 - Node <pixel_x_1_9> of sequential type is unconnected in block <charGen>.
+WARNING:Xst:2677 - Node <pixel_x_2_3> of sequential type is unconnected in block <charGen>.
+WARNING:Xst:2677 - Node <pixel_x_2_4> of sequential type is unconnected in block <charGen>.
+WARNING:Xst:2677 - Node <pixel_x_2_5> of sequential type is unconnected in block <charGen>.
+WARNING:Xst:2677 - Node <pixel_x_2_6> of sequential type is unconnected in block <charGen>.
+WARNING:Xst:2677 - Node <pixel_x_2_7> of sequential type is unconnected in block <charGen>.
+WARNING:Xst:2677 - Node <pixel_x_2_8> of sequential type is unconnected in block <charGen>.
+WARNING:Xst:2677 - Node <pixel_x_2_9> of sequential type is unconnected in block <charGen>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 2048x8-bit single-port block RAM                      : 1
+ 4096x8-bit dual-port block RAM                        : 1
+# ROMs                                                 : 1
+ 16x7-bit ROM                                          : 1
+# Adders/Subtractors                                   : 2
+ 5-bit adder                                           : 1
+ 7-bit adder                                           : 1
+# Counters                                             : 4
+ 10-bit up counter                                     : 2
+ 15-bit up counter                                     : 1
+ 20-bit up counter                                     : 1
+# Registers                                            : 49
+ Flip-Flops                                            : 49
+# Comparators                                          : 4
+ 4-bit comparator equal                                : 1
+ 5-bit comparator greatequal                           : 1
+ 7-bit comparator greatequal                           : 1
+ 7-bit comparator less                                 : 1
+# Multiplexers                                         : 2
+ 1-bit 8-to-1 multiplexer                              : 1
+ 4-bit 4-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <top> ...
+
+Optimizing unit <vga_timing> ...
+
+Optimizing unit <charGen> ...
+WARNING:Xst:2677 - Node <vga_timer/last_column> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <vga_timer/last_row> of sequential type is unconnected in block <top>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block top, actual ratio is 1.
+
+Final Macro Processing ...
+
+Processing Unit <top> :
+	Found 2-bit shift register for signal <VS2>.
+	Found 2-bit shift register for signal <HS2>.
+	Found 2-bit shift register for signal <yomama/pixel_x_2_2>.
+	Found 2-bit shift register for signal <yomama/pixel_x_2_1>.
+	Found 2-bit shift register for signal <yomama/pixel_x_2_0>.
+Unit <top> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 92
+ Flip-Flops                                            : 92
+# Shift Registers                                      : 5
+ 2-bit shift register                                  : 5
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : top.ngr
+Top Level Output File Name         : top
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 43
+
+Cell Usage :
+# BELS                             : 274
+#      GND                         : 1
+#      INV                         : 6
+#      LUT1                        : 51
+#      LUT2                        : 28
+#      LUT2_L                      : 3
+#      LUT3                        : 11
+#      LUT3_D                      : 3
+#      LUT3_L                      : 1
+#      LUT4                        : 46
+#      LUT4_D                      : 4
+#      LUT4_L                      : 5
+#      MUXCY                       : 56
+#      MUXF5                       : 2
+#      MUXF6                       : 1
+#      VCC                         : 1
+#      XORCY                       : 55
+# FlipFlops/Latches                : 97
+#      FD                          : 34
+#      FDC                         : 1
+#      FDCE                        : 22
+#      FDE                         : 16
+#      FDPE                        : 2
+#      FDR                         : 22
+# RAMS                             : 3
+#      RAMB16_S4_S4                : 2
+#      RAMB16_S9                   : 1
+# Shift Registers                  : 5
+#      SRL16                       : 5
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 42
+#      IBUF                        : 12
+#      OBUF                        : 30
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                       86  out of   4656     1%  
+ Number of Slice Flip Flops:             97  out of   9312     1%  
+ Number of 4 input LUTs:                163  out of   9312     1%  
+    Number used as logic:               158
+    Number used as Shift registers:       5
+ Number of IOs:                          43
+ Number of bonded IOBs:                  43  out of    232    18%  
+ Number of BRAMs:                         3  out of     20    15%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 105   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+btn<3>                             | IBUF                   | 25    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 5.582ns (Maximum Frequency: 179.147MHz)
+   Minimum input arrival time before clock: 6.574ns
+   Maximum output required time after clock: 9.972ns
+   Maximum combinational path delay: 7.811ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 5.582ns (frequency: 179.147MHz)
+  Total number of paths / destination ports: 1258 / 219
+-------------------------------------------------------------------------
+Delay:               5.582ns (Levels of Logic = 3)
+  Source:            vga_timer/column_counter_1 (FF)
+  Destination:       vga_timer/row_counter_9 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: vga_timer/column_counter_1 to vga_timer/row_counter_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             5   0.591   0.808  vga_timer/column_counter_1 (vga_timer/column_counter_1)
+     LUT3_D:I0->LO         1   0.704   0.104  vga_timer/column_counter_cmp_eq00001_SW0 (N38)
+     LUT4:I3->O            2   0.704   0.451  vga_timer/column_counter_cmp_eq00001 (vga_timer/last_column_and0000)
+     LUT4:I3->O           12   0.704   0.961  vga_timer/row_counter_not00011 (vga_timer/row_counter_not0001)
+     FDPE:CE                   0.555          vga_timer/VS
+    ----------------------------------------
+    Total                      5.582ns (3.258ns logic, 2.324ns route)
+                                       (58.4% logic, 41.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 92 / 32
+-------------------------------------------------------------------------
+Offset:              6.574ns (Levels of Logic = 3)
+  Source:            btn<3> (PAD)
+  Destination:       debounce_timer_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: btn<3> to debounce_timer_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            27   1.218   1.340  btn_3_IBUF (btn_3_IBUF)
+     LUT4:I1->O            1   0.704   0.595  debounce_timer_cmp_eq0000453 (debounce_timer_cmp_eq0000453)
+     LUT2:I0->O           20   0.704   1.102  debounce_timer_cmp_eq0000454 (debounce_timer_cmp_eq0000)
+     FDR:R                     0.911          debounce_timer_0
+    ----------------------------------------
+    Total                      6.574ns (3.537ns logic, 3.037ns route)
+                                       (53.8% logic, 46.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 198 / 19
+-------------------------------------------------------------------------
+Offset:              9.972ns (Levels of Logic = 5)
+  Source:            yomama/font/Mrom_data_rom0000 (RAM)
+  Destination:       vgaRed<0> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: yomama/font/Mrom_data_rom0000 to vgaRed<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB16_S9:CLK->DO7    1   2.800   0.499  yomama/font/Mrom_data_rom0000 (yomama/font_rom_data<7>)
+     LUT3:I1->O            1   0.704   0.000  yomama/Mmux_pixel_out_6 (yomama/Mmux_pixel_out_6)
+     MUXF5:I0->O           1   0.321   0.000  yomama/Mmux_pixel_out_4_f5 (yomama/Mmux_pixel_out_4_f5)
+     MUXF6:I0->O           2   0.521   0.482  yomama/Mmux_pixel_out_2_f6 (pixel_out)
+     LUT3:I2->O            6   0.704   0.669  vgaBlue_and00001 (vgaGreen_0_OBUF)
+     OBUF:I->O                 3.272          vgaRed_0_OBUF (vgaRed<0>)
+    ----------------------------------------
+    Total                      9.972ns (8.322ns logic, 1.650ns route)
+                                       (83.5% logic, 16.5% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 64 / 15
+-------------------------------------------------------------------------
+Delay:               7.811ns (Levels of Logic = 4)
+  Source:            sw<1> (PAD)
+  Destination:       seg<6> (PAD)
+
+  Data Path: sw<1> to seg<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   1.218   0.610  sw_1_IBUF (led_1_OBUF)
+     LUT4:I1->O            7   0.704   0.883  YEAH_CONTROL/Mmux_decode_THIS41 (YEAH_CONTROL/decode_THIS<1>)
+     LUT4:I0->O            1   0.704   0.420  YEAH_CONTROL/Mrom_seg21 (seg_2_OBUF)
+     OBUF:I->O                 3.272          seg_2_OBUF (seg<2>)
+    ----------------------------------------
+    Total                      7.811ns (5.898ns logic, 1.913ns route)
+                                       (75.5% logic, 24.5% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 10.00 secs
+Total CPU time to Xst completion: 10.32 secs
+ 
+--> 
+
+Total memory usage is 285328 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   37 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
+

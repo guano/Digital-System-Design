@@ -1,0 +1,85 @@
+
+Exercise 1
+
+Question: How many characters can be displayed on the 640 x 480 display using this font?
+2400 total characters
+
+Question: What are the character coordinates of the character associated with the pixel at location (279, 173)?
+34, 21
+
+Question: What is the position of this pixel within a character (i.e., what position is this pixel within a 8x16 character)?
+7, 5
+
+
+Exercise 2
+
+
+Question: How many bits are stored in the character memory?
+32768
+
+Question: What address of the character memory holds the value for the character located on the character display at (65, 17)?
+7 bits for row, 5 bits for column = 0b100000110001 = 0x831
+
+Question: What are the coordinates of the character stored at address 0xB8F in the character memory?
+92, 15
+
+Question: What is the default message that will be displayed on line 0? You will need to interpret the default ASCII values for line 0 to determine the text output.
+ Go Cougars!    
+
+Question: Summarize the timing of a read operation.
+Basically we give the Ram an address, and then on the next clock cycle it will give us the value. It is significantly faster than a SRAM or a DRAM because we are probably just using a lookup table
+
+Question: Provide a VHDL statement that will determine the char_read_addr input based on the pixel_x and pixel_y signals (i.e., char_read_addr <= [fill in the blank using pixel_x and pixel_y])
+char_read_addr <= pixel_x(9 downto 3) & pixel_y(8 downto 4);
+
+Exercise 3
+
+Question: How wide, in bits, is each word of this ROM?
+8 bits
+
+Question: How many words are there in this ROM?
+2048
+
+Question: What is the total size, in bits, of this ROM?
+16384
+
+Question: What is the value of the word at address 0x32a in this ROM?
+0x32a : 11000110
+
+Question: What character is associated with address 0x32a in this ROM?
+2
+
+Question: What addresses in the font ROM store the contents for the character ‘A’?
+0x410-0x41f
+
+Question: Provide a VHDL statement that will determine the address input to the font ROM. Your statement should use the character read from the character memory AND the pixel_y signal. (i.e., font_rom_addr <= <fill in the blank>).
+font_rom_addr <= character_read_value & pixel_y(3 downto 0);
+
+
+
+
+Exercise 4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,479 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 4
+-n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf
+Spartan3EMaster.ucf
+
+Design file:              top.ncd
+Physical constraint file: top.pcf
+Device,package,speed:     xc3s500e,fg320,-4 (PRODUCTION 1.27 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+================================================================================
+Timing constraint: TS_clk = PERIOD TIMEGRP "clk" 20 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 1253 paths analyzed, 325 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   5.696ns.
+--------------------------------------------------------------------------------
+
+Paths for end point debounce_timer_8 (SLICE_X53Y86.SR), 4 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     14.304ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               btn_out_2 (FF)
+  Destination:          debounce_timer_8 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.666ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.030ns (0.029 - 0.059)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: btn_out_2 to debounce_timer_8
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X65Y80.YQ      Tcko                  0.587   btn_out<3>
+                                                       btn_out_2
+    SLICE_X64Y80.F1      net (fanout=1)        0.460   btn_out<2>
+    SLICE_X64Y80.X       Tilo                  0.759   debounce_timer_cmp_eq0000453
+                                                       debounce_timer_cmp_eq0000453
+    SLICE_X65Y78.F1      net (fanout=1)        0.445   debounce_timer_cmp_eq0000453
+    SLICE_X65Y78.X       Tilo                  0.704   debounce_timer_cmp_eq0000
+                                                       debounce_timer_cmp_eq0000454
+    SLICE_X53Y86.SR      net (fanout=10)       1.801   debounce_timer_cmp_eq0000
+    SLICE_X53Y86.CLK     Tsrck                 0.910   debounce_timer<8>
+                                                       debounce_timer_8
+    -------------------------------------------------  ---------------------------
+    Total                                      5.666ns (2.960ns logic, 2.706ns route)
+                                                       (52.2% logic, 47.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     14.396ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               btn_out_3 (FF)
+  Destination:          debounce_timer_8 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.574ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.030ns (0.029 - 0.059)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: btn_out_3 to debounce_timer_8
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X65Y80.XQ      Tcko                  0.591   btn_out<3>
+                                                       btn_out_3
+    SLICE_X64Y80.F4      net (fanout=1)        0.364   btn_out<3>
+    SLICE_X64Y80.X       Tilo                  0.759   debounce_timer_cmp_eq0000453
+                                                       debounce_timer_cmp_eq0000453
+    SLICE_X65Y78.F1      net (fanout=1)        0.445   debounce_timer_cmp_eq0000453
+    SLICE_X65Y78.X       Tilo                  0.704   debounce_timer_cmp_eq0000
+                                                       debounce_timer_cmp_eq0000454
+    SLICE_X53Y86.SR      net (fanout=10)       1.801   debounce_timer_cmp_eq0000
+    SLICE_X53Y86.CLK     Tsrck                 0.910   debounce_timer<8>
+                                                       debounce_timer_8
+    -------------------------------------------------  ---------------------------
+    Total                                      5.574ns (2.964ns logic, 2.610ns route)
+                                                       (53.2% logic, 46.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     14.549ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               btn_out_0 (FF)
+  Destination:          debounce_timer_8 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.424ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.027ns (0.029 - 0.056)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: btn_out_0 to debounce_timer_8
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X64Y78.YQ      Tcko                  0.652   btn_out<1>
+                                                       btn_out_0
+    SLICE_X65Y78.G3      net (fanout=5)        0.630   btn_out<0>
+    SLICE_X65Y78.Y       Tilo                  0.704   debounce_timer_cmp_eq0000
+                                                       debounce_timer_cmp_eq0000426
+    SLICE_X65Y78.F3      net (fanout=1)        0.023   debounce_timer_cmp_eq0000426/O
+    SLICE_X65Y78.X       Tilo                  0.704   debounce_timer_cmp_eq0000
+                                                       debounce_timer_cmp_eq0000454
+    SLICE_X53Y86.SR      net (fanout=10)       1.801   debounce_timer_cmp_eq0000
+    SLICE_X53Y86.CLK     Tsrck                 0.910   debounce_timer<8>
+                                                       debounce_timer_8
+    -------------------------------------------------  ---------------------------
+    Total                                      5.424ns (2.970ns logic, 2.454ns route)
+                                                       (54.8% logic, 45.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point debounce_timer_9 (SLICE_X53Y86.SR), 4 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     14.304ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               btn_out_2 (FF)
+  Destination:          debounce_timer_9 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.666ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.030ns (0.029 - 0.059)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: btn_out_2 to debounce_timer_9
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X65Y80.YQ      Tcko                  0.587   btn_out<3>
+                                                       btn_out_2
+    SLICE_X64Y80.F1      net (fanout=1)        0.460   btn_out<2>
+    SLICE_X64Y80.X       Tilo                  0.759   debounce_timer_cmp_eq0000453
+                                                       debounce_timer_cmp_eq0000453
+    SLICE_X65Y78.F1      net (fanout=1)        0.445   debounce_timer_cmp_eq0000453
+    SLICE_X65Y78.X       Tilo                  0.704   debounce_timer_cmp_eq0000
+                                                       debounce_timer_cmp_eq0000454
+    SLICE_X53Y86.SR      net (fanout=10)       1.801   debounce_timer_cmp_eq0000
+    SLICE_X53Y86.CLK     Tsrck                 0.910   debounce_timer<8>
+                                                       debounce_timer_9
+    -------------------------------------------------  ---------------------------
+    Total                                      5.666ns (2.960ns logic, 2.706ns route)
+                                                       (52.2% logic, 47.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     14.396ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               btn_out_3 (FF)
+  Destination:          debounce_timer_9 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.574ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.030ns (0.029 - 0.059)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: btn_out_3 to debounce_timer_9
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X65Y80.XQ      Tcko                  0.591   btn_out<3>
+                                                       btn_out_3
+    SLICE_X64Y80.F4      net (fanout=1)        0.364   btn_out<3>
+    SLICE_X64Y80.X       Tilo                  0.759   debounce_timer_cmp_eq0000453
+                                                       debounce_timer_cmp_eq0000453
+    SLICE_X65Y78.F1      net (fanout=1)        0.445   debounce_timer_cmp_eq0000453
+    SLICE_X65Y78.X       Tilo                  0.704   debounce_timer_cmp_eq0000
+                                                       debounce_timer_cmp_eq0000454
+    SLICE_X53Y86.SR      net (fanout=10)       1.801   debounce_timer_cmp_eq0000
+    SLICE_X53Y86.CLK     Tsrck                 0.910   debounce_timer<8>
+                                                       debounce_timer_9
+    -------------------------------------------------  ---------------------------
+    Total                                      5.574ns (2.964ns logic, 2.610ns route)
+                                                       (53.2% logic, 46.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     14.549ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               btn_out_0 (FF)
+  Destination:          debounce_timer_9 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.424ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.027ns (0.029 - 0.056)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: btn_out_0 to debounce_timer_9
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X64Y78.YQ      Tcko                  0.652   btn_out<1>
+                                                       btn_out_0
+    SLICE_X65Y78.G3      net (fanout=5)        0.630   btn_out<0>
+    SLICE_X65Y78.Y       Tilo                  0.704   debounce_timer_cmp_eq0000
+                                                       debounce_timer_cmp_eq0000426
+    SLICE_X65Y78.F3      net (fanout=1)        0.023   debounce_timer_cmp_eq0000426/O
+    SLICE_X65Y78.X       Tilo                  0.704   debounce_timer_cmp_eq0000
+                                                       debounce_timer_cmp_eq0000454
+    SLICE_X53Y86.SR      net (fanout=10)       1.801   debounce_timer_cmp_eq0000
+    SLICE_X53Y86.CLK     Tsrck                 0.910   debounce_timer<8>
+                                                       debounce_timer_9
+    -------------------------------------------------  ---------------------------
+    Total                                      5.424ns (2.970ns logic, 2.454ns route)
+                                                       (54.8% logic, 45.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point debounce_timer_10 (SLICE_X53Y87.SR), 4 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     14.304ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               btn_out_2 (FF)
+  Destination:          debounce_timer_10 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.666ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.030ns (0.029 - 0.059)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: btn_out_2 to debounce_timer_10
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X65Y80.YQ      Tcko                  0.587   btn_out<3>
+                                                       btn_out_2
+    SLICE_X64Y80.F1      net (fanout=1)        0.460   btn_out<2>
+    SLICE_X64Y80.X       Tilo                  0.759   debounce_timer_cmp_eq0000453
+                                                       debounce_timer_cmp_eq0000453
+    SLICE_X65Y78.F1      net (fanout=1)        0.445   debounce_timer_cmp_eq0000453
+    SLICE_X65Y78.X       Tilo                  0.704   debounce_timer_cmp_eq0000
+                                                       debounce_timer_cmp_eq0000454
+    SLICE_X53Y87.SR      net (fanout=10)       1.801   debounce_timer_cmp_eq0000
+    SLICE_X53Y87.CLK     Tsrck                 0.910   debounce_timer<10>
+                                                       debounce_timer_10
+    -------------------------------------------------  ---------------------------
+    Total                                      5.666ns (2.960ns logic, 2.706ns route)
+                                                       (52.2% logic, 47.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     14.396ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               btn_out_3 (FF)
+  Destination:          debounce_timer_10 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.574ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.030ns (0.029 - 0.059)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: btn_out_3 to debounce_timer_10
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X65Y80.XQ      Tcko                  0.591   btn_out<3>
+                                                       btn_out_3
+    SLICE_X64Y80.F4      net (fanout=1)        0.364   btn_out<3>
+    SLICE_X64Y80.X       Tilo                  0.759   debounce_timer_cmp_eq0000453
+                                                       debounce_timer_cmp_eq0000453
+    SLICE_X65Y78.F1      net (fanout=1)        0.445   debounce_timer_cmp_eq0000453
+    SLICE_X65Y78.X       Tilo                  0.704   debounce_timer_cmp_eq0000
+                                                       debounce_timer_cmp_eq0000454
+    SLICE_X53Y87.SR      net (fanout=10)       1.801   debounce_timer_cmp_eq0000
+    SLICE_X53Y87.CLK     Tsrck                 0.910   debounce_timer<10>
+                                                       debounce_timer_10
+    -------------------------------------------------  ---------------------------
+    Total                                      5.574ns (2.964ns logic, 2.610ns route)
+                                                       (53.2% logic, 46.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     14.549ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               btn_out_0 (FF)
+  Destination:          debounce_timer_10 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.424ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.027ns (0.029 - 0.056)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: btn_out_0 to debounce_timer_10
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X64Y78.YQ      Tcko                  0.652   btn_out<1>
+                                                       btn_out_0
+    SLICE_X65Y78.G3      net (fanout=5)        0.630   btn_out<0>
+    SLICE_X65Y78.Y       Tilo                  0.704   debounce_timer_cmp_eq0000
+                                                       debounce_timer_cmp_eq0000426
+    SLICE_X65Y78.F3      net (fanout=1)        0.023   debounce_timer_cmp_eq0000426/O
+    SLICE_X65Y78.X       Tilo                  0.704   debounce_timer_cmp_eq0000
+                                                       debounce_timer_cmp_eq0000454
+    SLICE_X53Y87.SR      net (fanout=10)       1.801   debounce_timer_cmp_eq0000
+    SLICE_X53Y87.CLK     Tsrck                 0.910   debounce_timer<10>
+                                                       debounce_timer_10
+    -------------------------------------------------  ---------------------------
+    Total                                      5.424ns (2.970ns logic, 2.454ns route)
+                                                       (54.8% logic, 45.2% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_clk = PERIOD TIMEGRP "clk" 20 ns HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point char_x_pos_1 (SLICE_X55Y56.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.931ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               char_x_pos_next_1 (FF)
+  Destination:          char_x_pos_1 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.931ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 20.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: char_x_pos_next_1 to char_x_pos_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X54Y57.XQ      Tcko                  0.474   char_x_pos_next<1>
+                                                       char_x_pos_next_1
+    SLICE_X55Y56.BX      net (fanout=1)        0.364   char_x_pos_next<1>
+    SLICE_X55Y56.CLK     Tckdi       (-Th)    -0.093   char_x_pos<1>
+                                                       char_x_pos_1
+    -------------------------------------------------  ---------------------------
+    Total                                      0.931ns (0.567ns logic, 0.364ns route)
+                                                       (60.9% logic, 39.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point char_x_pos_5 (SLICE_X54Y51.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.958ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               char_x_pos_next_5 (FF)
+  Destination:          char_x_pos_5 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.960ns (Levels of Logic = 0)
+  Clock Path Skew:      0.002ns (0.017 - 0.015)
+  Source Clock:         clk_BUFGP rising at 20.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: char_x_pos_next_5 to char_x_pos_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X55Y52.XQ      Tcko                  0.473   char_x_pos_next<5>
+                                                       char_x_pos_next_5
+    SLICE_X54Y51.BX      net (fanout=1)        0.353   char_x_pos_next<5>
+    SLICE_X54Y51.CLK     Tckdi       (-Th)    -0.134   char_x_pos<5>
+                                                       char_x_pos_5
+    -------------------------------------------------  ---------------------------
+    Total                                      0.960ns (0.607ns logic, 0.353ns route)
+                                                       (63.2% logic, 36.8% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point char_y_pos_1 (SLICE_X54Y52.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.972ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               char_y_pos_next_1 (FF)
+  Destination:          char_y_pos_1 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.972ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 20.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: char_y_pos_next_1 to char_y_pos_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X54Y53.XQ      Tcko                  0.474   char_y_pos_next<1>
+                                                       char_y_pos_next_1
+    SLICE_X54Y52.BX      net (fanout=1)        0.364   char_y_pos_next<1>
+    SLICE_X54Y52.CLK     Tckdi       (-Th)    -0.134   char_y_pos<1>
+                                                       char_y_pos_1
+    -------------------------------------------------  ---------------------------
+    Total                                      0.972ns (0.608ns logic, 0.364ns route)
+                                                       (62.6% logic, 37.4% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_clk = PERIOD TIMEGRP "clk" 20 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 16.808ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 20.000ns
+  Low pulse: 10.000ns
+  Low pulse limit: 1.596ns (Trpw)
+  Physical resource: vga_timer/blank_x/SR
+  Logical resource: vga_timer/blank_x/SR
+  Location pin: SLICE_X46Y40.SR
+  Clock network: btn_3_IBUF
+--------------------------------------------------------------------------------
+Slack: 16.808ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 10.000ns
+  High pulse limit: 1.596ns (Trpw)
+  Physical resource: vga_timer/blank_x/SR
+  Logical resource: vga_timer/blank_x/SR
+  Location pin: SLICE_X46Y40.SR
+  Clock network: btn_3_IBUF
+--------------------------------------------------------------------------------
+Slack: 16.808ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 20.000ns
+  Low pulse: 10.000ns
+  Low pulse limit: 1.596ns (Trpw)
+  Physical resource: vga_timer/VS/SR
+  Logical resource: vga_timer/VS/SR
+  Location pin: SLICE_X46Y42.SR
+  Clock network: btn_3_IBUF
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    5.696|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 1253 paths, 0 nets, and 525 connections
+
+Design statistics:
+   Minimum period:   5.696ns{1}   (Maximum frequency: 175.562MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Thu Mar 17 17:53:19 2016 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 170 MB
+
+
+

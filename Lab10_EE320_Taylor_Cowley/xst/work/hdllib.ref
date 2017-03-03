@@ -1,0 +1,12 @@
+AR char_mem arch "//fs-caedm/tcowley0/EE 320/Lab10_EE320_Taylor_Cowley/char_mem.vhd" sub00/vhpl03 1458258735
+AR top taylor "//fs-caedm/tcowley0/EE 320/Lab10_EE320_Taylor_Cowley/top.vhd" sub00/vhpl11 1458258743
+EN chargen NULL "//fs-caedm/tcowley0/EE 320/Lab10_EE320_Taylor_Cowley/charGen.vhd" sub00/vhpl04 1458258736
+AR seven_segment_control best "//fs-caedm/tcowley0/EE 320/Lab10_EE320_Taylor_Cowley/seven_seg_control.vhd" sub00/vhpl09 1458258741
+EN seven_segment_control NULL "//fs-caedm/tcowley0/EE 320/Lab10_EE320_Taylor_Cowley/seven_seg_control.vhd" sub00/vhpl08 1458258740
+EN top NULL "//fs-caedm/tcowley0/EE 320/Lab10_EE320_Taylor_Cowley/top.vhd" sub00/vhpl10 1458258742
+EN vga_timing NULL "//fs-caedm/tcowley0/EE 320/Lab10_EE320_Taylor_Cowley/vga_timing.vhd" sub00/vhpl06 1458258738
+AR font_rom arch "//fs-caedm/tcowley0/EE 320/Lab10_EE320_Taylor_Cowley/list_ch13_01_font_rom.vhd" sub00/vhpl01 1458258733
+EN font_rom NULL "//fs-caedm/tcowley0/EE 320/Lab10_EE320_Taylor_Cowley/list_ch13_01_font_rom.vhd" sub00/vhpl00 1458258732
+AR vga_timing behavioral "//fs-caedm/tcowley0/EE 320/Lab10_EE320_Taylor_Cowley/vga_timing.vhd" sub00/vhpl07 1458258739
+EN char_mem NULL "//fs-caedm/tcowley0/EE 320/Lab10_EE320_Taylor_Cowley/char_mem.vhd" sub00/vhpl02 1458258734
+AR chargen taylor "//fs-caedm/tcowley0/EE 320/Lab10_EE320_Taylor_Cowley/charGen.vhd" sub00/vhpl05 1458258737

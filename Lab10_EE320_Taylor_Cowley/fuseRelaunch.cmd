@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "J:/EE 320/Lab10_EE320_Taylor_Cowley/tb_chargen_isim_beh.exe" -prj "J:/EE 320/Lab10_EE320_Taylor_Cowley/tb_chargen_beh.prj" "work.tb_chargen" 
