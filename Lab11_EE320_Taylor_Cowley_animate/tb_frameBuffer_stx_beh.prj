@@ -1,0 +1,5 @@
+vhdl isim_temp "vga_timing.vhd"
+vhdl isim_temp "sramController.vhd"
+vhdl isim_temp "frameBuffer.vhd"
+vhdl isim_temp "tb_frameBuffer.vhd"
+verilog isim_temp "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

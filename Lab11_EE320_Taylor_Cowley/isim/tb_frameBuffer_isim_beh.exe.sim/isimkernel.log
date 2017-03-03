@@ -1,0 +1,28 @@
+Command line:
+   tb_frameBuffer_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  58470
+
+Thu Mar 24 16:38:23 2016
+
+
+ Elaboration Time: 0.156001 sec
+
+ Current Memory Usage: 1317.13 Meg
+
+ Total Signals          : 214
+ Total Nets             : 636
+ Total Signal Drivers   : 129
+ Total Blocks           : 21
+ Total Primitive Blocks : 15
+ Total Processes        : 129
+ Total Traceable Variables  : 306
+ Total Scalar Nets and Variables : 23267
+
+ Total Simulation Time: 39.5307 sec
+
+ Current Memory Usage: 687.948 Meg
+
+Thu Mar 24 17:18:22 2016
+

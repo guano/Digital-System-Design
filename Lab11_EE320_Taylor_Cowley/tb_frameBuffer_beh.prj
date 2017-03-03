@@ -1,0 +1,6 @@
+vhdl work "vga_timing.vhd"
+vhdl work "sramController.vhd"
+vhdl work "frameBuffer.vhd"
+verilog work "cellram_checker.v"
+vhdl work "tb_frameBuffer.vhd"
+verilog work "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

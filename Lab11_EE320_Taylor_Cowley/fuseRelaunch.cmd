@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "J:/EE 320/Lab11_EE320_Taylor_Cowley/tb_frameBuffer_isim_beh.exe" -prj "J:/EE 320/Lab11_EE320_Taylor_Cowley/tb_frameBuffer_beh.prj" "work.tb_frameBuffer" "work.glbl" 

@@ -1,0 +1,3 @@
+vhdl work "../Lab9_EE320_Taylor_Cowley/seven_seg_control.vhd"
+vhdl work "sramController.vhd"
+vhdl work "memory_top.vhd"

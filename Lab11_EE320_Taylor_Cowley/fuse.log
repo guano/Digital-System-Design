@@ -1,0 +1,32 @@
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "J:/EE 320/Lab11_EE320_Taylor_Cowley/tb_frameBuffer_isim_beh.exe" -prj "J:/EE 320/Lab11_EE320_Taylor_Cowley/tb_frameBuffer_beh.prj" "work.tb_frameBuffer" "work.glbl" 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "J:/EE 320/Lab11_EE320_Taylor_Cowley/cellram_checker.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Parsing VHDL file "J:/EE 320/Lab11_EE320_Taylor_Cowley/vga_timing.vhd" into library work
+Parsing VHDL file "J:/EE 320/Lab11_EE320_Taylor_Cowley/sramController.vhd" into library work
+Parsing VHDL file "J:/EE 320/Lab11_EE320_Taylor_Cowley/frameBuffer.vhd" into library work
+Parsing VHDL file "J:/EE 320/Lab11_EE320_Taylor_Cowley/tb_frameBuffer.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module glbl
+Compiling module cellram_pathdelay
+Compiling module cellram_checker(7.0,20.0,70.0,70...
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package textio
+Compiling package numeric_std
+Compiling package vl_types
+Compiling architecture yolo of entity sramController [\sramController(50000)\]
+Compiling architecture behavioral of entity vga_timing [vga_timing_default]
+Compiling architecture taylor of entity frameBuffer [framebuffer_default]
+Compiling architecture tb of entity tb_framebuffer
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 12 VHDL Units
+Compiled 3 Verilog Units
+Built simulation executable J:/EE 320/Lab11_EE320_Taylor_Cowley/tb_frameBuffer_isim_beh.exe
+Fuse Memory Usage: 40176 KB
+Fuse CPU Usage: 935 ms

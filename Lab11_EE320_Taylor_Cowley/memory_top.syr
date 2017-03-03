@@ -1,0 +1,584 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.17 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.17 secs
+ 
+--> Reading design: memory_top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "memory_top.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "memory_top"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : memory_top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "//fs-caedm/tcowley0/EE 320/Lab11_EE320_Taylor_Cowley/sramController.vhd" in Library work.
+Entity <sramcontroller> compiled.
+Entity <sramcontroller> (Architecture <yolo>) compiled.
+Compiling vhdl file "//fs-caedm/tcowley0/EE 320/Lab9_EE320_Taylor_Cowley/seven_seg_control.vhd" in Library work.
+Architecture best of Entity seven_segment_control is up to date.
+Compiling vhdl file "//fs-caedm/tcowley0/EE 320/Lab11_EE320_Taylor_Cowley/memory_top.vhd" in Library work.
+Architecture taylor of Entity memory_top is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <memory_top> in library <work> (architecture <taylor>).
+
+Analyzing hierarchy for entity <sramController> in library <work> (architecture <yolo>) with generics.
+	CLK_RATE = 50000000
+
+Analyzing hierarchy for entity <seven_segment_control> in library <work> (architecture <best>) with generics.
+	COUNTER_BITS = 15
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <memory_top> in library <work> (Architecture <taylor>).
+WARNING:Xst:819 - "//fs-caedm/tcowley0/EE 320/Lab11_EE320_Taylor_Cowley/memory_top.vhd" line 161: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <btn>, <btn_out>
+Entity <memory_top> analyzed. Unit <memory_top> generated.
+
+Analyzing generic Entity <sramController> in library <work> (Architecture <yolo>).
+	CLK_RATE = 50000000
+Entity <sramController> analyzed. Unit <sramController> generated.
+
+Analyzing generic Entity <seven_segment_control> in library <work> (Architecture <best>).
+	COUNTER_BITS = 15
+Entity <seven_segment_control> analyzed. Unit <seven_segment_control> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <sramController>.
+    Related source file is "//fs-caedm/tcowley0/EE 320/Lab11_EE320_Taylor_Cowley/sramController.vhd".
+INFO:Xst:1799 - State r_00 is never reached in FSM <state>.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 11                                             |
+    | Transitions        | 16                                             |
+    | Inputs             | 3                                              |
+    | Outputs            | 11                                             |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | rst                       (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | power_up                                       |
+    | Power Up State     | power_up                                       |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 16-bit tristate buffer for signal <d>.
+    Found 14-bit up counter for signal <power_up_count>.
+    Found 23-bit register for signal <Raddr>.
+    Found 16-bit register for signal <Rm2s>.
+    Found 16-bit register for signal <Rs2m>.
+    Found 14-bit comparator greatequal for signal <state$cmp_ge0000> created at line 102.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   1 Counter(s).
+	inferred  55 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred  16 Tristate(s).
+Unit <sramController> synthesized.
+
+
+Synthesizing Unit <seven_segment_control>.
+    Related source file is "//fs-caedm/tcowley0/EE 320/Lab9_EE320_Taylor_Cowley/seven_seg_control.vhd".
+    Found 16x7-bit ROM for signal <seg>.
+    Found 15-bit up counter for signal <counter>.
+    Found 4-bit 4-to-1 multiplexer for signal <decode_THIS>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   1 Counter(s).
+	inferred   4 Multiplexer(s).
+Unit <seven_segment_control> synthesized.
+
+
+Synthesizing Unit <memory_top>.
+    Related source file is "//fs-caedm/tcowley0/EE 320/Lab11_EE320_Taylor_Cowley/memory_top.vhd".
+WARNING:Xst:647 - Input <RamWait> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1780 - Signal <sram_data> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <sram_addr> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <ready_has_gone_high> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <ready> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 23-bit register for signal <addr>.
+    Found 8-bit register for signal <addr_next>.
+    Found 4-bit register for signal <btn_out>.
+    Found 20-bit up counter for signal <debounce_timer>.
+    Found 4-bit comparator equal for signal <debounce_timer$cmp_eq0000> created at line 153.
+    Found 16-bit register for signal <good_read>.
+    Found 16-bit register for signal <good_read_next>.
+    Found 8-bit register for signal <input_next>.
+    Found 1-bit register for signal <mem>.
+    Found 1-bit register for signal <rst>.
+    Found 1-bit register for signal <rw>.
+    Found 16-bit register for signal <write_data>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred  94 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <memory_top> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x7-bit ROM                                          : 1
+# Counters                                             : 3
+ 14-bit up counter                                     : 1
+ 15-bit up counter                                     : 1
+ 20-bit up counter                                     : 1
+# Registers                                            : 13
+ 1-bit register                                        : 3
+ 16-bit register                                       : 5
+ 23-bit register                                       : 2
+ 4-bit register                                        : 1
+ 8-bit register                                        : 2
+# Comparators                                          : 2
+ 14-bit comparator greatequal                          : 1
+ 4-bit comparator equal                                : 1
+# Multiplexers                                         : 1
+ 4-bit 4-to-1 multiplexer                              : 1
+# Tristates                                            : 1
+ 16-bit tristate buffer                                : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <sramCtl/state/FSM> on signal <state[1:11]> with one-hot encoding.
+------------------------------
+ State         | Encoding
+------------------------------
+ power_up      | 00000000001
+ idle          | 00000000010
+ r_00          | unreached
+ r_20          | 00000000100
+ r_40          | 00000010000
+ r_60          | 00000100000
+ r_unnecessary | 00001000000
+ w_00          | 00000001000
+ w_20          | 00010000000
+ w_40          | 00100000000
+ w_60          | 01000000000
+ w_unnecessary | 10000000000
+------------------------------
+WARNING:Xst:1710 - FF/Latch <Raddr_22> (without init value) has a constant value of 0 in block <sramCtl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Raddr_21> (without init value) has a constant value of 0 in block <sramCtl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Raddr_20> (without init value) has a constant value of 0 in block <sramCtl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Raddr_19> (without init value) has a constant value of 0 in block <sramCtl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Raddr_18> (without init value) has a constant value of 0 in block <sramCtl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Raddr_17> (without init value) has a constant value of 0 in block <sramCtl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Raddr_16> (without init value) has a constant value of 0 in block <sramCtl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Raddr_15> (without init value) has a constant value of 0 in block <sramCtl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Raddr_14> (without init value) has a constant value of 0 in block <sramCtl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Raddr_13> (without init value) has a constant value of 0 in block <sramCtl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Raddr_12> (without init value) has a constant value of 0 in block <sramCtl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Raddr_11> (without init value) has a constant value of 0 in block <sramCtl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Raddr_10> (without init value) has a constant value of 0 in block <sramCtl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Raddr_9> (without init value) has a constant value of 0 in block <sramCtl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Raddr_8> (without init value) has a constant value of 0 in block <sramCtl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_22> (without init value) has a constant value of 0 in block <memory_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_21> (without init value) has a constant value of 0 in block <memory_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_20> (without init value) has a constant value of 0 in block <memory_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_19> (without init value) has a constant value of 0 in block <memory_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_18> (without init value) has a constant value of 0 in block <memory_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_17> (without init value) has a constant value of 0 in block <memory_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_16> (without init value) has a constant value of 0 in block <memory_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_15> (without init value) has a constant value of 0 in block <memory_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_14> (without init value) has a constant value of 0 in block <memory_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_13> (without init value) has a constant value of 0 in block <memory_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_12> (without init value) has a constant value of 0 in block <memory_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_11> (without init value) has a constant value of 0 in block <memory_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_10> (without init value) has a constant value of 0 in block <memory_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_9> (without init value) has a constant value of 0 in block <memory_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_8> (without init value) has a constant value of 0 in block <memory_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2404 -  FFs/Latches <addr<22:8>> (without init value) have a constant value of 0 in block <memory_top>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# ROMs                                                 : 1
+ 16x7-bit ROM                                          : 1
+# Counters                                             : 2
+ 14-bit up counter                                     : 1
+ 15-bit up counter                                     : 1
+# Registers                                            : 130
+ Flip-Flops                                            : 130
+# Comparators                                          : 1
+ 14-bit comparator greatequal                          : 1
+# Multiplexers                                         : 1
+ 4-bit 4-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <write_data_3> in Unit <memory_top> is equivalent to the following FF/Latch, which will be removed : <write_data_11> 
+INFO:Xst:2261 - The FF/Latch <write_data_6> in Unit <memory_top> is equivalent to the following FF/Latch, which will be removed : <write_data_14> 
+INFO:Xst:2261 - The FF/Latch <write_data_5> in Unit <memory_top> is equivalent to the following FF/Latch, which will be removed : <write_data_13> 
+INFO:Xst:2261 - The FF/Latch <write_data_0> in Unit <memory_top> is equivalent to the following FF/Latch, which will be removed : <write_data_8> 
+INFO:Xst:2261 - The FF/Latch <write_data_7> in Unit <memory_top> is equivalent to the following FF/Latch, which will be removed : <write_data_15> 
+INFO:Xst:2261 - The FF/Latch <write_data_2> in Unit <memory_top> is equivalent to the following FF/Latch, which will be removed : <write_data_10> 
+INFO:Xst:2261 - The FF/Latch <write_data_1> in Unit <memory_top> is equivalent to the following FF/Latch, which will be removed : <write_data_9> 
+INFO:Xst:2261 - The FF/Latch <write_data_4> in Unit <memory_top> is equivalent to the following FF/Latch, which will be removed : <write_data_12> 
+INFO:Xst:2261 - The FF/Latch <Rm2s_2> in Unit <sramController> is equivalent to the following FF/Latch, which will be removed : <Rm2s_10> 
+INFO:Xst:2261 - The FF/Latch <Rm2s_3> in Unit <sramController> is equivalent to the following FF/Latch, which will be removed : <Rm2s_11> 
+INFO:Xst:2261 - The FF/Latch <Rm2s_0> in Unit <sramController> is equivalent to the following FF/Latch, which will be removed : <Rm2s_8> 
+INFO:Xst:2261 - The FF/Latch <Rm2s_4> in Unit <sramController> is equivalent to the following FF/Latch, which will be removed : <Rm2s_12> 
+INFO:Xst:2261 - The FF/Latch <Rm2s_1> in Unit <sramController> is equivalent to the following FF/Latch, which will be removed : <Rm2s_9> 
+INFO:Xst:2261 - The FF/Latch <Rm2s_5> in Unit <sramController> is equivalent to the following FF/Latch, which will be removed : <Rm2s_13> 
+INFO:Xst:2261 - The FF/Latch <Rm2s_6> in Unit <sramController> is equivalent to the following FF/Latch, which will be removed : <Rm2s_14> 
+INFO:Xst:2261 - The FF/Latch <Rm2s_7> in Unit <sramController> is equivalent to the following FF/Latch, which will be removed : <Rm2s_15> 
+WARNING:Xst:1710 - FF/Latch <Raddr_8> (without init value) has a constant value of 0 in block <sramController>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Raddr_9> (without init value) has a constant value of 0 in block <sramController>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Raddr_10> (without init value) has a constant value of 0 in block <sramController>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Raddr_11> (without init value) has a constant value of 0 in block <sramController>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Raddr_12> (without init value) has a constant value of 0 in block <sramController>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Raddr_13> (without init value) has a constant value of 0 in block <sramController>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Raddr_14> (without init value) has a constant value of 0 in block <sramController>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Raddr_15> (without init value) has a constant value of 0 in block <sramController>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Raddr_16> (without init value) has a constant value of 0 in block <sramController>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Raddr_17> (without init value) has a constant value of 0 in block <sramController>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Raddr_18> (without init value) has a constant value of 0 in block <sramController>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Raddr_19> (without init value) has a constant value of 0 in block <sramController>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Raddr_20> (without init value) has a constant value of 0 in block <sramController>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Raddr_21> (without init value) has a constant value of 0 in block <sramController>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Raddr_22> (without init value) has a constant value of 0 in block <sramController>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <memory_top> ...
+
+Optimizing unit <seven_segment_control> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block memory_top, actual ratio is 1.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 139
+ Flip-Flops                                            : 139
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : memory_top.ngr
+Top Level Output File Name         : memory_top
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 81
+
+Cell Usage :
+# BELS                             : 173
+#      GND                         : 1
+#      INV                         : 5
+#      LUT1                        : 16
+#      LUT2                        : 27
+#      LUT3                        : 27
+#      LUT4                        : 26
+#      LUT4_D                      : 2
+#      MUXCY                       : 35
+#      MUXF5                       : 4
+#      VCC                         : 1
+#      XORCY                       : 29
+# FlipFlops/Latches                : 139
+#      FD                          : 15
+#      FDC                         : 18
+#      FDCE                        : 38
+#      FDE                         : 18
+#      FDPE                        : 1
+#      FDR                         : 33
+#      FDRE                        : 16
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 79
+#      IBUF                        : 12
+#      IOBUF                       : 16
+#      OBUF                        : 51
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                       90  out of   4656     1%  
+ Number of Slice Flip Flops:            139  out of   9312     1%  
+ Number of 4 input LUTs:                103  out of   9312     1%  
+ Number of IOs:                          81
+ Number of bonded IOBs:                  80  out of    232    34%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 139   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+rst(rst:Q)                         | NONE(sramCtl/Raddr_0)  | 57    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 7.140ns (Maximum Frequency: 140.056MHz)
+   Minimum input arrival time before clock: 6.715ns
+   Maximum output required time after clock: 8.053ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 7.140ns (frequency: 140.056MHz)
+  Total number of paths / destination ports: 1983 / 158
+-------------------------------------------------------------------------
+Delay:               7.140ns (Levels of Logic = 24)
+  Source:            sramCtl/power_up_count_2 (FF)
+  Destination:       sramCtl/power_up_count_13 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: sramCtl/power_up_count_2 to sramCtl/power_up_count_13
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             2   0.591   0.622  sramCtl/power_up_count_2 (sramCtl/power_up_count_2)
+     LUT2:I0->O            1   0.704   0.000  sramCtl/Mcompar_state_cmp_ge0000_lut<0> (sramCtl/Mcompar_state_cmp_ge0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  sramCtl/Mcompar_state_cmp_ge0000_cy<0> (sramCtl/Mcompar_state_cmp_ge0000_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  sramCtl/Mcompar_state_cmp_ge0000_cy<1> (sramCtl/Mcompar_state_cmp_ge0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  sramCtl/Mcompar_state_cmp_ge0000_cy<2> (sramCtl/Mcompar_state_cmp_ge0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  sramCtl/Mcompar_state_cmp_ge0000_cy<3> (sramCtl/Mcompar_state_cmp_ge0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  sramCtl/Mcompar_state_cmp_ge0000_cy<4> (sramCtl/Mcompar_state_cmp_ge0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  sramCtl/Mcompar_state_cmp_ge0000_cy<5> (sramCtl/Mcompar_state_cmp_ge0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  sramCtl/Mcompar_state_cmp_ge0000_cy<6> (sramCtl/Mcompar_state_cmp_ge0000_cy<6>)
+     MUXCY:CI->O          17   0.331   1.086  sramCtl/Mcompar_state_cmp_ge0000_cy<7> (sramCtl/state_cmp_ge0000)
+     LUT3:I2->O            1   0.704   0.000  sramCtl/Mcount_power_up_count_lut<0> (sramCtl/Mcount_power_up_count_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  sramCtl/Mcount_power_up_count_cy<0> (sramCtl/Mcount_power_up_count_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  sramCtl/Mcount_power_up_count_cy<1> (sramCtl/Mcount_power_up_count_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  sramCtl/Mcount_power_up_count_cy<2> (sramCtl/Mcount_power_up_count_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  sramCtl/Mcount_power_up_count_cy<3> (sramCtl/Mcount_power_up_count_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  sramCtl/Mcount_power_up_count_cy<4> (sramCtl/Mcount_power_up_count_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  sramCtl/Mcount_power_up_count_cy<5> (sramCtl/Mcount_power_up_count_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  sramCtl/Mcount_power_up_count_cy<6> (sramCtl/Mcount_power_up_count_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  sramCtl/Mcount_power_up_count_cy<7> (sramCtl/Mcount_power_up_count_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  sramCtl/Mcount_power_up_count_cy<8> (sramCtl/Mcount_power_up_count_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  sramCtl/Mcount_power_up_count_cy<9> (sramCtl/Mcount_power_up_count_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  sramCtl/Mcount_power_up_count_cy<10> (sramCtl/Mcount_power_up_count_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  sramCtl/Mcount_power_up_count_cy<11> (sramCtl/Mcount_power_up_count_cy<11>)
+     MUXCY:CI->O           0   0.059   0.000  sramCtl/Mcount_power_up_count_cy<12> (sramCtl/Mcount_power_up_count_cy<12>)
+     XORCY:CI->O           1   0.804   0.000  sramCtl/Mcount_power_up_count_xor<13> (sramCtl/Mcount_power_up_count13)
+     FDCE:D                    0.308          sramCtl/power_up_count_13
+    ----------------------------------------
+    Total                      7.140ns (5.432ns logic, 1.708ns route)
+                                       (76.1% logic, 23.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 320 / 117
+-------------------------------------------------------------------------
+Offset:              6.715ns (Levels of Logic = 3)
+  Source:            btn<0> (PAD)
+  Destination:       good_read_next_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: btn<0> to good_read_next_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            10   1.218   1.057  btn_0_IBUF (btn_0_IBUF)
+     LUT4:I0->O           49   0.704   1.443  addr_next_cmp_eq00001 (addr_next_cmp_eq0000)
+     LUT2:I0->O           16   0.704   1.034  good_read_next_not00011 (good_read_next_not0001)
+     FDE:CE                    0.555          good_read_next_0
+    ----------------------------------------
+    Total                      6.715ns (3.181ns logic, 3.534ns route)
+                                       (47.4% logic, 52.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 301 / 46
+-------------------------------------------------------------------------
+Offset:              8.053ns (Levels of Logic = 4)
+  Source:            YEAH_CONTROL/counter_13 (FF)
+  Destination:       seg<6> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: YEAH_CONTROL/counter_13 to seg<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              13   0.591   1.158  YEAH_CONTROL/counter_13 (YEAH_CONTROL/counter_13)
+     LUT3:I0->O            1   0.704   0.000  YEAH_CONTROL/Mmux_decode_THIS_3 (YEAH_CONTROL/Mmux_decode_THIS_3)
+     MUXF5:I1->O           7   0.321   0.883  YEAH_CONTROL/Mmux_decode_THIS_2_f5 (YEAH_CONTROL/decode_THIS<0>)
+     LUT4:I0->O            1   0.704   0.420  YEAH_CONTROL/Mrom_seg111 (seg_1_OBUF)
+     OBUF:I->O                 3.272          seg_1_OBUF (seg<1>)
+    ----------------------------------------
+    Total                      8.053ns (5.592ns logic, 2.461ns route)
+                                       (69.4% logic, 30.6% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 6.83 secs
+ 
+--> 
+
+Total memory usage is 279112 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   52 (   0 filtered)
+Number of infos    :   17 (   0 filtered)
+

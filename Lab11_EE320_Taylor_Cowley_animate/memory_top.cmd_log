@@ -1,0 +1,8 @@
+xst -intstyle ise -ifn "J:/EE 320/Lab11_EE320_Taylor_Cowley/memory_top.xst" -ofn "J:/EE 320/Lab11_EE320_Taylor_Cowley/memory_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "memory_top.ngc" memory_top.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o memory_top_map.ncd memory_top.ngd memory_top.pcf 
+par -w -intstyle ise -ol high -t 1 memory_top_map.ncd memory_top.ncd memory_top.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml memory_top.twx memory_top.ncd -o memory_top.twr memory_top.pcf 
+xst -intstyle ise -ifn "J:/EE 320/Lab11_EE320_Taylor_Cowley/memory_top.xst" -ofn "J:/EE 320/Lab11_EE320_Taylor_Cowley/memory_top.syr" 
+xst -intstyle ise -ifn "J:/EE 320/Lab11_EE320_Taylor_Cowley/memory_top.xst" -ofn "J:/EE 320/Lab11_EE320_Taylor_Cowley/memory_top.syr" 
+xst -intstyle ise -ifn "J:/EE 320/Lab11_EE320_Taylor_Cowley/memory_top.xst" -ofn "J:/EE 320/Lab11_EE320_Taylor_Cowley/memory_top.syr" 
