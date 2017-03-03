@@ -1,0 +1,274 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Fri Apr 08 19:11:26 2016
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clk" LOCATE = SITE "B8" LEVEL 1;
+COMP "vgaRed<0>" LOCATE = SITE "R9" LEVEL 1;
+COMP "vgaRed<1>" LOCATE = SITE "T8" LEVEL 1;
+COMP "vgaRed<2>" LOCATE = SITE "R8" LEVEL 1;
+COMP "btn0" LOCATE = SITE "B18" LEVEL 1;
+COMP "MemDB<0>" LOCATE = SITE "L1" LEVEL 1;
+COMP "MemDB<1>" LOCATE = SITE "L4" LEVEL 1;
+COMP "MemDB<2>" LOCATE = SITE "L6" LEVEL 1;
+COMP "MemDB<3>" LOCATE = SITE "M4" LEVEL 1;
+COMP "MemDB<4>" LOCATE = SITE "N5" LEVEL 1;
+COMP "MemDB<5>" LOCATE = SITE "P1" LEVEL 1;
+COMP "MemDB<6>" LOCATE = SITE "P2" LEVEL 1;
+COMP "MemDB<7>" LOCATE = SITE "R2" LEVEL 1;
+COMP "MemDB<8>" LOCATE = SITE "L3" LEVEL 1;
+COMP "MemDB<9>" LOCATE = SITE "L5" LEVEL 1;
+COMP "MemOE" LOCATE = SITE "T2" LEVEL 1;
+COMP "MemWR" LOCATE = SITE "N7" LEVEL 1;
+COMP "RamCS" LOCATE = SITE "R6" LEVEL 1;
+COMP "RamLB" LOCATE = SITE "K5" LEVEL 1;
+COMP "RamUB" LOCATE = SITE "K4" LEVEL 1;
+COMP "an<0>" LOCATE = SITE "F17" LEVEL 1;
+COMP "an<1>" LOCATE = SITE "H17" LEVEL 1;
+COMP "an<2>" LOCATE = SITE "C18" LEVEL 1;
+COMP "an<3>" LOCATE = SITE "F15" LEVEL 1;
+COMP "Hsync" LOCATE = SITE "T4" LEVEL 1;
+COMP "vgaGreen<0>" LOCATE = SITE "N8" LEVEL 1;
+COMP "vgaGreen<1>" LOCATE = SITE "P8" LEVEL 1;
+COMP "vgaGreen<2>" LOCATE = SITE "P6" LEVEL 1;
+COMP "Vsync" LOCATE = SITE "U3" LEVEL 1;
+COMP "sw<0>" LOCATE = SITE "G18" LEVEL 1;
+COMP "sw<1>" LOCATE = SITE "H18" LEVEL 1;
+COMP "sw<2>" LOCATE = SITE "K18" LEVEL 1;
+COMP "sw<3>" LOCATE = SITE "K17" LEVEL 1;
+COMP "sw<4>" LOCATE = SITE "L14" LEVEL 1;
+COMP "sw<5>" LOCATE = SITE "L13" LEVEL 1;
+COMP "sw<6>" LOCATE = SITE "N17" LEVEL 1;
+COMP "sw<7>" LOCATE = SITE "R17" LEVEL 1;
+COMP "MemDB<10>" LOCATE = SITE "M3" LEVEL 1;
+COMP "MemDB<11>" LOCATE = SITE "M6" LEVEL 1;
+COMP "MemDB<12>" LOCATE = SITE "L2" LEVEL 1;
+COMP "MemDB<13>" LOCATE = SITE "N4" LEVEL 1;
+COMP "MemDB<14>" LOCATE = SITE "R3" LEVEL 1;
+COMP "MemDB<15>" LOCATE = SITE "T1" LEVEL 1;
+COMP "MemAdr<1>" LOCATE = SITE "J1" LEVEL 1;
+COMP "MemAdr<2>" LOCATE = SITE "J2" LEVEL 1;
+COMP "MemAdr<3>" LOCATE = SITE "H4" LEVEL 1;
+COMP "MemAdr<4>" LOCATE = SITE "H1" LEVEL 1;
+COMP "MemAdr<5>" LOCATE = SITE "H2" LEVEL 1;
+COMP "MemAdr<6>" LOCATE = SITE "J5" LEVEL 1;
+COMP "MemAdr<7>" LOCATE = SITE "H3" LEVEL 1;
+COMP "MemAdr<8>" LOCATE = SITE "H6" LEVEL 1;
+COMP "MemAdr<9>" LOCATE = SITE "F1" LEVEL 1;
+COMP "RamADV" LOCATE = SITE "J4" LEVEL 1;
+COMP "RamCLK" LOCATE = SITE "H5" LEVEL 1;
+COMP "RamCRE" LOCATE = SITE "P7" LEVEL 1;
+COMP "led<0>" LOCATE = SITE "J14" LEVEL 1;
+COMP "led<1>" LOCATE = SITE "J15" LEVEL 1;
+COMP "led<2>" LOCATE = SITE "K15" LEVEL 1;
+COMP "led<3>" LOCATE = SITE "K14" LEVEL 1;
+COMP "led<4>" LOCATE = SITE "E17" LEVEL 1;
+COMP "led<5>" LOCATE = SITE "P15" LEVEL 1;
+COMP "led<6>" LOCATE = SITE "F4" LEVEL 1;
+COMP "led<7>" LOCATE = SITE "R4" LEVEL 1;
+COMP "audioOut" LOCATE = SITE "B4" LEVEL 1;
+COMP "MemAdr<10>" LOCATE = SITE "G3" LEVEL 1;
+COMP "MemAdr<11>" LOCATE = SITE "G6" LEVEL 1;
+COMP "MemAdr<20>" LOCATE = SITE "D2" LEVEL 1;
+COMP "MemAdr<12>" LOCATE = SITE "G5" LEVEL 1;
+COMP "MemAdr<21>" LOCATE = SITE "K3" LEVEL 1;
+COMP "MemAdr<13>" LOCATE = SITE "G4" LEVEL 1;
+COMP "MemAdr<22>" LOCATE = SITE "D1" LEVEL 1;
+COMP "MemAdr<14>" LOCATE = SITE "F2" LEVEL 1;
+COMP "MemAdr<23>" LOCATE = SITE "K6" LEVEL 1;
+COMP "MemAdr<15>" LOCATE = SITE "E1" LEVEL 1;
+COMP "MemAdr<16>" LOCATE = SITE "M5" LEVEL 1;
+COMP "MemAdr<17>" LOCATE = SITE "E2" LEVEL 1;
+COMP "MemAdr<18>" LOCATE = SITE "C2" LEVEL 1;
+COMP "MemAdr<19>" LOCATE = SITE "C1" LEVEL 1;
+COMP "vgaBlue<0>" LOCATE = SITE "U5" LEVEL 1;
+COMP "vgaBlue<1>" LOCATE = SITE "U4" LEVEL 1;
+NET "clk_BUFGP/IBUFG" BEL "clk_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+TIMEGRP clk = BEL "audio_cache_0_0" BEL "audio_cache_0_1" BEL
+        "audio_cache_0_2" BEL "audio_cache_0_3" BEL "audio_cache_0_4" BEL
+        "audio_cache_0_5" BEL "audio_cache_0_6" BEL "audio_cache_0_7" BEL
+        "audio_cache_0_8" BEL "audio_cache_1_0" BEL "audio_cache_1_1" BEL
+        "audio_cache_1_2" BEL "audio_cache_1_3" BEL "audio_cache_1_4" BEL
+        "audio_cache_1_5" BEL "audio_cache_1_6" BEL "audio_cache_1_7" BEL
+        "audio_cache_2_0" BEL "audio_cache_2_1" BEL "audio_cache_2_2" BEL
+        "audio_cache_2_3" BEL "audio_cache_2_4" BEL "audio_cache_2_5" BEL
+        "audio_cache_2_6" BEL "audio_cache_2_7" BEL "audio_cache_2_8" BEL
+        "audio_cache_3_0" BEL "audio_cache_3_1" BEL "audio_cache_3_2" BEL
+        "audio_cache_3_3" BEL "audio_cache_3_4" BEL "audio_cache_3_5" BEL
+        "audio_cache_3_6" BEL "audio_cache_3_7" BEL "audio_cache_4_0" BEL
+        "audio_cache_4_1" BEL "audio_cache_4_2" BEL "audio_cache_4_3" BEL
+        "audio_cache_4_4" BEL "audio_cache_4_5" BEL "audio_cache_4_6" BEL
+        "audio_cache_4_7" BEL "audio_cache_4_8" BEL "audio_cache_5_0" BEL
+        "audio_cache_5_1" BEL "audio_cache_5_2" BEL "audio_cache_5_3" BEL
+        "audio_cache_5_4" BEL "audio_cache_5_5" BEL "audio_cache_5_6" BEL
+        "audio_cache_5_7" BEL "audio_cache_6_0" BEL "audio_cache_6_1" BEL
+        "audio_cache_6_2" BEL "audio_cache_6_3" BEL "audio_cache_6_4" BEL
+        "audio_cache_6_5" BEL "audio_cache_6_6" BEL "audio_cache_6_7" BEL
+        "audio_cache_6_8" BEL "audio_cache_7_0" BEL "audio_cache_7_1" BEL
+        "audio_cache_7_2" BEL "audio_cache_7_3" BEL "audio_cache_7_4" BEL
+        "audio_cache_7_5" BEL "audio_cache_7_6" BEL "audio_cache_7_7" BEL
+        "audio_cache_8_0" BEL "audio_cache_8_1" BEL "audio_cache_8_2" BEL
+        "audio_cache_8_3" BEL "audio_cache_8_4" BEL "audio_cache_8_5" BEL
+        "audio_cache_8_6" BEL "audio_cache_8_7" BEL "audio_cache_8_8" BEL
+        "audio_cache_9_0" BEL "audio_cache_9_1" BEL "audio_cache_9_2" BEL
+        "audio_cache_9_3" BEL "audio_cache_9_4" BEL "audio_cache_9_5" BEL
+        "audio_cache_9_6" BEL "audio_cache_9_7" BEL "animate_timer_next_0" BEL
+        "animate_timer_next_1" BEL "animate_timer_next_2" BEL
+        "animate_timer_next_3" BEL "animate_timer_next_4" BEL
+        "animate_timer_next_5" BEL "animate_timer_next_6" BEL
+        "animate_timer_next_7" BEL "animate_timer_next_8" BEL
+        "animate_timer_next_9" BEL "animate_timer_next_10" BEL
+        "animate_timer_next_11" BEL "animate_timer_next_12" BEL
+        "animate_timer_next_13" BEL "animate_timer_next_14" BEL
+        "animate_timer_next_15" BEL "animate_timer_next_16" BEL
+        "animate_timer_next_17" BEL "animate_timer_next_18" BEL
+        "animate_timer_next_19" BEL "animate_timer_next_20" BEL
+        "animate_timer_next_21" BEL "animate_timer_next_22" BEL
+        "timeSampleHeld_0" BEL "timeSampleHeld_1" BEL "timeSampleHeld_2" BEL
+        "timeSampleHeld_3" BEL "timeSampleHeld_4" BEL "timeSampleHeld_5" BEL
+        "timeSampleHeld_6" BEL "timeSampleHeld_7" BEL "timeSampleHeld_8" BEL
+        "timeSampleHeld_9" BEL "timeSampleHeld_10" BEL "PWMCounterDirection_0"
+        BEL "audio_cache_10_0" BEL "audio_cache_10_1" BEL "audio_cache_10_2"
+        BEL "audio_cache_10_3" BEL "audio_cache_10_4" BEL "audio_cache_10_5"
+        BEL "audio_cache_10_6" BEL "audio_cache_10_7" BEL "audio_cache_10_8"
+        BEL "audio_cache_11_0" BEL "audio_cache_11_1" BEL "audio_cache_11_2"
+        BEL "audio_cache_11_3" BEL "audio_cache_11_4" BEL "audio_cache_11_5"
+        BEL "audio_cache_11_6" BEL "audio_cache_11_7" BEL "audio_cache_12_0"
+        BEL "audio_cache_12_1" BEL "audio_cache_12_2" BEL "audio_cache_12_3"
+        BEL "audio_cache_12_4" BEL "audio_cache_12_5" BEL "audio_cache_12_6"
+        BEL "audio_cache_12_7" BEL "audio_cache_12_8" BEL "audio_cache_13_0"
+        BEL "audio_cache_13_1" BEL "audio_cache_13_2" BEL "audio_cache_13_3"
+        BEL "audio_cache_13_4" BEL "audio_cache_13_5" BEL "audio_cache_13_6"
+        BEL "audio_cache_13_7" BEL "audio_cache_14_0" BEL "audio_cache_14_1"
+        BEL "audio_cache_14_2" BEL "audio_cache_14_3" BEL "audio_cache_14_4"
+        BEL "audio_cache_14_5" BEL "audio_cache_14_6" BEL "audio_cache_14_7"
+        BEL "audio_cache_14_8" BEL "audio_cache_15_0" BEL "audio_cache_15_1"
+        BEL "audio_cache_15_2" BEL "audio_cache_15_3" BEL "audio_cache_15_4"
+        BEL "audio_cache_15_5" BEL "audio_cache_15_6" BEL "audio_cache_15_7"
+        BEL "audio_cache_20_0" BEL "audio_cache_20_1" BEL "audio_cache_20_2"
+        BEL "audio_cache_20_3" BEL "audio_cache_20_4" BEL "audio_cache_20_5"
+        BEL "audio_cache_20_6" BEL "audio_cache_20_7" BEL "audio_cache_20_8"
+        BEL "audio_cache_16_0" BEL "audio_cache_16_1" BEL "audio_cache_16_2"
+        BEL "audio_cache_16_3" BEL "audio_cache_16_4" BEL "audio_cache_16_5"
+        BEL "audio_cache_16_6" BEL "audio_cache_16_7" BEL "audio_cache_16_8"
+        BEL "audio_cache_21_0" BEL "audio_cache_21_1" BEL "audio_cache_21_2"
+        BEL "audio_cache_21_3" BEL "audio_cache_21_4" BEL "audio_cache_21_5"
+        BEL "audio_cache_21_6" BEL "audio_cache_21_7" BEL "audio_cache_17_0"
+        BEL "audio_cache_17_1" BEL "audio_cache_17_2" BEL "audio_cache_17_3"
+        BEL "audio_cache_17_4" BEL "audio_cache_17_5" BEL "audio_cache_17_6"
+        BEL "audio_cache_17_7" BEL "audio_cache_22_0" BEL "audio_cache_22_1"
+        BEL "audio_cache_22_2" BEL "audio_cache_22_3" BEL "audio_cache_22_4"
+        BEL "audio_cache_22_5" BEL "audio_cache_22_6" BEL "audio_cache_22_7"
+        BEL "audio_cache_22_8" BEL "audio_cache_18_0" BEL "audio_cache_18_1"
+        BEL "audio_cache_18_2" BEL "audio_cache_18_3" BEL "audio_cache_18_4"
+        BEL "audio_cache_18_5" BEL "audio_cache_18_6" BEL "audio_cache_18_7"
+        BEL "audio_cache_18_8" BEL "audio_cache_23_0" BEL "audio_cache_23_1"
+        BEL "audio_cache_23_2" BEL "audio_cache_23_3" BEL "audio_cache_23_4"
+        BEL "audio_cache_23_5" BEL "audio_cache_23_6" BEL "audio_cache_23_7"
+        BEL "audio_cache_25_0" BEL "audio_cache_25_1" BEL "audio_cache_25_2"
+        BEL "audio_cache_25_3" BEL "audio_cache_25_4" BEL "audio_cache_25_5"
+        BEL "audio_cache_25_6" BEL "audio_cache_25_7" BEL "audio_cache_19_0"
+        BEL "audio_cache_19_1" BEL "audio_cache_19_2" BEL "audio_cache_19_3"
+        BEL "audio_cache_19_4" BEL "audio_cache_19_5" BEL "audio_cache_19_6"
+        BEL "audio_cache_19_7" BEL "audio_cache_24_0" BEL "audio_cache_24_1"
+        BEL "audio_cache_24_2" BEL "audio_cache_24_3" BEL "audio_cache_24_4"
+        BEL "audio_cache_24_5" BEL "audio_cache_24_6" BEL "audio_cache_24_7"
+        BEL "audio_cache_24_8" BEL "audio_cache_30_0" BEL "audio_cache_30_1"
+        BEL "audio_cache_30_2" BEL "audio_cache_30_3" BEL "audio_cache_30_4"
+        BEL "audio_cache_30_5" BEL "audio_cache_30_6" BEL "audio_cache_30_7"
+        BEL "audio_cache_30_8" BEL "audio_cache_26_0" BEL "audio_cache_26_1"
+        BEL "audio_cache_26_2" BEL "audio_cache_26_3" BEL "audio_cache_26_4"
+        BEL "audio_cache_26_5" BEL "audio_cache_26_6" BEL "audio_cache_26_7"
+        BEL "audio_cache_26_8" BEL "audio_cache_31_0" BEL "audio_cache_31_1"
+        BEL "audio_cache_31_2" BEL "audio_cache_31_3" BEL "audio_cache_31_4"
+        BEL "audio_cache_31_5" BEL "audio_cache_31_6" BEL "audio_cache_31_7"
+        BEL "audio_cache_27_0" BEL "audio_cache_27_1" BEL "audio_cache_27_2"
+        BEL "audio_cache_27_3" BEL "audio_cache_27_4" BEL "audio_cache_27_5"
+        BEL "audio_cache_27_6" BEL "audio_cache_27_7" BEL "audio_cache_28_0"
+        BEL "audio_cache_28_1" BEL "audio_cache_28_2" BEL "audio_cache_28_3"
+        BEL "audio_cache_28_4" BEL "audio_cache_28_5" BEL "audio_cache_28_6"
+        BEL "audio_cache_28_7" BEL "audio_cache_28_8" BEL "audio_cache_29_0"
+        BEL "audio_cache_29_1" BEL "audio_cache_29_2" BEL "audio_cache_29_3"
+        BEL "audio_cache_29_4" BEL "audio_cache_29_5" BEL "audio_cache_29_6"
+        BEL "audio_cache_29_7" BEL "audio_load_address_1" BEL
+        "audio_load_address_2" BEL "audio_load_address_3" BEL
+        "audio_load_address_4" BEL "audio_load_address_5" BEL
+        "audio_load_address_6" BEL "audio_load_address_7" BEL
+        "audio_load_address_8" BEL "audio_load_address_9" BEL
+        "audio_load_address_10" BEL "audio_load_address_11" BEL
+        "audio_load_address_12" BEL "audio_load_address_13" BEL
+        "audio_load_address_14" BEL "audio_load_address_15" BEL
+        "audio_load_address_16" BEL "audio_load_address_17" BEL
+        "audio_load_address_18" BEL "audio_load_address_19" BEL
+        "audio_load_address_20" BEL "audio_load_address_21" BEL
+        "audio_load_address_22" BEL "audio_load_address_23" BEL "addr_0" BEL
+        "addr_1" BEL "addr_2" BEL "addr_3" BEL "addr_4" BEL "addr_5" BEL
+        "addr_6" BEL "addr_7" BEL "addr_8" BEL "addr_9" BEL "addr_10" BEL
+        "addr_11" BEL "addr_12" BEL "addr_13" BEL "addr_14" BEL "addr_15" BEL
+        "addr_16" BEL "addr_17" BEL "addr_18" BEL "addr_19" BEL "addr_20" BEL
+        "addr_21" BEL "addr_22" BEL "image_number_next_0" BEL
+        "image_number_next_1" BEL "image_number_next_2" BEL
+        "image_number_next_3" BEL "image_number_next_4" BEL "animate_timer_0"
+        BEL "animate_timer_1" BEL "animate_timer_2" BEL "animate_timer_3" BEL
+        "animate_timer_4" BEL "animate_timer_5" BEL "animate_timer_6" BEL
+        "animate_timer_7" BEL "animate_timer_8" BEL "animate_timer_9" BEL
+        "animate_timer_10" BEL "animate_timer_11" BEL "animate_timer_12" BEL
+        "animate_timer_13" BEL "animate_timer_14" BEL "animate_timer_15" BEL
+        "animate_timer_16" BEL "animate_timer_17" BEL "animate_timer_18" BEL
+        "animate_timer_19" BEL "animate_timer_20" BEL "animate_timer_21" BEL
+        "animate_timer_22" BEL "image_number_0" BEL "image_number_1" BEL
+        "image_number_2" BEL "image_number_3" BEL "image_number_4" BEL
+        "pixel_data_0" BEL "pixel_data_1" BEL "pixel_data_2" BEL
+        "pixel_data_3" BEL "pixel_data_4" BEL "pixel_data_5" BEL
+        "pixel_data_6" BEL "pixel_data_7" BEL "pixel_data_8" BEL
+        "pixel_data_9" BEL "pixel_data_10" BEL "pixel_data_11" BEL
+        "pixel_data_12" BEL "pixel_data_13" BEL "pixel_data_14" BEL
+        "pixel_data_15" BEL "curSample_0" BEL "curSample_1" BEL "curSample_2"
+        BEL "curSample_3" BEL "curSample_4" BEL "curSample_5" BEL
+        "curSample_6" BEL "curSample_7" BEL "PWMCounter_0" BEL "PWMCounter_1"
+        BEL "PWMCounter_2" BEL "PWMCounter_3" BEL "PWMCounter_4" BEL
+        "PWMCounter_5" BEL "PWMCounter_6" BEL "PWMCounter_7" BEL "data_loaded"
+        BEL "audio_play_address_0" BEL "audio_play_address_1" BEL
+        "audio_play_address_2" BEL "audio_play_address_3" BEL
+        "audio_play_address_4" BEL "audio_save_address_1" BEL
+        "audio_save_address_2" BEL "audio_save_address_3" BEL
+        "audio_save_address_4" BEL "sramCtl/state_FSM_FFd1" BEL
+        "sramCtl/state_FSM_FFd2" BEL "sramCtl/state_FSM_FFd3" BEL
+        "sramCtl/state_FSM_FFd5" BEL "sramCtl/state_FSM_FFd4" BEL
+        "sramCtl/power_up_count_13" BEL "sramCtl/power_up_count_12" BEL
+        "sramCtl/power_up_count_11" BEL "sramCtl/power_up_count_10" BEL
+        "sramCtl/power_up_count_9" BEL "sramCtl/power_up_count_8" BEL
+        "sramCtl/power_up_count_7" BEL "sramCtl/power_up_count_6" BEL
+        "sramCtl/power_up_count_5" BEL "sramCtl/power_up_count_4" BEL
+        "sramCtl/power_up_count_3" BEL "sramCtl/power_up_count_2" BEL
+        "sramCtl/power_up_count_1" BEL "sramCtl/power_up_count_0" BEL
+        "sramCtl/Rs2m_15" BEL "sramCtl/Rs2m_14" BEL "sramCtl/Rs2m_13" BEL
+        "sramCtl/Rs2m_12" BEL "sramCtl/Rs2m_11" BEL "sramCtl/Rs2m_10" BEL
+        "sramCtl/Rs2m_9" BEL "sramCtl/Rs2m_8" BEL "sramCtl/Rs2m_7" BEL
+        "sramCtl/Rs2m_6" BEL "sramCtl/Rs2m_5" BEL "sramCtl/Rs2m_4" BEL
+        "sramCtl/Rs2m_3" BEL "sramCtl/Rs2m_2" BEL "sramCtl/Rs2m_1" BEL
+        "sramCtl/Rs2m_0" BEL "sramCtl/Raddr_22" BEL "sramCtl/Raddr_21" BEL
+        "sramCtl/Raddr_20" BEL "sramCtl/Raddr_19" BEL "sramCtl/Raddr_18" BEL
+        "sramCtl/Raddr_17" BEL "sramCtl/Raddr_16" BEL "sramCtl/Raddr_15" BEL
+        "sramCtl/Raddr_14" BEL "sramCtl/Raddr_13" BEL "sramCtl/Raddr_12" BEL
+        "sramCtl/Raddr_11" BEL "sramCtl/Raddr_10" BEL "sramCtl/Raddr_9" BEL
+        "sramCtl/Raddr_8" BEL "sramCtl/Raddr_7" BEL "sramCtl/Raddr_6" BEL
+        "sramCtl/Raddr_5" BEL "sramCtl/Raddr_4" BEL "sramCtl/Raddr_3" BEL
+        "sramCtl/Raddr_2" BEL "sramCtl/Raddr_1" BEL "sramCtl/Raddr_0" BEL
+        "control/column_counter_9" BEL "control/column_counter_8" BEL
+        "control/column_counter_7" BEL "control/column_counter_6" BEL
+        "control/column_counter_5" BEL "control/column_counter_4" BEL
+        "control/column_counter_3" BEL "control/column_counter_2" BEL
+        "control/column_counter_1" BEL "control/column_counter_0" BEL
+        "control/row_counter_9" BEL "control/row_counter_8" BEL
+        "control/row_counter_7" BEL "control/row_counter_6" BEL
+        "control/row_counter_5" BEL "control/row_counter_4" BEL
+        "control/row_counter_3" BEL "control/row_counter_2" BEL
+        "control/row_counter_1" BEL "control/row_counter_0" BEL
+        "control/blank_y" BEL "control/HS" BEL "control/pixel_en" BEL
+        "control/blank_x" BEL "control/VS" BEL "sramCtl/state_FSM_FFd6" BEL
+        "Mshreg_bl8" BEL "bl8" BEL "clk_BUFGP/BUFG.GCLKMUX" BEL
+        "clk_BUFGP/BUFG";
+TS_clk = PERIOD TIMEGRP "clk" 20 ns HIGH 50%;
+SCHEMATIC END;
+

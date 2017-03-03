@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "J:/EE 320/Essential last project/frameBuffer_isim_beh.exe" -prj "J:/EE 320/Essential last project/frameBuffer_beh.prj" "work.frameBuffer" 

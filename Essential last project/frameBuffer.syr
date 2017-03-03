@@ -1,0 +1,135 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.19 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.20 secs
+ 
+--> Reading design: frameBuffer.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "frameBuffer.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "frameBuffer"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : frameBuffer
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "//fs-caedm/tcowley0/EE 320/Essential last project/sramController (2).vhd" in Library work.
+Architecture yolo of Entity sramcontroller is up to date.
+Compiling vhdl file "//fs-caedm/tcowley0/EE 320/Essential last project/vga_timing.vhd" in Library work.
+Architecture behavioral of Entity vga_timing is up to date.
+Compiling vhdl file "//fs-caedm/tcowley0/EE 320/Essential last project/frameBuffer.vhd" in Library work.
+Architecture taylor of Entity framebuffer is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <frameBuffer> in library <work> (architecture <taylor>).
+
+Analyzing hierarchy for entity <sramController> in library <work> (architecture <behavioral>) with generics.
+	CLK_RATE = 50000000
+
+Analyzing hierarchy for entity <vga_timing> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <frameBuffer> in library <work> (Architecture <taylor>).
+WARNING:Xst:753 - "//fs-caedm/tcowley0/EE 320/Essential last project/frameBuffer.vhd" line 267: Unconnected output port 'ready' of component 'sramController'.
+WARNING:Xst:753 - "//fs-caedm/tcowley0/EE 320/Essential last project/frameBuffer.vhd" line 290: Unconnected output port 'last_column' of component 'vga_timing'.
+WARNING:Xst:753 - "//fs-caedm/tcowley0/EE 320/Essential last project/frameBuffer.vhd" line 290: Unconnected output port 'last_row' of component 'vga_timing'.
+Entity <frameBuffer> analyzed. Unit <frameBuffer> generated.
+
+Analyzing generic Entity <sramController> in library <work> (Architecture <behavioral>).
+FATAL_ERROR:HDLParsers:vhptype.c:174:$Id: vhptype.c,v 1.9 2005/08/22 17:03:34 mikev Exp $:200 - INTERNAL ERROR... while parsing "//fs-caedm/tcowley0/EE 320/Essential last project/frameBuffer.vhd" line 306. Contact your hot line.   For technical support on this issue, please visit http://www.xilinx.com/support.

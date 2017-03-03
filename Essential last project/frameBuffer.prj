@@ -1,0 +1,3 @@
+vhdl work "vga_timing.vhd"
+vhdl work "sramController (2).vhd"
+vhdl work "frameBuffer.vhd"

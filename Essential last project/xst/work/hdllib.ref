@@ -1,0 +1,9 @@
+AR wavplayer behavioral "//fs-caedm/tcowley0/EE 320/Essential last project/wavPlayer.vhd" sub00/vhpl07 1460147662
+AR framebuffer taylor "//fs-caedm/tcowley0/EE 320/Essential last project/frameBuffer.vhd" sub00/vhpl05 1460158320
+EN wavplayer NULL "//fs-caedm/tcowley0/EE 320/Essential last project/wavPlayer.vhd" sub00/vhpl06 1460147661
+EN vga_timing NULL "//fs-caedm/tcowley0/EE 320/Essential last project/vga_timing.vhd" sub00/vhpl02 1460158317
+EN framebuffer NULL "//fs-caedm/tcowley0/EE 320/Essential last project/frameBuffer.vhd" sub00/vhpl04 1460158319
+AR sramcontroller yolo "//fs-caedm/tcowley0/EE 320/Essential last project/sramController (2).vhd" sub00/vhpl08 1460158316
+AR sramcontroller behavioral "//fs-caedm/tcowley0/EE 320/Essential last project/sramController.vhd" sub00/vhpl01 1460155593
+AR vga_timing behavioral "//fs-caedm/tcowley0/EE 320/Essential last project/vga_timing.vhd" sub00/vhpl03 1460158318
+EN sramcontroller NULL "//fs-caedm/tcowley0/EE 320/Essential last project/sramController (2).vhd" sub00/vhpl00 1460158315

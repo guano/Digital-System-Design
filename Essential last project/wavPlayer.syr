@@ -1,0 +1,485 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.22 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.23 secs
+ 
+--> Reading design: wavPlayer.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "wavPlayer.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "wavPlayer"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : wavPlayer
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "//fs-caedm/tcowley0/EE 320/Essential last project/sramController.vhd" in Library work.
+Architecture behavioral of Entity sramcontroller is up to date.
+Compiling vhdl file "//fs-caedm/tcowley0/EE 320/Essential last project/wavPlayer.vhd" in Library work.
+Architecture behavioral of Entity wavplayer is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <wavPlayer> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <sramController> in library <work> (architecture <Behavioral>) with generics.
+	CLK_RATE = 50000000
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <wavPlayer> in library <work> (Architecture <behavioral>).
+Entity <wavPlayer> analyzed. Unit <wavPlayer> generated.
+
+Analyzing generic Entity <sramController> in library <work> (Architecture <Behavioral>).
+	CLK_RATE = 50000000
+WARNING:Xst:1760 - "//fs-caedm/tcowley0/EE 320/Essential last project/sramController.vhd" line 54: Overflow in constant operation.
+WARNING:Xst:1760 - "//fs-caedm/tcowley0/EE 320/Essential last project/sramController.vhd" line 54: Overflow in constant operation.
+WARNING:Xst:1760 - "//fs-caedm/tcowley0/EE 320/Essential last project/sramController.vhd" line 54: Overflow in constant operation.
+Entity <sramController> analyzed. Unit <sramController> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <sramController>.
+    Related source file is "//fs-caedm/tcowley0/EE 320/Essential last project/sramController.vhd".
+INFO:Xst:1799 - State w2 is never reached in FSM <curState>.
+INFO:Xst:1799 - State w1 is never reached in FSM <curState>.
+INFO:Xst:1799 - State w3 is never reached in FSM <curState>.
+INFO:Xst:1799 - State w4 is never reached in FSM <curState>.
+INFO:Xst:1799 - State w5 is never reached in FSM <curState>.
+INFO:Xst:1799 - State w6 is never reached in FSM <curState>.
+    Found finite state machine <FSM_0> for signal <curState>.
+    -----------------------------------------------------------------------
+    | States             | 7                                              |
+    | Transitions        | 9                                              |
+    | Inputs             | 2                                              |
+    | Outputs            | 6                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | rst                       (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | powerup                                        |
+    | Power Up State     | powerup                                        |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 16-bit tristate buffer for signal <MemDB>.
+    Found 23-bit register for signal <addrReg>.
+    Found 23-bit register for signal <count>.
+    Found 23-bit comparator greatequal for signal <curState$cmp_ge0000> created at line 83.
+    Found 16-bit register for signal <dataInReg>.
+    Found 16-bit register for signal <dataOutReg>.
+    Found 23-bit adder for signal <nextCount$addsub0000> created at line 81.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  78 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+	inferred  16 Tristate(s).
+Unit <sramController> synthesized.
+
+
+Synthesizing Unit <wavPlayer>.
+    Related source file is "//fs-caedm/tcowley0/EE 320/Essential last project/wavPlayer.vhd".
+WARNING:Xst:647 - Input <RamWait> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:646 - Signal <memIdle> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 8-bit comparator greatequal for signal <audioOut$cmp_ge0000> created at line 129.
+    Found 16-bit register for signal <bufferWord>.
+    Found 16-bit register for signal <curWord>.
+    Found 8-bit addsub for signal <nPWMCounter>.
+    Found 11-bit adder for signal <nTimeSampleHeld$addsub0000> created at line 96.
+    Found 8-bit register for signal <PWMCounter>.
+    Found 1-bit register for signal <PWMCounterDirection<0>>.
+    Found 24-bit up counter for signal <sampleNumber>.
+    Found 11-bit register for signal <timeSampleHeld>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred  52 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+Unit <wavPlayer> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 3
+ 11-bit adder                                          : 1
+ 23-bit adder                                          : 1
+ 8-bit addsub                                          : 1
+# Counters                                             : 1
+ 24-bit up counter                                     : 1
+# Registers                                            : 9
+ 1-bit register                                        : 1
+ 11-bit register                                       : 1
+ 16-bit register                                       : 4
+ 23-bit register                                       : 2
+ 8-bit register                                        : 1
+# Comparators                                          : 2
+ 23-bit comparator greatequal                          : 1
+ 8-bit comparator greatequal                           : 1
+# Tristates                                            : 1
+ 16-bit tristate buffer                                : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <ramControl/curState/FSM> on signal <curState[1:7]> with one-hot encoding.
+---------------------
+ State   | Encoding
+---------------------
+ powerup | 0000001
+ idle    | 0000010
+ r1      | 0000100
+ r2      | 0001000
+ r3      | 0010000
+ r4      | 0100000
+ r5      | 1000000
+ w1      | unreached
+ w2      | unreached
+ w3      | unreached
+ w4      | unreached
+ w5      | unreached
+ w6      | unreached
+---------------------
+INFO:Xst:2261 - The FF/Latch <dataInReg_0> in Unit <ramControl> is equivalent to the following 15 FFs/Latches, which will be removed : <dataInReg_1> <dataInReg_2> <dataInReg_3> <dataInReg_4> <dataInReg_5> <dataInReg_6> <dataInReg_7> <dataInReg_8> <dataInReg_9> <dataInReg_10> <dataInReg_11> <dataInReg_12> <dataInReg_13> <dataInReg_14> <dataInReg_15> 
+WARNING:Xst:1710 - FF/Latch <dataInReg_0> (without init value) has a constant value of 0 in block <ramControl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2404 -  FFs/Latches <dataInReg<15:0>> (without init value) have a constant value of 0 in block <sramController>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# Adders/Subtractors                                   : 3
+ 11-bit adder                                          : 1
+ 23-bit adder                                          : 1
+ 8-bit addsub                                          : 1
+# Counters                                             : 1
+ 24-bit up counter                                     : 1
+# Registers                                            : 114
+ Flip-Flops                                            : 114
+# Comparators                                          : 2
+ 23-bit comparator greatequal                          : 1
+ 8-bit comparator greatequal                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <wavPlayer> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block wavPlayer, actual ratio is 2.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 145
+ Flip-Flops                                            : 145
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : wavPlayer.ngr
+Top Level Output File Name         : wavPlayer
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 58
+
+Cell Usage :
+# BELS                             : 286
+#      GND                         : 1
+#      INV                         : 6
+#      LUT1                        : 56
+#      LUT2                        : 34
+#      LUT3                        : 25
+#      LUT3_D                      : 1
+#      LUT4                        : 25
+#      LUT4_D                      : 3
+#      LUT4_L                      : 3
+#      MUXCY                       : 72
+#      MUXF5                       : 1
+#      VCC                         : 1
+#      XORCY                       : 58
+# FlipFlops/Latches                : 145
+#      FDC                         : 49
+#      FDCE                        : 94
+#      FDPE                        : 2
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 56
+#      IBUF                        : 4
+#      IOBUF                       : 16
+#      OBUF                        : 36
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                      117  out of   4656     2%  
+ Number of Slice Flip Flops:            145  out of   9312     1%  
+ Number of 4 input LUTs:                153  out of   9312     1%  
+ Number of IOs:                          58
+ Number of bonded IOBs:                  57  out of    232    24%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 145   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+----------------------------+-------+
+Control Signal                     | Buffer(FF name)            | Load  |
+-----------------------------------+----------------------------+-------+
+rst(rst1:O)                        | NONE(PWMCounterDirection_0)| 145   |
+-----------------------------------+----------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 5.877ns (Maximum Frequency: 170.155MHz)
+   Minimum input arrival time before clock: 1.946ns
+   Maximum output required time after clock: 8.738ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 5.877ns (frequency: 170.155MHz)
+  Total number of paths / destination ports: 1740 / 224
+-------------------------------------------------------------------------
+Delay:               5.877ns (Levels of Logic = 3)
+  Source:            timeSampleHeld_9 (FF)
+  Destination:       sampleNumber_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: timeSampleHeld_9 to sampleNumber_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.591   0.622  timeSampleHeld_9 (timeSampleHeld_9)
+     LUT4:I0->O            3   0.704   0.566  curWord_cmp_eq000011 (N3)
+     LUT4_D:I2->LO         1   0.704   0.179  nTimeSampleHeld_cmp_eq000011 (N59)
+     LUT2:I1->O           24   0.704   1.252  sampleNumber_cmp_eq00001 (sampleNumber_cmp_eq0000)
+     FDCE:CE                   0.555          sampleNumber_0
+    ----------------------------------------
+    Total                      5.877ns (3.258ns logic, 2.619ns route)
+                                       (55.4% logic, 44.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 16 / 16
+-------------------------------------------------------------------------
+Offset:              1.946ns (Levels of Logic = 1)
+  Source:            MemDB<15> (PAD)
+  Destination:       ramControl/dataOutReg_15 (FF)
+  Destination Clock: clk rising
+
+  Data Path: MemDB<15> to ramControl/dataOutReg_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IOBUF:IO->O           1   1.218   0.420  MemDB_15_IOBUF (N10)
+     FDCE:D                    0.308          ramControl/dataOutReg_15
+    ----------------------------------------
+    Total                      1.946ns (1.526ns logic, 0.420ns route)
+                                       (78.4% logic, 21.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 88 / 28
+-------------------------------------------------------------------------
+Offset:              8.738ns (Levels of Logic = 11)
+  Source:            sampleNumber_0 (FF)
+  Destination:       audioOut (PAD)
+  Source Clock:      clk rising
+
+  Data Path: sampleNumber_0 to audioOut
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            14   0.591   1.175  sampleNumber_0 (sampleNumber_0)
+     LUT3:I0->O            1   0.704   0.595  curSample<0>1 (curSample<0>)
+     LUT2:I0->O            1   0.704   0.000  Mcompar_audioOut_cmp_ge0000_lut<0> (Mcompar_audioOut_cmp_ge0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  Mcompar_audioOut_cmp_ge0000_cy<0> (Mcompar_audioOut_cmp_ge0000_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_audioOut_cmp_ge0000_cy<1> (Mcompar_audioOut_cmp_ge0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_audioOut_cmp_ge0000_cy<2> (Mcompar_audioOut_cmp_ge0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_audioOut_cmp_ge0000_cy<3> (Mcompar_audioOut_cmp_ge0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_audioOut_cmp_ge0000_cy<4> (Mcompar_audioOut_cmp_ge0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_audioOut_cmp_ge0000_cy<5> (Mcompar_audioOut_cmp_ge0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_audioOut_cmp_ge0000_cy<6> (Mcompar_audioOut_cmp_ge0000_cy<6>)
+     MUXCY:CI->O           1   0.459   0.420  Mcompar_audioOut_cmp_ge0000_cy<7> (audioOut_OBUF)
+     OBUF:I->O                 3.272          audioOut_OBUF (audioOut)
+    ----------------------------------------
+    Total                      8.738ns (6.548ns logic, 2.190ns route)
+                                       (74.9% logic, 25.1% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 9.21 secs
+ 
+--> 
+
+Total memory usage is 279248 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    7 (   0 filtered)
+Number of infos    :    8 (   0 filtered)
+

@@ -1,0 +1,10 @@
+Command line:
+   frameBuffer_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  61879
+
+Fri Apr 08 16:58:05 2016
+
+
+ Elaboration Time: 0.234001 sec

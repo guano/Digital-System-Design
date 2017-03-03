@@ -1,0 +1,37 @@
+xst -intstyle ise -ifn "J:/EE 320/Essential last project/wavPlayer.xst" -ofn "J:/EE 320/Essential last project/wavPlayer.syr" 
+xst -intstyle ise -ifn "J:/EE 320/Essential last project/wavPlayer.xst" -ofn "J:/EE 320/Essential last project/wavPlayer.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "wavPlayer.ngc" wavPlayer.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o wavPlayer_map.ncd wavPlayer.ngd wavPlayer.pcf 
+par -w -intstyle ise -ol high -t 1 wavPlayer_map.ncd wavPlayer.ncd wavPlayer.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml wavPlayer.twx wavPlayer.ncd -o wavPlayer.twr wavPlayer.pcf 
+bitgen -intstyle ise -f wavPlayer.ut wavPlayer.ncd 
+xst -intstyle ise -ifn "J:/EE 320/Essential last project/wavPlayer.xst" -ofn "J:/EE 320/Essential last project/wavPlayer.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Spartan3EMaster.ucf -p xc3s500e-fg320-4 "wavPlayer.ngc" wavPlayer.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc kens.ucf -p xc3s500e-fg320-4 "wavPlayer.ngc" wavPlayer.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o wavPlayer_map.ncd wavPlayer.ngd wavPlayer.pcf 
+par -w -intstyle ise -ol high -t 1 wavPlayer_map.ncd wavPlayer.ncd wavPlayer.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml wavPlayer.twx wavPlayer.ncd -o wavPlayer.twr wavPlayer.pcf -ucf kens.ucf 
+bitgen -intstyle ise -f wavPlayer.ut wavPlayer.ncd 
+xst -intstyle ise -ifn "J:/EE 320/Essential last project/wavPlayer.xst" -ofn "J:/EE 320/Essential last project/wavPlayer.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc kens.ucf -p xc3s500e-fg320-4 "wavPlayer.ngc" wavPlayer.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o wavPlayer_map.ncd wavPlayer.ngd wavPlayer.pcf 
+par -w -intstyle ise -ol high -t 1 wavPlayer_map.ncd wavPlayer.ncd wavPlayer.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml wavPlayer.twx wavPlayer.ncd -o wavPlayer.twr wavPlayer.pcf -ucf kens.ucf 
+bitgen -intstyle ise -f wavPlayer.ut wavPlayer.ncd 
+xst -intstyle ise -ifn "J:/EE 320/Essential last project/wavPlayer.xst" -ofn "J:/EE 320/Essential last project/wavPlayer.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc kens.ucf -p xc3s500e-fg320-4 "wavPlayer.ngc" wavPlayer.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o wavPlayer_map.ncd wavPlayer.ngd wavPlayer.pcf 
+par -w -intstyle ise -ol high -t 1 wavPlayer_map.ncd wavPlayer.ncd wavPlayer.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml wavPlayer.twx wavPlayer.ncd -o wavPlayer.twr wavPlayer.pcf -ucf kens.ucf 
+bitgen -intstyle ise -f wavPlayer.ut wavPlayer.ncd 
+xst -intstyle ise -ifn "J:/EE 320/Essential last project/wavPlayer.xst" -ofn "J:/EE 320/Essential last project/wavPlayer.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc kens.ucf -p xc3s500e-fg320-4 "wavPlayer.ngc" wavPlayer.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o wavPlayer_map.ncd wavPlayer.ngd wavPlayer.pcf 
+par -w -intstyle ise -ol high -t 1 wavPlayer_map.ncd wavPlayer.ncd wavPlayer.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml wavPlayer.twx wavPlayer.ncd -o wavPlayer.twr wavPlayer.pcf -ucf kens.ucf 
+bitgen -intstyle ise -f wavPlayer.ut wavPlayer.ncd 
+xst -intstyle ise -ifn "J:/EE 320/Essential last project/wavPlayer.xst" -ofn "J:/EE 320/Essential last project/wavPlayer.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc kens.ucf -p xc3s500e-fg320-4 "wavPlayer.ngc" wavPlayer.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o wavPlayer_map.ncd wavPlayer.ngd wavPlayer.pcf 
+par -w -intstyle ise -ol high -t 1 wavPlayer_map.ncd wavPlayer.ncd wavPlayer.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml wavPlayer.twx wavPlayer.ncd -o wavPlayer.twr wavPlayer.pcf -ucf kens.ucf 

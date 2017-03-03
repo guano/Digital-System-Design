@@ -1,0 +1,98 @@
+xst -intstyle ise -ifn "J:/EE 320/Essential last project/frameBuffer.xst" -ofn "J:/EE 320/Essential last project/frameBuffer.syr" 
+xst -intstyle ise -ifn "J:/EE 320/Essential last project/frameBuffer.xst" -ofn "J:/EE 320/Essential last project/frameBuffer.syr" 
+xst -intstyle ise -ifn "J:/EE 320/Essential last project/frameBuffer.xst" -ofn "J:/EE 320/Essential last project/frameBuffer.syr" 
+xst -intstyle ise -ifn "J:/EE 320/Essential last project/frameBuffer.xst" -ofn "J:/EE 320/Essential last project/frameBuffer.syr" 
+xst -intstyle ise -ifn "J:/EE 320/Essential last project/frameBuffer.xst" -ofn "J:/EE 320/Essential last project/frameBuffer.syr" 
+xst -intstyle ise -ifn "J:/EE 320/Essential last project/frameBuffer.xst" -ofn "J:/EE 320/Essential last project/frameBuffer.syr" 
+xst -intstyle ise -ifn "J:/EE 320/Essential last project/frameBuffer.xst" -ofn "J:/EE 320/Essential last project/frameBuffer.syr" 
+xst -intstyle ise -ifn "J:/EE 320/Essential last project/frameBuffer.xst" -ofn "J:/EE 320/Essential last project/frameBuffer.syr" 
+xst -intstyle ise -ifn "J:/EE 320/Essential last project/frameBuffer.xst" -ofn "J:/EE 320/Essential last project/frameBuffer.syr" 
+xst -intstyle ise -ifn "J:/EE 320/Essential last project/frameBuffer.xst" -ofn "J:/EE 320/Essential last project/frameBuffer.syr" 
+xst -intstyle ise -ifn "J:/EE 320/Essential last project/frameBuffer.xst" -ofn "J:/EE 320/Essential last project/frameBuffer.syr" 
+xst -intstyle ise -ifn "J:/EE 320/Essential last project/frameBuffer.xst" -ofn "J:/EE 320/Essential last project/frameBuffer.syr" 
+xst -intstyle ise -ifn "J:/EE 320/Essential last project/frameBuffer.xst" -ofn "J:/EE 320/Essential last project/frameBuffer.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "frameBuffer.ngc" frameBuffer.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o frameBuffer_map.ncd frameBuffer.ngd frameBuffer.pcf 
+par -w -intstyle ise -ol high -t 1 frameBuffer_map.ncd frameBuffer.ncd frameBuffer.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml frameBuffer.twx frameBuffer.ncd -o frameBuffer.twr frameBuffer.pcf 
+bitgen -intstyle ise -f frameBuffer.ut frameBuffer.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Spartan3EMaster.ucf -p xc3s500e-fg320-4 "frameBuffer.ngc" frameBuffer.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o frameBuffer_map.ncd frameBuffer.ngd frameBuffer.pcf 
+par -w -intstyle ise -ol high -t 1 frameBuffer_map.ncd frameBuffer.ncd frameBuffer.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml frameBuffer.twx frameBuffer.ncd -o frameBuffer.twr frameBuffer.pcf -ucf Spartan3EMaster.ucf 
+bitgen -intstyle ise -f frameBuffer.ut frameBuffer.ncd 
+xst -intstyle ise -ifn "J:/EE 320/Essential last project/frameBuffer.xst" -ofn "J:/EE 320/Essential last project/frameBuffer.syr" 
+xst -intstyle ise -ifn "J:/EE 320/Essential last project/frameBuffer.xst" -ofn "J:/EE 320/Essential last project/frameBuffer.syr" 
+xst -intstyle ise -ifn "J:/EE 320/Essential last project/frameBuffer.xst" -ofn "J:/EE 320/Essential last project/frameBuffer.syr" 
+xst -intstyle ise -ifn "J:/EE 320/Essential last project/frameBuffer.xst" -ofn "J:/EE 320/Essential last project/frameBuffer.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Spartan3EMaster.ucf -p xc3s500e-fg320-4 "frameBuffer.ngc" frameBuffer.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o frameBuffer_map.ncd frameBuffer.ngd frameBuffer.pcf 
+par -w -intstyle ise -ol high -t 1 frameBuffer_map.ncd frameBuffer.ncd frameBuffer.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml frameBuffer.twx frameBuffer.ncd -o frameBuffer.twr frameBuffer.pcf -ucf Spartan3EMaster.ucf 
+bitgen -intstyle ise -f frameBuffer.ut frameBuffer.ncd 
+bitgen -intstyle ise -f frameBuffer.ut frameBuffer.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Spartan3EMaster.ucf -p xc3s500e-fg320-4 "frameBuffer.ngc" frameBuffer.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o frameBuffer_map.ncd frameBuffer.ngd frameBuffer.pcf 
+par -w -intstyle ise -ol high -t 1 frameBuffer_map.ncd frameBuffer.ncd frameBuffer.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml frameBuffer.twx frameBuffer.ncd -o frameBuffer.twr frameBuffer.pcf -ucf Spartan3EMaster.ucf 
+bitgen -intstyle ise -f frameBuffer.ut frameBuffer.ncd 
+xst -intstyle ise -ifn "J:/EE 320/Essential last project/frameBuffer.xst" -ofn "J:/EE 320/Essential last project/frameBuffer.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "frameBuffer.ngc" frameBuffer.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o frameBuffer_map.ncd frameBuffer.ngd frameBuffer.pcf 
+par -w -intstyle ise -ol high -t 1 frameBuffer_map.ncd frameBuffer.ncd frameBuffer.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml frameBuffer.twx frameBuffer.ncd -o frameBuffer.twr frameBuffer.pcf 
+bitgen -intstyle ise -f frameBuffer.ut frameBuffer.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Spartan3EMaster.ucf -p xc3s500e-fg320-4 "frameBuffer.ngc" frameBuffer.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o frameBuffer_map.ncd frameBuffer.ngd frameBuffer.pcf 
+par -w -intstyle ise -ol high -t 1 frameBuffer_map.ncd frameBuffer.ncd frameBuffer.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml frameBuffer.twx frameBuffer.ncd -o frameBuffer.twr frameBuffer.pcf -ucf Spartan3EMaster.ucf 
+bitgen -intstyle ise -f frameBuffer.ut frameBuffer.ncd 
+xst -intstyle ise -ifn "J:/EE 320/Essential last project/frameBuffer.xst" -ofn "J:/EE 320/Essential last project/frameBuffer.syr" 
+xst -intstyle ise -ifn "J:/EE 320/Essential last project/frameBuffer.xst" -ofn "J:/EE 320/Essential last project/frameBuffer.syr" 
+xst -intstyle ise -ifn "J:/EE 320/Essential last project/frameBuffer.xst" -ofn "J:/EE 320/Essential last project/frameBuffer.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Spartan3EMaster.ucf -p xc3s500e-fg320-4 "frameBuffer.ngc" frameBuffer.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o frameBuffer_map.ncd frameBuffer.ngd frameBuffer.pcf 
+par -w -intstyle ise -ol high -t 1 frameBuffer_map.ncd frameBuffer.ncd frameBuffer.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml frameBuffer.twx frameBuffer.ncd -o frameBuffer.twr frameBuffer.pcf -ucf Spartan3EMaster.ucf 
+bitgen -intstyle ise -f frameBuffer.ut frameBuffer.ncd 
+xst -intstyle ise -ifn "J:/EE 320/Essential last project/frameBuffer.xst" -ofn "J:/EE 320/Essential last project/frameBuffer.syr" 
+xst -intstyle ise -ifn "J:/EE 320/Essential last project/frameBuffer.xst" -ofn "J:/EE 320/Essential last project/frameBuffer.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Spartan3EMaster.ucf -p xc3s500e-fg320-4 "frameBuffer.ngc" frameBuffer.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o frameBuffer_map.ncd frameBuffer.ngd frameBuffer.pcf 
+par -w -intstyle ise -ol high -t 1 frameBuffer_map.ncd frameBuffer.ncd frameBuffer.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml frameBuffer.twx frameBuffer.ncd -o frameBuffer.twr frameBuffer.pcf -ucf Spartan3EMaster.ucf 
+bitgen -intstyle ise -f frameBuffer.ut frameBuffer.ncd 
+xst -intstyle ise -ifn "J:/EE 320/Essential last project/frameBuffer.xst" -ofn "J:/EE 320/Essential last project/frameBuffer.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Spartan3EMaster.ucf -p xc3s500e-fg320-4 "frameBuffer.ngc" frameBuffer.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o frameBuffer_map.ncd frameBuffer.ngd frameBuffer.pcf 
+par -w -intstyle ise -ol high -t 1 frameBuffer_map.ncd frameBuffer.ncd frameBuffer.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml frameBuffer.twx frameBuffer.ncd -o frameBuffer.twr frameBuffer.pcf -ucf Spartan3EMaster.ucf 
+bitgen -intstyle ise -f frameBuffer.ut frameBuffer.ncd 
+xst -intstyle ise -ifn "J:/EE 320/Essential last project/frameBuffer.xst" -ofn "J:/EE 320/Essential last project/frameBuffer.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Spartan3EMaster.ucf -p xc3s500e-fg320-4 "frameBuffer.ngc" frameBuffer.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o frameBuffer_map.ncd frameBuffer.ngd frameBuffer.pcf 
+par -w -intstyle ise -ol high -t 1 frameBuffer_map.ncd frameBuffer.ncd frameBuffer.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml frameBuffer.twx frameBuffer.ncd -o frameBuffer.twr frameBuffer.pcf -ucf Spartan3EMaster.ucf 
+bitgen -intstyle ise -f frameBuffer.ut frameBuffer.ncd 
+xst -intstyle ise -ifn "J:/EE 320/Essential last project/frameBuffer.xst" -ofn "J:/EE 320/Essential last project/frameBuffer.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Spartan3EMaster.ucf -p xc3s500e-fg320-4 "frameBuffer.ngc" frameBuffer.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o frameBuffer_map.ncd frameBuffer.ngd frameBuffer.pcf 
+par -w -intstyle ise -ol high -t 1 frameBuffer_map.ncd frameBuffer.ncd frameBuffer.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml frameBuffer.twx frameBuffer.ncd -o frameBuffer.twr frameBuffer.pcf -ucf Spartan3EMaster.ucf 
+bitgen -intstyle ise -f frameBuffer.ut frameBuffer.ncd 
+xst -intstyle ise -ifn "J:/EE 320/Essential last project/frameBuffer.xst" -ofn "J:/EE 320/Essential last project/frameBuffer.syr" 
+xst -intstyle ise -ifn "J:/EE 320/Essential last project/frameBuffer.xst" -ofn "J:/EE 320/Essential last project/frameBuffer.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Spartan3EMaster.ucf -p xc3s500e-fg320-4 "frameBuffer.ngc" frameBuffer.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o frameBuffer_map.ncd frameBuffer.ngd frameBuffer.pcf 
+par -w -intstyle ise -ol high -t 1 frameBuffer_map.ncd frameBuffer.ncd frameBuffer.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml frameBuffer.twx frameBuffer.ncd -o frameBuffer.twr frameBuffer.pcf -ucf Spartan3EMaster.ucf 
+bitgen -intstyle ise -f frameBuffer.ut frameBuffer.ncd 
+xst -intstyle ise -ifn "J:/EE 320/Essential last project/frameBuffer.xst" -ofn "J:/EE 320/Essential last project/frameBuffer.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Spartan3EMaster.ucf -p xc3s500e-fg320-4 "frameBuffer.ngc" frameBuffer.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o frameBuffer_map.ncd frameBuffer.ngd frameBuffer.pcf 
+par -w -intstyle ise -ol high -t 1 frameBuffer_map.ncd frameBuffer.ncd frameBuffer.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml frameBuffer.twx frameBuffer.ncd -o frameBuffer.twr frameBuffer.pcf -ucf Spartan3EMaster.ucf 
+bitgen -intstyle ise -f frameBuffer.ut frameBuffer.ncd 
+xst -intstyle ise -ifn "J:/EE 320/Essential last project/frameBuffer.xst" -ofn "J:/EE 320/Essential last project/frameBuffer.syr" 
+xst -intstyle ise -ifn "J:/EE 320/Essential last project/frameBuffer.xst" -ofn "J:/EE 320/Essential last project/frameBuffer.syr" 
+xst -intstyle ise -ifn "J:/EE 320/Essential last project/frameBuffer.xst" -ofn "J:/EE 320/Essential last project/frameBuffer.syr" 

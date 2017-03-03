@@ -1,0 +1,950 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.19 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.19 secs
+ 
+--> Reading design: frameBuffer.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "frameBuffer.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "frameBuffer"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : frameBuffer
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "//fs-caedm/tcowley0/EE 320/Essential last project 2/sramController (2).vhd" in Library work.
+Architecture yolo of Entity sramcontroller is up to date.
+Compiling vhdl file "//fs-caedm/tcowley0/EE 320/Essential last project 2/vga_timing.vhd" in Library work.
+Architecture behavioral of Entity vga_timing is up to date.
+Compiling vhdl file "//fs-caedm/tcowley0/EE 320/Essential last project 2/frameBuffer.vhd" in Library work.
+Entity <framebuffer> compiled.
+Entity <framebuffer> (Architecture <taylor>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <frameBuffer> in library <work> (architecture <taylor>).
+
+Analyzing hierarchy for entity <sramController> in library <work> (architecture <yolo>) with generics.
+	CLK_RATE = 50000000
+
+Analyzing hierarchy for entity <vga_timing> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <frameBuffer> in library <work> (Architecture <taylor>).
+WARNING:Xst:795 - "//fs-caedm/tcowley0/EE 320/Essential last project 2/frameBuffer.vhd" line 155: Size of operands are different : result is <false>.
+WARNING:Xst:790 - "//fs-caedm/tcowley0/EE 320/Essential last project 2/frameBuffer.vhd" line 239: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:1607 - Contents of array <audio_cache> may be accessed with an index that does not cover the full array size.
+WARNING:Xst:790 - "//fs-caedm/tcowley0/EE 320/Essential last project 2/frameBuffer.vhd" line 240: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "//fs-caedm/tcowley0/EE 320/Essential last project 2/frameBuffer.vhd" line 246: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:1607 - Contents of array <audio_cache> may be accessed with an index that does not cover the full array size.
+WARNING:Xst:790 - "//fs-caedm/tcowley0/EE 320/Essential last project 2/frameBuffer.vhd" line 248: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "//fs-caedm/tcowley0/EE 320/Essential last project 2/frameBuffer.vhd" line 249: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:753 - "//fs-caedm/tcowley0/EE 320/Essential last project 2/frameBuffer.vhd" line 275: Unconnected output port 'ready' of component 'sramController'.
+WARNING:Xst:753 - "//fs-caedm/tcowley0/EE 320/Essential last project 2/frameBuffer.vhd" line 298: Unconnected output port 'last_column' of component 'vga_timing'.
+WARNING:Xst:753 - "//fs-caedm/tcowley0/EE 320/Essential last project 2/frameBuffer.vhd" line 298: Unconnected output port 'last_row' of component 'vga_timing'.
+Entity <frameBuffer> analyzed. Unit <frameBuffer> generated.
+
+Analyzing generic Entity <sramController> in library <work> (Architecture <yolo>).
+	CLK_RATE = 50000000
+Entity <sramController> analyzed. Unit <sramController> generated.
+
+Analyzing Entity <vga_timing> in library <work> (Architecture <behavioral>).
+Entity <vga_timing> analyzed. Unit <vga_timing> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <sramController>.
+    Related source file is "//fs-caedm/tcowley0/EE 320/Essential last project 2/sramController (2).vhd".
+INFO:Xst:1799 - State r_00 is never reached in FSM <state>.
+INFO:Xst:1799 - State w_20 is never reached in FSM <state>.
+INFO:Xst:1799 - State w_00 is never reached in FSM <state>.
+INFO:Xst:1799 - State w_40 is never reached in FSM <state>.
+INFO:Xst:1799 - State w_60 is never reached in FSM <state>.
+INFO:Xst:1799 - State w_unnecessary is never reached in FSM <state>.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 6                                              |
+    | Transitions        | 7                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 6                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | rst                       (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | power_up                                       |
+    | Power Up State     | power_up                                       |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 16-bit tristate buffer for signal <d>.
+    Found 14-bit up counter for signal <power_up_count>.
+    Found 23-bit register for signal <Raddr>.
+    Found 16-bit register for signal <Rm2s>.
+    Found 16-bit register for signal <Rs2m>.
+    Found 14-bit comparator greatequal for signal <state$cmp_ge0000> created at line 102.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   1 Counter(s).
+	inferred  55 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred  16 Tristate(s).
+Unit <sramController> synthesized.
+
+
+Synthesizing Unit <vga_timing>.
+    Related source file is "//fs-caedm/tcowley0/EE 320/Essential last project 2/vga_timing.vhd".
+    Found 1-bit register for signal <last_row>.
+    Found 1-bit register for signal <last_column>.
+    Found 1-bit register for signal <HS>.
+    Found 1-bit register for signal <VS>.
+    Found 1-bit register for signal <blank_x>.
+    Found 1-bit register for signal <blank_y>.
+    Found 10-bit up counter for signal <column_counter>.
+    Found 1-bit register for signal <pixel_en>.
+    Found 10-bit up counter for signal <row_counter>.
+    Summary:
+	inferred   2 Counter(s).
+	inferred   7 D-type flip-flop(s).
+Unit <vga_timing> synthesized.
+
+
+Synthesizing Unit <frameBuffer>.
+    Related source file is "//fs-caedm/tcowley0/EE 320/Essential last project 2/frameBuffer.vhd".
+WARNING:Xst:646 - Signal <pixel_y<9>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <count_to_four_next> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <count_to_four> is used but never assigned. This sourceless signal will be automatically connected to value 0000.
+WARNING:Xst:646 - Signal <VS4> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <HS4> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 9-bit 64-to-1 multiplexer for signal <$varindex0000> created at line 246.
+    Found 23-bit register for signal <addr>.
+    Found 23-bit register for signal <animate_timer>.
+    Found 23-bit register for signal <animate_timer_next>.
+    Found 23-bit adder for signal <animate_timer_next$addsub0000> created at line 214.
+    Found 576-bit register for signal <audio_cache>.
+    Found 5-bit adder for signal <audio_cache_next$add0000> created at line 249.
+    Found 24-bit register for signal <audio_load_address>.
+    Found 24-bit adder for signal <audio_load_address$addsub0000> created at line 259.
+    Found 24-bit comparator greatequal for signal <audio_load_address$cmp_ge0000> created at line 254.
+    Found 24-bit comparator greatequal for signal <audio_load_address$cmp_ge0001> created at line 255.
+    Found 24-bit comparator less for signal <audio_load_address$cmp_lt0000> created at line 254.
+    Found 5-bit up counter for signal <audio_play_address>.
+    Found 5-bit up accumulator for signal <audio_save_address>.
+    Found 8-bit comparator greatequal for signal <audioOut$cmp_ge0000> created at line 133.
+    Found 1-bit register for signal <bl1>.
+    Found 1-bit register for signal <bl2>.
+    Found 1-bit register for signal <bl3>.
+    Found 1-bit register for signal <bl4>.
+    Found 1-bit register for signal <bl5>.
+    Found 1-bit register for signal <bl6>.
+    Found 1-bit register for signal <bl7>.
+    Found 1-bit register for signal <bl8>.
+    Found 8-bit register for signal <curSample>.
+    Found 1-bit register for signal <data_loaded>.
+    Found 5-bit register for signal <image_number>.
+    Found 5-bit register for signal <image_number_next>.
+    Found 5-bit adder for signal <image_number_next$addsub0000> created at line 211.
+    Found 9-bit 64-to-1 multiplexer for signal <next_sample$varindex0000> created at line 239.
+    Found 8-bit addsub for signal <nPWMCounter>.
+    Found 11-bit adder for signal <nTimeSampleHeld$addsub0000> created at line 122.
+    Found 16-bit register for signal <pixel_data>.
+    Found 8-bit register for signal <PWMCounter>.
+    Found 1-bit register for signal <PWMCounterDirection<0>>.
+    Found 24-bit up counter for signal <sampleNumber>.
+    Found 11-bit register for signal <timeSampleHeld>.
+INFO:Xst:738 - HDL ADVISOR - 576 flip-flops were inferred for signal <audio_cache>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+    Summary:
+	inferred   2 Counter(s).
+	inferred   1 Accumulator(s).
+	inferred 732 D-type flip-flop(s).
+	inferred   6 Adder/Subtractor(s).
+	inferred   4 Comparator(s).
+	inferred  18 Multiplexer(s).
+Unit <frameBuffer> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 6
+ 11-bit adder                                          : 1
+ 23-bit adder                                          : 1
+ 24-bit adder                                          : 1
+ 5-bit adder                                           : 2
+ 8-bit addsub                                          : 1
+# Counters                                             : 4
+ 10-bit up counter                                     : 2
+ 14-bit up counter                                     : 1
+ 5-bit up counter                                      : 1
+# Accumulators                                         : 1
+ 5-bit up accumulator                                  : 1
+# Registers                                            : 94
+ 1-bit register                                        : 17
+ 11-bit register                                       : 1
+ 16-bit register                                       : 3
+ 23-bit register                                       : 4
+ 24-bit register                                       : 1
+ 5-bit register                                        : 2
+ 8-bit register                                        : 2
+ 9-bit register                                        : 64
+# Comparators                                          : 5
+ 14-bit comparator greatequal                          : 1
+ 24-bit comparator greatequal                          : 2
+ 24-bit comparator less                                : 1
+ 8-bit comparator greatequal                           : 1
+# Multiplexers                                         : 2
+ 9-bit 64-to-1 multiplexer                             : 2
+# Tristates                                            : 1
+ 16-bit tristate buffer                                : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <sramCtl/state/FSM> on signal <state[1:6]> with one-hot encoding.
+---------------------------
+ State         | Encoding
+---------------------------
+ power_up      | 000001
+ idle          | 000010
+ r_00          | unreached
+ r_20          | 000100
+ r_40          | 001000
+ r_60          | 010000
+ r_unnecessary | 100000
+ w_00          | unreached
+ w_20          | unreached
+ w_40          | unreached
+ w_60          | unreached
+ w_unnecessary | unreached
+---------------------------
+INFO:Xst:2261 - The FF/Latch <Rm2s_0> in Unit <sramCtl> is equivalent to the following 15 FFs/Latches, which will be removed : <Rm2s_1> <Rm2s_2> <Rm2s_3> <Rm2s_4> <Rm2s_5> <Rm2s_6> <Rm2s_7> <Rm2s_8> <Rm2s_9> <Rm2s_10> <Rm2s_11> <Rm2s_12> <Rm2s_13> <Rm2s_14> <Rm2s_15> 
+WARNING:Xst:1710 - FF/Latch <Rm2s_0> (without init value) has a constant value of 0 in block <sramCtl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_55_8> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_55_7> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_55_6> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_55_5> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_55_4> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_55_3> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_55_2> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_55_1> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_55_0> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_48_8> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_48_7> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_48_6> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_48_5> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_48_4> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_48_3> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_48_2> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_48_1> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_48_0> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_54_8> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_54_7> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_54_6> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_54_5> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_54_4> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_54_3> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_54_2> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_54_1> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_54_0> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_49_8> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_49_7> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_49_6> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_49_5> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_49_4> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_49_3> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_49_2> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_49_1> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_49_0> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_51_8> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_51_7> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_51_6> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_51_5> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_51_4> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_51_3> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_51_2> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_51_1> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_51_0> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_46_8> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_46_7> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_46_6> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_46_5> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_46_4> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_46_3> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_46_2> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_46_1> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_46_0> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_52_8> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_52_7> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_52_6> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_52_5> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_52_4> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_52_3> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_52_2> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_52_1> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_52_0> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_53_8> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_53_7> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_53_6> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_53_5> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_53_4> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_53_3> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_53_2> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_53_1> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_53_0> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_62_8> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_62_7> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_62_6> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_62_5> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_62_4> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_62_3> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_62_2> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_62_1> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_62_0> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_57_8> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_57_7> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_57_6> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_57_5> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_57_4> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_57_3> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_57_2> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_57_1> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_57_0> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_59_8> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_59_7> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_59_6> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_59_5> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_59_4> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_59_3> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_59_2> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_59_1> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_59_0> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_63_8> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_63_7> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_63_6> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_63_5> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_63_4> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_63_3> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_63_2> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_63_1> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_63_0> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_60_8> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_60_7> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_60_6> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_60_5> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_60_4> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_60_3> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_60_2> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_60_1> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_60_0> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_61_8> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_61_7> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_61_6> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_61_5> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_61_4> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_61_3> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_61_2> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_61_1> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_61_0> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_58_8> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_58_7> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_58_6> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_58_5> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_58_4> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_58_3> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_58_2> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_58_1> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_58_0> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_56_8> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_56_7> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_56_6> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_56_5> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_56_4> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_56_3> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_56_2> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_56_1> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_56_0> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_37_8> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_37_7> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_37_6> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_37_5> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_37_4> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_37_3> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_37_2> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_37_1> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_37_0> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_35_8> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_35_7> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_35_6> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_35_5> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_35_4> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_35_3> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_35_2> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_35_1> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_35_0> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_41_8> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_41_7> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_41_6> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_41_5> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_41_4> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_41_3> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_41_2> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_41_1> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_41_0> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_36_8> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_36_7> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_36_6> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_36_5> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_36_4> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_36_3> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_36_2> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_36_1> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_36_0> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_34_8> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_34_7> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_34_6> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_34_5> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_34_4> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_34_3> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_34_2> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_34_1> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_34_0> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_32_8> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_32_7> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_32_6> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_32_5> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_32_4> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_32_3> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_32_2> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_32_1> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_32_0> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_40_8> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_40_7> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_40_6> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_40_5> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_40_4> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_40_3> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_40_2> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_40_1> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_40_0> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_33_8> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_33_7> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_33_6> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_33_5> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_33_4> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_33_3> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_33_2> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_33_1> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_33_0> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_44_8> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_44_7> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_44_6> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_44_5> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_44_4> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_44_3> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_44_2> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_44_1> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_44_0> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_50_8> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_50_7> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_50_6> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_50_5> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_50_4> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_50_3> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_50_2> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_50_1> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_50_0> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_47_8> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_47_7> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_47_6> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_47_5> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_47_4> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_47_3> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_47_2> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_47_1> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_47_0> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_45_8> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_45_7> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_45_6> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_45_5> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_45_4> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_45_3> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_45_2> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_45_1> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_45_0> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_38_8> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_38_7> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_38_6> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_38_5> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_38_4> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_38_3> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_38_2> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_38_1> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_38_0> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_42_8> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_42_7> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_42_6> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_42_5> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_42_4> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_42_3> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_42_2> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_42_1> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_42_0> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_39_8> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_39_7> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_39_6> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_39_5> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_39_4> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_39_3> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_39_2> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_39_1> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_39_0> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_43_8> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_43_7> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_43_6> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_43_5> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_43_4> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_43_3> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_43_2> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_43_1> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_cache_43_0> (without init value) has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2404 -  FFs/Latches <audio_cache_32<8:0>> (without init value) have a constant value of 0 in block <frameBuffer>.
+WARNING:Xst:2404 -  FFs/Latches <audio_cache_33<8:0>> (without init value) have a constant value of 0 in block <frameBuffer>.
+WARNING:Xst:2404 -  FFs/Latches <audio_cache_34<8:0>> (without init value) have a constant value of 0 in block <frameBuffer>.
+WARNING:Xst:2404 -  FFs/Latches <audio_cache_35<8:0>> (without init value) have a constant value of 0 in block <frameBuffer>.
+WARNING:Xst:2404 -  FFs/Latches <audio_cache_36<8:0>> (without init value) have a constant value of 0 in block <frameBuffer>.
+WARNING:Xst:2404 -  FFs/Latches <audio_cache_40<8:0>> (without init value) have a constant value of 0 in block <frameBuffer>.
+WARNING:Xst:2404 -  FFs/Latches <audio_cache_41<8:0>> (without init value) have a constant value of 0 in block <frameBuffer>.
+WARNING:Xst:2404 -  FFs/Latches <audio_cache_37<8:0>> (without init value) have a constant value of 0 in block <frameBuffer>.
+WARNING:Xst:2404 -  FFs/Latches <audio_cache_42<8:0>> (without init value) have a constant value of 0 in block <frameBuffer>.
+WARNING:Xst:2404 -  FFs/Latches <audio_cache_38<8:0>> (without init value) have a constant value of 0 in block <frameBuffer>.
+WARNING:Xst:2404 -  FFs/Latches <audio_cache_43<8:0>> (without init value) have a constant value of 0 in block <frameBuffer>.
+WARNING:Xst:2404 -  FFs/Latches <audio_cache_44<8:0>> (without init value) have a constant value of 0 in block <frameBuffer>.
+WARNING:Xst:2404 -  FFs/Latches <audio_cache_39<8:0>> (without init value) have a constant value of 0 in block <frameBuffer>.
+WARNING:Xst:2404 -  FFs/Latches <audio_cache_45<8:0>> (without init value) have a constant value of 0 in block <frameBuffer>.
+WARNING:Xst:2404 -  FFs/Latches <audio_cache_46<8:0>> (without init value) have a constant value of 0 in block <frameBuffer>.
+WARNING:Xst:2404 -  FFs/Latches <audio_cache_50<8:0>> (without init value) have a constant value of 0 in block <frameBuffer>.
+WARNING:Xst:2404 -  FFs/Latches <audio_cache_51<8:0>> (without init value) have a constant value of 0 in block <frameBuffer>.
+WARNING:Xst:2404 -  FFs/Latches <audio_cache_52<8:0>> (without init value) have a constant value of 0 in block <frameBuffer>.
+WARNING:Xst:2404 -  FFs/Latches <audio_cache_47<8:0>> (without init value) have a constant value of 0 in block <frameBuffer>.
+WARNING:Xst:2404 -  FFs/Latches <audio_cache_48<8:0>> (without init value) have a constant value of 0 in block <frameBuffer>.
+WARNING:Xst:2404 -  FFs/Latches <audio_cache_49<8:0>> (without init value) have a constant value of 0 in block <frameBuffer>.
+WARNING:Xst:2404 -  FFs/Latches <audio_cache_53<8:0>> (without init value) have a constant value of 0 in block <frameBuffer>.
+WARNING:Xst:2404 -  FFs/Latches <audio_cache_54<8:0>> (without init value) have a constant value of 0 in block <frameBuffer>.
+WARNING:Xst:2404 -  FFs/Latches <audio_cache_60<8:0>> (without init value) have a constant value of 0 in block <frameBuffer>.
+WARNING:Xst:2404 -  FFs/Latches <audio_cache_55<8:0>> (without init value) have a constant value of 0 in block <frameBuffer>.
+WARNING:Xst:2404 -  FFs/Latches <audio_cache_56<8:0>> (without init value) have a constant value of 0 in block <frameBuffer>.
+WARNING:Xst:2404 -  FFs/Latches <audio_cache_57<8:0>> (without init value) have a constant value of 0 in block <frameBuffer>.
+WARNING:Xst:2404 -  FFs/Latches <audio_cache_61<8:0>> (without init value) have a constant value of 0 in block <frameBuffer>.
+WARNING:Xst:2404 -  FFs/Latches <audio_cache_62<8:0>> (without init value) have a constant value of 0 in block <frameBuffer>.
+WARNING:Xst:2404 -  FFs/Latches <audio_cache_63<8:0>> (without init value) have a constant value of 0 in block <frameBuffer>.
+WARNING:Xst:2404 -  FFs/Latches <audio_cache_58<8:0>> (without init value) have a constant value of 0 in block <frameBuffer>.
+WARNING:Xst:2404 -  FFs/Latches <audio_cache_59<8:0>> (without init value) have a constant value of 0 in block <frameBuffer>.
+WARNING:Xst:2404 -  FFs/Latches <Rm2s<15:0>> (without init value) have a constant value of 0 in block <sramController>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# Adders/Subtractors                                   : 6
+ 11-bit adder                                          : 1
+ 23-bit adder                                          : 1
+ 24-bit adder                                          : 1
+ 5-bit adder                                           : 2
+ 8-bit addsub                                          : 1
+# Counters                                             : 4
+ 10-bit up counter                                     : 2
+ 14-bit up counter                                     : 1
+ 5-bit up counter                                      : 1
+# Accumulators                                         : 1
+ 5-bit up accumulator                                  : 1
+# Registers                                            : 490
+ Flip-Flops                                            : 490
+# Comparators                                          : 5
+ 14-bit comparator greatequal                          : 1
+ 24-bit comparator greatequal                          : 2
+ 24-bit comparator less                                : 1
+ 8-bit comparator greatequal                           : 1
+# Multiplexers                                         : 2
+ 9-bit 64-to-1 multiplexer                             : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1293 - FF/Latch <audio_load_address_0> has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <audio_save_address_0> has a constant value of 0 in block <frameBuffer>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <frameBuffer> ...
+
+Optimizing unit <vga_timing> ...
+WARNING:Xst:2677 - Node <control/last_column> of sequential type is unconnected in block <frameBuffer>.
+WARNING:Xst:2677 - Node <control/last_row> of sequential type is unconnected in block <frameBuffer>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+WARNING:Xst:2677 - Node <audio_cache_1_8> of sequential type is unconnected in block <frameBuffer>.
+WARNING:Xst:2677 - Node <audio_cache_3_8> of sequential type is unconnected in block <frameBuffer>.
+WARNING:Xst:2677 - Node <audio_cache_5_8> of sequential type is unconnected in block <frameBuffer>.
+WARNING:Xst:2677 - Node <audio_cache_7_8> of sequential type is unconnected in block <frameBuffer>.
+WARNING:Xst:2677 - Node <audio_cache_9_8> of sequential type is unconnected in block <frameBuffer>.
+WARNING:Xst:2677 - Node <audio_cache_11_8> of sequential type is unconnected in block <frameBuffer>.
+WARNING:Xst:2677 - Node <audio_cache_13_8> of sequential type is unconnected in block <frameBuffer>.
+WARNING:Xst:2677 - Node <audio_cache_15_8> of sequential type is unconnected in block <frameBuffer>.
+WARNING:Xst:2677 - Node <audio_cache_21_8> of sequential type is unconnected in block <frameBuffer>.
+WARNING:Xst:2677 - Node <audio_cache_17_8> of sequential type is unconnected in block <frameBuffer>.
+WARNING:Xst:2677 - Node <audio_cache_23_8> of sequential type is unconnected in block <frameBuffer>.
+WARNING:Xst:2677 - Node <audio_cache_25_8> of sequential type is unconnected in block <frameBuffer>.
+WARNING:Xst:2677 - Node <audio_cache_19_8> of sequential type is unconnected in block <frameBuffer>.
+WARNING:Xst:2677 - Node <audio_cache_31_8> of sequential type is unconnected in block <frameBuffer>.
+WARNING:Xst:2677 - Node <audio_cache_27_8> of sequential type is unconnected in block <frameBuffer>.
+WARNING:Xst:2677 - Node <audio_cache_29_8> of sequential type is unconnected in block <frameBuffer>.
+Found area constraint ratio of 100 (+ 5) on block frameBuffer, actual ratio is 10.
+
+Final Macro Processing ...
+
+Processing Unit <frameBuffer> :
+	Found 8-bit shift register for signal <bl8>.
+Unit <frameBuffer> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 512
+ Flip-Flops                                            : 512
+# Shift Registers                                      : 1
+ 8-bit shift register                                  : 1
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : frameBuffer.ngr
+Top Level Output File Name         : frameBuffer
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 80
+
+Cell Usage :
+# BELS                             : 1233
+#      GND                         : 1
+#      INV                         : 26
+#      LUT1                        : 106
+#      LUT2                        : 100
+#      LUT2_D                      : 1
+#      LUT3                        : 324
+#      LUT3_D                      : 8
+#      LUT3_L                      : 2
+#      LUT4                        : 263
+#      LUT4_D                      : 21
+#      LUT4_L                      : 2
+#      MUXCY                       : 146
+#      MUXF5                       : 79
+#      MUXF6                       : 36
+#      MUXF7                       : 18
+#      MUXF8                       : 8
+#      VCC                         : 1
+#      XORCY                       : 91
+# FlipFlops/Latches                : 513
+#      FDC                         : 29
+#      FDCE                        : 52
+#      FDE                         : 429
+#      FDPE                        : 3
+# Shift Registers                  : 1
+#      SRL16E                      : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 79
+#      IBUF                        : 9
+#      IOBUF                       : 16
+#      OBUF                        : 54
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                      475  out of   4656    10%  
+ Number of Slice Flip Flops:            513  out of   9312     5%  
+ Number of 4 input LUTs:                854  out of   9312     9%  
+    Number used as logic:               853
+    Number used as Shift registers:       1
+ Number of IOs:                          80
+ Number of bonded IOBs:                  80  out of    232    34%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 514   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+btn0                               | IBUF                   | 84    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 8.908ns (Maximum Frequency: 112.257MHz)
+   Minimum input arrival time before clock: 6.001ns
+   Maximum output required time after clock: 11.712ns
+   Maximum combinational path delay: 7.368ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 8.908ns (frequency: 112.257MHz)
+  Total number of paths / destination ports: 16683 / 608
+-------------------------------------------------------------------------
+Delay:               8.908ns (Levels of Logic = 5)
+  Source:            timeSampleHeld_9 (FF)
+  Destination:       audio_cache_2_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: timeSampleHeld_9 to audio_cache_2_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              3   0.591   0.706  timeSampleHeld_9 (timeSampleHeld_9)
+     LUT3:I0->O            1   0.704   0.424  _cmp_eq0000_SW0_SW0 (N144)
+     LUT4:I3->O           11   0.704   0.968  _cmp_eq0000 (_cmp_eq0000)
+     LUT3_D:I2->O        111   0.704   1.322  Mmux__varindex0000_2_f8_SW0 (N151)
+     LUT3_D:I2->O         16   0.704   1.069  _mux044411 (N12)
+     LUT3:I2->O            1   0.704   0.000  _mux05101 (audio_cache_next<12><6>)
+     FDE:D                     0.308          audio_cache_12_6
+    ----------------------------------------
+    Total                      8.908ns (4.419ns logic, 4.489ns route)
+                                       (49.6% logic, 50.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 446 / 446
+-------------------------------------------------------------------------
+Offset:              6.001ns (Levels of Logic = 3)
+  Source:            btn0 (PAD)
+  Destination:       audio_load_address_1 (FF)
+  Destination Clock: clk rising
+
+  Data Path: btn0 to audio_load_address_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            88   1.218   1.455  btn0_IBUF (btn0_IBUF)
+     LUT4_L:I0->LO         1   0.704   0.104  audio_save_address_and00001_SW0 (N193)
+     LUT4:I3->O           27   0.704   1.261  audio_save_address_and00001 (audio_save_address_and0000)
+     FDE:CE                    0.555          audio_load_address_1
+    ----------------------------------------
+    Total                      6.001ns (3.181ns logic, 2.820ns route)
+                                       (53.0% logic, 47.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 367 / 37
+-------------------------------------------------------------------------
+Offset:              11.712ns (Levels of Logic = 7)
+  Source:            pixel_data_0 (FF)
+  Destination:       vgaRed<2> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: pixel_data_0 to vgaRed<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             18   0.591   1.243  pixel_data_0 (pixel_data_0)
+     LUT4:I0->O            1   0.704   0.000  vgaGreen_and0000241 (vgaGreen_and0000241)
+     MUXF5:I0->O           2   0.321   0.622  vgaGreen_and000024_f5 (vgaGreen_and000024)
+     LUT4:I0->O            1   0.704   0.455  vgaGreen<0>41_SW0 (N2011)
+     LUT3:I2->O            6   0.704   0.673  vgaGreen<0>41 (N181)
+     LUT4:I3->O            1   0.704   0.595  vgaRed<2>_SW0 (N18)
+     LUT3:I0->O            1   0.704   0.420  vgaRed<2> (vgaRed_2_OBUF)
+     OBUF:I->O                 3.272          vgaRed_2_OBUF (vgaRed<2>)
+    ----------------------------------------
+    Total                     11.712ns (7.704ns logic, 4.008ns route)
+                                       (65.8% logic, 34.2% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Delay:               7.368ns (Levels of Logic = 4)
+  Source:            sw<7> (PAD)
+  Destination:       vgaRed<2> (PAD)
+
+  Data Path: sw<7> to vgaRed<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.218   0.455  sw_7_IBUF (sw_7_IBUF)
+     LUT4:I2->O            1   0.704   0.595  vgaRed<2>_SW0 (N18)
+     LUT3:I0->O            1   0.704   0.420  vgaRed<2> (vgaRed_2_OBUF)
+     OBUF:I->O                 3.272          vgaRed_2_OBUF (vgaRed<2>)
+    ----------------------------------------
+    Total                      7.368ns (5.898ns logic, 1.470ns route)
+                                       (80.0% logic, 20.0% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 15.00 secs
+Total CPU time to Xst completion: 14.76 secs
+ 
+--> 
+
+Total memory usage is 290960 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  356 (   0 filtered)
+Number of infos    :   11 (   0 filtered)
+

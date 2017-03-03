@@ -1,0 +1,605 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 4
+-n 3 -fastpaths -xml frameBuffer.twx frameBuffer.ncd -o frameBuffer.twr
+frameBuffer.pcf -ucf Spartan3EMaster.ucf
+
+Design file:              frameBuffer.ncd
+Physical constraint file: frameBuffer.pcf
+Device,package,speed:     xc3s500e,fg320,-4 (PRODUCTION 1.27 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+================================================================================
+Timing constraint: TS_clk = PERIOD TIMEGRP "clk" 20 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 623809 paths analyzed, 9440 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  15.175ns.
+--------------------------------------------------------------------------------
+
+Paths for end point audio_cache_32_2 (SLICE_X20Y17.G4), 268 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     4.825ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               audio_save_address_1_3 (FF)
+  Destination:          audio_cache_32_2 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      15.162ns (Levels of Logic = 7)
+  Clock Path Skew:      -0.013ns (0.077 - 0.090)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: audio_save_address_1_3 to audio_cache_32_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X30Y34.YQ      Tcko                  0.652   audio_save_address_1_3
+                                                       audio_save_address_1_3
+    SLICE_X52Y45.BX      net (fanout=32)       2.996   audio_save_address_1_3
+    SLICE_X52Y45.F5      Tbxf5                 0.687   Mmux__varindex0000_13_f52
+                                                       Mmux__varindex0000_13_f5_1
+    SLICE_X52Y44.FXINB   net (fanout=1)        0.000   Mmux__varindex0000_13_f52
+    SLICE_X52Y44.FX      Tinbfx                0.364   Mmux__varindex0000_12_f55
+                                                       Mmux__varindex0000_11_f6_1
+    SLICE_X52Y45.FXINA   net (fanout=1)        0.000   Mmux__varindex0000_11_f62
+    SLICE_X52Y45.FX      Tinafx                0.364   Mmux__varindex0000_13_f52
+                                                       Mmux__varindex0000_10_f7
+    SLICE_X53Y43.FXINB   net (fanout=1)        0.000   Mmux__varindex0000_10_f7
+    SLICE_X53Y43.Y       Tif6y                 0.521   Mmux__varindex0000_8_f8
+                                                       Mmux__varindex0000_8_f8
+    SLICE_X42Y37.F4      net (fanout=1)        1.272   Mmux__varindex0000_8_f8
+    SLICE_X42Y37.X       Tif5x                 1.152   Mmux__varindex0000_3_f5
+                                                       Mmux__varindex0000_3_f5_G
+                                                       Mmux__varindex0000_3_f5
+    SLICE_X45Y36.G1      net (fanout=2)        0.798   Mmux__varindex0000_3_f5
+    SLICE_X45Y36.Y       Tilo                  0.704   audio_cache_248_3
+                                                       _mux2560111
+    SLICE_X20Y17.G4      net (fanout=2176)     4.760   N386
+    SLICE_X20Y17.CLK     Tgck                  0.892   audio_cache_32_3
+                                                       _mux45161
+                                                       audio_cache_32_2
+    -------------------------------------------------  ---------------------------
+    Total                                     15.162ns (5.336ns logic, 9.826ns route)
+                                                       (35.2% logic, 64.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     4.825ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               audio_save_address_1_3 (FF)
+  Destination:          audio_cache_32_2 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      15.162ns (Levels of Logic = 7)
+  Clock Path Skew:      -0.013ns (0.077 - 0.090)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: audio_save_address_1_3 to audio_cache_32_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X30Y34.YQ      Tcko                  0.652   audio_save_address_1_3
+                                                       audio_save_address_1_3
+    SLICE_X52Y44.BX      net (fanout=32)       2.996   audio_save_address_1_3
+    SLICE_X52Y44.F5      Tbxf5                 0.687   Mmux__varindex0000_12_f55
+                                                       Mmux__varindex0000_12_f5_4
+    SLICE_X52Y44.FXINA   net (fanout=1)        0.000   Mmux__varindex0000_12_f55
+    SLICE_X52Y44.FX      Tinafx                0.364   Mmux__varindex0000_12_f55
+                                                       Mmux__varindex0000_11_f6_1
+    SLICE_X52Y45.FXINA   net (fanout=1)        0.000   Mmux__varindex0000_11_f62
+    SLICE_X52Y45.FX      Tinafx                0.364   Mmux__varindex0000_13_f52
+                                                       Mmux__varindex0000_10_f7
+    SLICE_X53Y43.FXINB   net (fanout=1)        0.000   Mmux__varindex0000_10_f7
+    SLICE_X53Y43.Y       Tif6y                 0.521   Mmux__varindex0000_8_f8
+                                                       Mmux__varindex0000_8_f8
+    SLICE_X42Y37.F4      net (fanout=1)        1.272   Mmux__varindex0000_8_f8
+    SLICE_X42Y37.X       Tif5x                 1.152   Mmux__varindex0000_3_f5
+                                                       Mmux__varindex0000_3_f5_G
+                                                       Mmux__varindex0000_3_f5
+    SLICE_X45Y36.G1      net (fanout=2)        0.798   Mmux__varindex0000_3_f5
+    SLICE_X45Y36.Y       Tilo                  0.704   audio_cache_248_3
+                                                       _mux2560111
+    SLICE_X20Y17.G4      net (fanout=2176)     4.760   N386
+    SLICE_X20Y17.CLK     Tgck                  0.892   audio_cache_32_3
+                                                       _mux45161
+                                                       audio_cache_32_2
+    -------------------------------------------------  ---------------------------
+    Total                                     15.162ns (5.336ns logic, 9.826ns route)
+                                                       (35.2% logic, 64.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     4.852ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               audio_save_address_1_3 (FF)
+  Destination:          audio_cache_32_2 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      15.135ns (Levels of Logic = 7)
+  Clock Path Skew:      -0.013ns (0.077 - 0.090)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: audio_save_address_1_3 to audio_cache_32_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X30Y34.YQ      Tcko                  0.652   audio_save_address_1_3
+                                                       audio_save_address_1_3
+    SLICE_X53Y44.BX      net (fanout=32)       2.968   audio_save_address_1_3
+    SLICE_X53Y44.F5      Tbxf5                 0.589   Mmux__varindex0000_13_f53
+                                                       Mmux__varindex0000_13_f5_2
+    SLICE_X53Y44.FXINA   net (fanout=1)        0.000   Mmux__varindex0000_13_f53
+    SLICE_X53Y44.FX      Tinafx                0.463   Mmux__varindex0000_13_f53
+                                                       Mmux__varindex0000_12_f6
+    SLICE_X52Y45.FXINB   net (fanout=1)        0.000   Mmux__varindex0000_12_f6
+    SLICE_X52Y45.FX      Tinbfx                0.364   Mmux__varindex0000_13_f52
+                                                       Mmux__varindex0000_10_f7
+    SLICE_X53Y43.FXINB   net (fanout=1)        0.000   Mmux__varindex0000_10_f7
+    SLICE_X53Y43.Y       Tif6y                 0.521   Mmux__varindex0000_8_f8
+                                                       Mmux__varindex0000_8_f8
+    SLICE_X42Y37.F4      net (fanout=1)        1.272   Mmux__varindex0000_8_f8
+    SLICE_X42Y37.X       Tif5x                 1.152   Mmux__varindex0000_3_f5
+                                                       Mmux__varindex0000_3_f5_G
+                                                       Mmux__varindex0000_3_f5
+    SLICE_X45Y36.G1      net (fanout=2)        0.798   Mmux__varindex0000_3_f5
+    SLICE_X45Y36.Y       Tilo                  0.704   audio_cache_248_3
+                                                       _mux2560111
+    SLICE_X20Y17.G4      net (fanout=2176)     4.760   N386
+    SLICE_X20Y17.CLK     Tgck                  0.892   audio_cache_32_3
+                                                       _mux45161
+                                                       audio_cache_32_2
+    -------------------------------------------------  ---------------------------
+    Total                                     15.135ns (5.337ns logic, 9.798ns route)
+                                                       (35.3% logic, 64.7% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point audio_cache_33_2 (SLICE_X20Y16.G4), 268 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     4.825ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               audio_save_address_1_3 (FF)
+  Destination:          audio_cache_33_2 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      15.162ns (Levels of Logic = 7)
+  Clock Path Skew:      -0.013ns (0.077 - 0.090)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: audio_save_address_1_3 to audio_cache_33_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X30Y34.YQ      Tcko                  0.652   audio_save_address_1_3
+                                                       audio_save_address_1_3
+    SLICE_X52Y45.BX      net (fanout=32)       2.996   audio_save_address_1_3
+    SLICE_X52Y45.F5      Tbxf5                 0.687   Mmux__varindex0000_13_f52
+                                                       Mmux__varindex0000_13_f5_1
+    SLICE_X52Y44.FXINB   net (fanout=1)        0.000   Mmux__varindex0000_13_f52
+    SLICE_X52Y44.FX      Tinbfx                0.364   Mmux__varindex0000_12_f55
+                                                       Mmux__varindex0000_11_f6_1
+    SLICE_X52Y45.FXINA   net (fanout=1)        0.000   Mmux__varindex0000_11_f62
+    SLICE_X52Y45.FX      Tinafx                0.364   Mmux__varindex0000_13_f52
+                                                       Mmux__varindex0000_10_f7
+    SLICE_X53Y43.FXINB   net (fanout=1)        0.000   Mmux__varindex0000_10_f7
+    SLICE_X53Y43.Y       Tif6y                 0.521   Mmux__varindex0000_8_f8
+                                                       Mmux__varindex0000_8_f8
+    SLICE_X42Y37.F4      net (fanout=1)        1.272   Mmux__varindex0000_8_f8
+    SLICE_X42Y37.X       Tif5x                 1.152   Mmux__varindex0000_3_f5
+                                                       Mmux__varindex0000_3_f5_G
+                                                       Mmux__varindex0000_3_f5
+    SLICE_X45Y36.G1      net (fanout=2)        0.798   Mmux__varindex0000_3_f5
+    SLICE_X45Y36.Y       Tilo                  0.704   audio_cache_248_3
+                                                       _mux2560111
+    SLICE_X20Y16.G4      net (fanout=2176)     4.760   N386
+    SLICE_X20Y16.CLK     Tgck                  0.892   audio_cache_33_3
+                                                       _mux26721
+                                                       audio_cache_33_2
+    -------------------------------------------------  ---------------------------
+    Total                                     15.162ns (5.336ns logic, 9.826ns route)
+                                                       (35.2% logic, 64.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     4.825ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               audio_save_address_1_3 (FF)
+  Destination:          audio_cache_33_2 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      15.162ns (Levels of Logic = 7)
+  Clock Path Skew:      -0.013ns (0.077 - 0.090)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: audio_save_address_1_3 to audio_cache_33_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X30Y34.YQ      Tcko                  0.652   audio_save_address_1_3
+                                                       audio_save_address_1_3
+    SLICE_X52Y44.BX      net (fanout=32)       2.996   audio_save_address_1_3
+    SLICE_X52Y44.F5      Tbxf5                 0.687   Mmux__varindex0000_12_f55
+                                                       Mmux__varindex0000_12_f5_4
+    SLICE_X52Y44.FXINA   net (fanout=1)        0.000   Mmux__varindex0000_12_f55
+    SLICE_X52Y44.FX      Tinafx                0.364   Mmux__varindex0000_12_f55
+                                                       Mmux__varindex0000_11_f6_1
+    SLICE_X52Y45.FXINA   net (fanout=1)        0.000   Mmux__varindex0000_11_f62
+    SLICE_X52Y45.FX      Tinafx                0.364   Mmux__varindex0000_13_f52
+                                                       Mmux__varindex0000_10_f7
+    SLICE_X53Y43.FXINB   net (fanout=1)        0.000   Mmux__varindex0000_10_f7
+    SLICE_X53Y43.Y       Tif6y                 0.521   Mmux__varindex0000_8_f8
+                                                       Mmux__varindex0000_8_f8
+    SLICE_X42Y37.F4      net (fanout=1)        1.272   Mmux__varindex0000_8_f8
+    SLICE_X42Y37.X       Tif5x                 1.152   Mmux__varindex0000_3_f5
+                                                       Mmux__varindex0000_3_f5_G
+                                                       Mmux__varindex0000_3_f5
+    SLICE_X45Y36.G1      net (fanout=2)        0.798   Mmux__varindex0000_3_f5
+    SLICE_X45Y36.Y       Tilo                  0.704   audio_cache_248_3
+                                                       _mux2560111
+    SLICE_X20Y16.G4      net (fanout=2176)     4.760   N386
+    SLICE_X20Y16.CLK     Tgck                  0.892   audio_cache_33_3
+                                                       _mux26721
+                                                       audio_cache_33_2
+    -------------------------------------------------  ---------------------------
+    Total                                     15.162ns (5.336ns logic, 9.826ns route)
+                                                       (35.2% logic, 64.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     4.852ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               audio_save_address_1_3 (FF)
+  Destination:          audio_cache_33_2 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      15.135ns (Levels of Logic = 7)
+  Clock Path Skew:      -0.013ns (0.077 - 0.090)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: audio_save_address_1_3 to audio_cache_33_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X30Y34.YQ      Tcko                  0.652   audio_save_address_1_3
+                                                       audio_save_address_1_3
+    SLICE_X53Y44.BX      net (fanout=32)       2.968   audio_save_address_1_3
+    SLICE_X53Y44.F5      Tbxf5                 0.589   Mmux__varindex0000_13_f53
+                                                       Mmux__varindex0000_13_f5_2
+    SLICE_X53Y44.FXINA   net (fanout=1)        0.000   Mmux__varindex0000_13_f53
+    SLICE_X53Y44.FX      Tinafx                0.463   Mmux__varindex0000_13_f53
+                                                       Mmux__varindex0000_12_f6
+    SLICE_X52Y45.FXINB   net (fanout=1)        0.000   Mmux__varindex0000_12_f6
+    SLICE_X52Y45.FX      Tinbfx                0.364   Mmux__varindex0000_13_f52
+                                                       Mmux__varindex0000_10_f7
+    SLICE_X53Y43.FXINB   net (fanout=1)        0.000   Mmux__varindex0000_10_f7
+    SLICE_X53Y43.Y       Tif6y                 0.521   Mmux__varindex0000_8_f8
+                                                       Mmux__varindex0000_8_f8
+    SLICE_X42Y37.F4      net (fanout=1)        1.272   Mmux__varindex0000_8_f8
+    SLICE_X42Y37.X       Tif5x                 1.152   Mmux__varindex0000_3_f5
+                                                       Mmux__varindex0000_3_f5_G
+                                                       Mmux__varindex0000_3_f5
+    SLICE_X45Y36.G1      net (fanout=2)        0.798   Mmux__varindex0000_3_f5
+    SLICE_X45Y36.Y       Tilo                  0.704   audio_cache_248_3
+                                                       _mux2560111
+    SLICE_X20Y16.G4      net (fanout=2176)     4.760   N386
+    SLICE_X20Y16.CLK     Tgck                  0.892   audio_cache_33_3
+                                                       _mux26721
+                                                       audio_cache_33_2
+    -------------------------------------------------  ---------------------------
+    Total                                     15.135ns (5.337ns logic, 9.798ns route)
+                                                       (35.3% logic, 64.7% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point audio_cache_150_2 (SLICE_X24Y2.G4), 268 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     5.299ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               audio_save_address_1_3 (FF)
+  Destination:          audio_cache_150_2 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      14.701ns (Levels of Logic = 7)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: audio_save_address_1_3 to audio_cache_150_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X30Y34.YQ      Tcko                  0.652   audio_save_address_1_3
+                                                       audio_save_address_1_3
+    SLICE_X52Y45.BX      net (fanout=32)       2.996   audio_save_address_1_3
+    SLICE_X52Y45.F5      Tbxf5                 0.687   Mmux__varindex0000_13_f52
+                                                       Mmux__varindex0000_13_f5_1
+    SLICE_X52Y44.FXINB   net (fanout=1)        0.000   Mmux__varindex0000_13_f52
+    SLICE_X52Y44.FX      Tinbfx                0.364   Mmux__varindex0000_12_f55
+                                                       Mmux__varindex0000_11_f6_1
+    SLICE_X52Y45.FXINA   net (fanout=1)        0.000   Mmux__varindex0000_11_f62
+    SLICE_X52Y45.FX      Tinafx                0.364   Mmux__varindex0000_13_f52
+                                                       Mmux__varindex0000_10_f7
+    SLICE_X53Y43.FXINB   net (fanout=1)        0.000   Mmux__varindex0000_10_f7
+    SLICE_X53Y43.Y       Tif6y                 0.521   Mmux__varindex0000_8_f8
+                                                       Mmux__varindex0000_8_f8
+    SLICE_X42Y37.F4      net (fanout=1)        1.272   Mmux__varindex0000_8_f8
+    SLICE_X42Y37.X       Tif5x                 1.152   Mmux__varindex0000_3_f5
+                                                       Mmux__varindex0000_3_f5_G
+                                                       Mmux__varindex0000_3_f5
+    SLICE_X45Y36.G1      net (fanout=2)        0.798   Mmux__varindex0000_3_f5
+    SLICE_X45Y36.Y       Tilo                  0.704   audio_cache_248_3
+                                                       _mux2560111
+    SLICE_X24Y2.G4       net (fanout=2176)     4.299   N386
+    SLICE_X24Y2.CLK      Tgck                  0.892   audio_cache_150_3
+                                                       _mux31721
+                                                       audio_cache_150_2
+    -------------------------------------------------  ---------------------------
+    Total                                     14.701ns (5.336ns logic, 9.365ns route)
+                                                       (36.3% logic, 63.7% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     5.299ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               audio_save_address_1_3 (FF)
+  Destination:          audio_cache_150_2 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      14.701ns (Levels of Logic = 7)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: audio_save_address_1_3 to audio_cache_150_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X30Y34.YQ      Tcko                  0.652   audio_save_address_1_3
+                                                       audio_save_address_1_3
+    SLICE_X52Y44.BX      net (fanout=32)       2.996   audio_save_address_1_3
+    SLICE_X52Y44.F5      Tbxf5                 0.687   Mmux__varindex0000_12_f55
+                                                       Mmux__varindex0000_12_f5_4
+    SLICE_X52Y44.FXINA   net (fanout=1)        0.000   Mmux__varindex0000_12_f55
+    SLICE_X52Y44.FX      Tinafx                0.364   Mmux__varindex0000_12_f55
+                                                       Mmux__varindex0000_11_f6_1
+    SLICE_X52Y45.FXINA   net (fanout=1)        0.000   Mmux__varindex0000_11_f62
+    SLICE_X52Y45.FX      Tinafx                0.364   Mmux__varindex0000_13_f52
+                                                       Mmux__varindex0000_10_f7
+    SLICE_X53Y43.FXINB   net (fanout=1)        0.000   Mmux__varindex0000_10_f7
+    SLICE_X53Y43.Y       Tif6y                 0.521   Mmux__varindex0000_8_f8
+                                                       Mmux__varindex0000_8_f8
+    SLICE_X42Y37.F4      net (fanout=1)        1.272   Mmux__varindex0000_8_f8
+    SLICE_X42Y37.X       Tif5x                 1.152   Mmux__varindex0000_3_f5
+                                                       Mmux__varindex0000_3_f5_G
+                                                       Mmux__varindex0000_3_f5
+    SLICE_X45Y36.G1      net (fanout=2)        0.798   Mmux__varindex0000_3_f5
+    SLICE_X45Y36.Y       Tilo                  0.704   audio_cache_248_3
+                                                       _mux2560111
+    SLICE_X24Y2.G4       net (fanout=2176)     4.299   N386
+    SLICE_X24Y2.CLK      Tgck                  0.892   audio_cache_150_3
+                                                       _mux31721
+                                                       audio_cache_150_2
+    -------------------------------------------------  ---------------------------
+    Total                                     14.701ns (5.336ns logic, 9.365ns route)
+                                                       (36.3% logic, 63.7% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     5.326ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               audio_save_address_1_3 (FF)
+  Destination:          audio_cache_150_2 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      14.674ns (Levels of Logic = 7)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: audio_save_address_1_3 to audio_cache_150_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X30Y34.YQ      Tcko                  0.652   audio_save_address_1_3
+                                                       audio_save_address_1_3
+    SLICE_X53Y44.BX      net (fanout=32)       2.968   audio_save_address_1_3
+    SLICE_X53Y44.F5      Tbxf5                 0.589   Mmux__varindex0000_13_f53
+                                                       Mmux__varindex0000_13_f5_2
+    SLICE_X53Y44.FXINA   net (fanout=1)        0.000   Mmux__varindex0000_13_f53
+    SLICE_X53Y44.FX      Tinafx                0.463   Mmux__varindex0000_13_f53
+                                                       Mmux__varindex0000_12_f6
+    SLICE_X52Y45.FXINB   net (fanout=1)        0.000   Mmux__varindex0000_12_f6
+    SLICE_X52Y45.FX      Tinbfx                0.364   Mmux__varindex0000_13_f52
+                                                       Mmux__varindex0000_10_f7
+    SLICE_X53Y43.FXINB   net (fanout=1)        0.000   Mmux__varindex0000_10_f7
+    SLICE_X53Y43.Y       Tif6y                 0.521   Mmux__varindex0000_8_f8
+                                                       Mmux__varindex0000_8_f8
+    SLICE_X42Y37.F4      net (fanout=1)        1.272   Mmux__varindex0000_8_f8
+    SLICE_X42Y37.X       Tif5x                 1.152   Mmux__varindex0000_3_f5
+                                                       Mmux__varindex0000_3_f5_G
+                                                       Mmux__varindex0000_3_f5
+    SLICE_X45Y36.G1      net (fanout=2)        0.798   Mmux__varindex0000_3_f5
+    SLICE_X45Y36.Y       Tilo                  0.704   audio_cache_248_3
+                                                       _mux2560111
+    SLICE_X24Y2.G4       net (fanout=2176)     4.299   N386
+    SLICE_X24Y2.CLK      Tgck                  0.892   audio_cache_150_3
+                                                       _mux31721
+                                                       audio_cache_150_2
+    -------------------------------------------------  ---------------------------
+    Total                                     14.674ns (5.337ns logic, 9.337ns route)
+                                                       (36.4% logic, 63.6% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_clk = PERIOD TIMEGRP "clk" 20 ns HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point animate_timer_11 (SLICE_X15Y84.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.931ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               animate_timer_next_11 (FF)
+  Destination:          animate_timer_11 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.931ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 20.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: animate_timer_next_11 to animate_timer_11
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X14Y85.XQ      Tcko                  0.474   animate_timer_next<11>
+                                                       animate_timer_next_11
+    SLICE_X15Y84.BX      net (fanout=1)        0.364   animate_timer_next<11>
+    SLICE_X15Y84.CLK     Tckdi       (-Th)    -0.093   animate_timer<11>
+                                                       animate_timer_11
+    -------------------------------------------------  ---------------------------
+    Total                                      0.931ns (0.567ns logic, 0.364ns route)
+                                                       (60.9% logic, 39.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point animate_timer_21 (SLICE_X15Y90.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.937ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               animate_timer_next_21 (FF)
+  Destination:          animate_timer_21 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.944ns (Levels of Logic = 0)
+  Clock Path Skew:      0.007ns (0.032 - 0.025)
+  Source Clock:         clk_BUFGP rising at 20.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: animate_timer_next_21 to animate_timer_21
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X16Y91.XQ      Tcko                  0.474   animate_timer_next<21>
+                                                       animate_timer_next_21
+    SLICE_X15Y90.BX      net (fanout=1)        0.377   animate_timer_next<21>
+    SLICE_X15Y90.CLK     Tckdi       (-Th)    -0.093   animate_timer<21>
+                                                       animate_timer_21
+    -------------------------------------------------  ---------------------------
+    Total                                      0.944ns (0.567ns logic, 0.377ns route)
+                                                       (60.1% logic, 39.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point animate_timer_19 (SLICE_X16Y88.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.963ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               animate_timer_next_19 (FF)
+  Destination:          animate_timer_19 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.961ns (Levels of Logic = 0)
+  Clock Path Skew:      -0.002ns (0.016 - 0.018)
+  Source Clock:         clk_BUFGP rising at 20.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: animate_timer_next_19 to animate_timer_19
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X16Y90.XQ      Tcko                  0.474   animate_timer_next<19>
+                                                       animate_timer_next_19
+    SLICE_X16Y88.BX      net (fanout=1)        0.353   animate_timer_next<19>
+    SLICE_X16Y88.CLK     Tckdi       (-Th)    -0.134   animate_timer<19>
+                                                       animate_timer_19
+    -------------------------------------------------  ---------------------------
+    Total                                      0.961ns (0.608ns logic, 0.353ns route)
+                                                       (63.3% logic, 36.7% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_clk = PERIOD TIMEGRP "clk" 20 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 16.808ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 20.000ns
+  Low pulse: 10.000ns
+  Low pulse limit: 1.596ns (Trpw)
+  Physical resource: sramCtl/power_up_count<0>/SR
+  Logical resource: sramCtl/power_up_count_0/SR
+  Location pin: SLICE_X3Y0.SR
+  Clock network: btn0_IBUF
+--------------------------------------------------------------------------------
+Slack: 16.808ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 10.000ns
+  High pulse limit: 1.596ns (Trpw)
+  Physical resource: sramCtl/power_up_count<0>/SR
+  Logical resource: sramCtl/power_up_count_0/SR
+  Location pin: SLICE_X3Y0.SR
+  Clock network: btn0_IBUF
+--------------------------------------------------------------------------------
+Slack: 16.808ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 20.000ns
+  Low pulse: 10.000ns
+  Low pulse limit: 1.596ns (Trpw)
+  Physical resource: sramCtl/power_up_count<0>/SR
+  Logical resource: sramCtl/power_up_count_1/SR
+  Location pin: SLICE_X3Y0.SR
+  Clock network: btn0_IBUF
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |   15.175|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 623809 paths, 0 nets, and 17498 connections
+
+Design statistics:
+   Minimum period:  15.175ns{1}   (Maximum frequency:  65.898MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Fri Apr 08 17:04:57 2016 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 230 MB
+
+
+

@@ -1,0 +1,2 @@
+vhdl work "sramController.vhd"
+vhdl work "wavPlayer.vhd"
