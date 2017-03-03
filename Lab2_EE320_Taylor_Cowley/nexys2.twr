@@ -1,0 +1,122 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\trce.exe -intstyle ise -v 3 -s 4 -n
+3 -fastpaths -xml nexys2.twx nexys2.ncd -o nexys2.twr nexys2.pcf -ucf
+nexys2.ucf
+
+Design file:              nexys2.ncd
+Physical constraint file: nexys2.pcf
+Device,package,speed:     xc3s500e,fg320,-4 (PRODUCTION 1.27 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+btn<0>         |led<0>         |    9.556|
+btn<0>         |led<1>         |    9.742|
+btn<0>         |led<2>         |   10.562|
+btn<0>         |led<3>         |    8.874|
+btn<0>         |led<4>         |   10.755|
+btn<0>         |led<5>         |   11.308|
+btn<0>         |led<6>         |   14.400|
+btn<0>         |led<7>         |   12.149|
+btn<1>         |led<0>         |    9.327|
+btn<1>         |led<1>         |    9.513|
+btn<1>         |led<2>         |   10.333|
+btn<1>         |led<3>         |    8.864|
+btn<1>         |led<4>         |   10.717|
+btn<1>         |led<5>         |   11.079|
+btn<1>         |led<6>         |   14.171|
+btn<1>         |led<7>         |   11.290|
+btn<2>         |led<0>         |    8.976|
+btn<2>         |led<1>         |    9.162|
+btn<2>         |led<2>         |    9.982|
+btn<2>         |led<3>         |    8.189|
+btn<2>         |led<4>         |   10.175|
+btn<2>         |led<5>         |   10.728|
+btn<2>         |led<6>         |   13.820|
+btn<2>         |led<7>         |   10.892|
+btn<3>         |led<0>         |    7.900|
+btn<3>         |led<1>         |    8.136|
+btn<3>         |led<2>         |    8.571|
+btn<3>         |led<3>         |    8.746|
+btn<3>         |led<4>         |    9.251|
+btn<3>         |led<5>         |    9.070|
+btn<3>         |led<6>         |   12.169|
+btn<3>         |led<7>         |   11.360|
+sw<0>          |led<0>         |    7.462|
+sw<0>          |led<4>         |    8.700|
+sw<0>          |led<7>         |   10.045|
+sw<1>          |led<0>         |    6.182|
+sw<1>          |led<1>         |    7.285|
+sw<1>          |led<5>         |    8.196|
+sw<1>          |led<6>         |   11.299|
+sw<2>          |led<1>         |    6.672|
+sw<2>          |led<2>         |    7.906|
+sw<2>          |led<5>         |    8.728|
+sw<2>          |led<6>         |   10.603|
+sw<3>          |led<2>         |    7.329|
+sw<3>          |led<3>         |    8.791|
+sw<3>          |led<4>         |    9.342|
+sw<3>          |led<7>         |   11.398|
+sw<4>          |led<0>         |    8.280|
+sw<4>          |led<3>         |    7.698|
+sw<4>          |led<4>         |    9.424|
+sw<5>          |led<1>         |    8.082|
+sw<5>          |led<2>         |    8.555|
+sw<5>          |led<4>         |    8.377|
+sw<5>          |led<5>         |    9.257|
+sw<6>          |led<1>         |    8.259|
+sw<6>          |led<2>         |    8.841|
+sw<6>          |led<5>         |    8.661|
+sw<6>          |led<6>         |   12.610|
+sw<7>          |led<0>         |    9.486|
+sw<7>          |led<3>         |    9.836|
+sw<7>          |led<6>         |   11.681|
+sw<7>          |led<7>         |   12.508|
+---------------+---------------+---------+
+
+
+Analysis completed Thu Jan 14 17:22:47 2016 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 167 MB
+
+
+

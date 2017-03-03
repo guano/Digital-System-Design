@@ -1,0 +1,28 @@
+Command line:
+   nexys2_testbench_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  3051
+
+Thu Jan 14 17:04:01 2016
+
+
+ Elaboration Time: 0.312003 sec
+
+ Current Memory Usage: 854.065 Meg
+
+ Total Signals          : 6
+ Total Nets             : 20
+ Total Signal Drivers   : 3
+ Total Blocks           : 4
+ Total Primitive Blocks : 3
+ Total Processes        : 2
+ Total Traceable Variables  : 11
+ Total Scalar Nets and Variables : 383
+
+ Total Simulation Time: 0.967206 sec
+
+ Current Memory Usage: 696.517 Meg
+
+Thu Jan 14 17:42:30 2016
+

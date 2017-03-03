@@ -1,0 +1,7 @@
+V3 3
+FL "//fs-caedm/tcowley0/EE 320/New folder/lab2/nexys2.vhd" 2016/01/14.17:21:05 P.20131013
+EN work/nexys2 1452817278 \
+      FL "//fs-caedm/tcowley0/EE 320/New folder/lab2/nexys2.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/nexys2/buttons_switches 1452817279 \
+      FL "//fs-caedm/tcowley0/EE 320/New folder/lab2/nexys2.vhd" EN work/nexys2 1452817278

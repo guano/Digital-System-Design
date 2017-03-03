@@ -1,0 +1,2 @@
+vhdl work "nexys2.vhd"
+vhdl work "nexys2_testbench.vhd"

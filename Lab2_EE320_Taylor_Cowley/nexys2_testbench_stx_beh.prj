@@ -1,0 +1,2 @@
+vhdl isim_temp "nexys2.vhd"
+vhdl isim_temp "nexys2_testbench.vhd"

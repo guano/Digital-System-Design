@@ -1,0 +1,21 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -o J:/EE 320/New folder/lab2/nexys2_testbench_isim_beh.exe -prj J:/EE 320/New folder/lab2/nexys2_testbench_beh.prj work.nexys2_testbench 
+ISim P.20131013 (signature 0x8ef4fb42)
+Number of CPUs detected in this system: 24
+Turning on mult-threading, number of parallel sub-compilation jobs: 48 
+Determining compilation order of HDL files
+Parsing VHDL file "J:/EE 320/New folder/lab2/nexys2.vhd" into library work
+Parsing VHDL file "J:/EE 320/New folder/lab2/nexys2_testbench.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 150784 KB
+Fuse CPU Usage: 717 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package textio
+Compiling architecture buttons_switches of entity nexys2 [nexys2_default]
+Compiling architecture testbench of entity nexys2_testbench
+Time Resolution for simulation is 1ps.
+Compiled 6 VHDL Units
+Built simulation executable J:/EE 320/New folder/lab2/nexys2_testbench_isim_beh.exe
+Fuse Memory Usage: 190192 KB
+Fuse CPU Usage: 1075 ms
