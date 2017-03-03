@@ -1,0 +1,47 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Thu Feb 18 13:39:50 2016
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "btn<0>" LOCATE = SITE "B18" LEVEL 1;
+COMP "btn<1>" LOCATE = SITE "D18" LEVEL 1;
+COMP "clk" LOCATE = SITE "B8" LEVEL 1;
+COMP "btn<2>" LOCATE = SITE "E18" LEVEL 1;
+COMP "btn<3>" LOCATE = SITE "H13" LEVEL 1;
+COMP "Hsync" LOCATE = SITE "T4" LEVEL 1;
+COMP "vgaGreen<0>" LOCATE = SITE "N8" LEVEL 1;
+COMP "vgaGreen<1>" LOCATE = SITE "P8" LEVEL 1;
+COMP "vgaGreen<2>" LOCATE = SITE "P6" LEVEL 1;
+COMP "sw<0>" LOCATE = SITE "G18" LEVEL 1;
+COMP "sw<1>" LOCATE = SITE "H18" LEVEL 1;
+COMP "sw<2>" LOCATE = SITE "K18" LEVEL 1;
+COMP "sw<3>" LOCATE = SITE "K17" LEVEL 1;
+COMP "sw<4>" LOCATE = SITE "L14" LEVEL 1;
+COMP "sw<5>" LOCATE = SITE "L13" LEVEL 1;
+COMP "vgaBlue<0>" LOCATE = SITE "U5" LEVEL 1;
+COMP "sw<6>" LOCATE = SITE "N17" LEVEL 1;
+COMP "Vsync" LOCATE = SITE "U3" LEVEL 1;
+COMP "vgaBlue<1>" LOCATE = SITE "U4" LEVEL 1;
+COMP "sw<7>" LOCATE = SITE "R17" LEVEL 1;
+COMP "vgaRed<0>" LOCATE = SITE "R9" LEVEL 1;
+COMP "vgaRed<1>" LOCATE = SITE "T8" LEVEL 1;
+COMP "vgaRed<2>" LOCATE = SITE "R8" LEVEL 1;
+NET "clk_BUFGP/IBUFG" BEL "clk_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+TIMEGRP clk = BEL "Hsync" BEL "Vsync" BEL "vga_timer/column_counter_9" BEL
+        "vga_timer/column_counter_8" BEL "vga_timer/column_counter_7" BEL
+        "vga_timer/column_counter_6" BEL "vga_timer/column_counter_5" BEL
+        "vga_timer/column_counter_4" BEL "vga_timer/column_counter_3" BEL
+        "vga_timer/column_counter_2" BEL "vga_timer/column_counter_1" BEL
+        "vga_timer/column_counter_0" BEL "vga_timer/row_counter_9" BEL
+        "vga_timer/row_counter_8" BEL "vga_timer/row_counter_7" BEL
+        "vga_timer/row_counter_6" BEL "vga_timer/row_counter_5" BEL
+        "vga_timer/row_counter_4" BEL "vga_timer/row_counter_3" BEL
+        "vga_timer/row_counter_2" BEL "vga_timer/row_counter_1" BEL
+        "vga_timer/row_counter_0" BEL "vga_timer/blank_y" BEL "vga_timer/HS"
+        BEL "vga_timer/pixel_en" BEL "vga_timer/blank_x" BEL "vga_timer/VS"
+        BEL "vgaBlue_0" BEL "vgaBlue_1" BEL "vgaRed_0" BEL "vgaRed_1" BEL
+        "vgaRed_2" BEL "vgaGreen_0" BEL "vgaGreen_1" BEL "vgaGreen_2" BEL
+        "clk_BUFGP/BUFG.GCLKMUX" BEL "clk_BUFGP/BUFG";
+TS_clk = PERIOD TIMEGRP "clk" 20 ns HIGH 50%;
+SCHEMATIC END;
+

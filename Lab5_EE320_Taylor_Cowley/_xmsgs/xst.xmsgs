@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">//fs-caedm/tcowley0/EE 320/Lab5_EE320_Taylor_Cowley/vga_top.vhd</arg>&quot; line <arg fmt="%d" index="2">45</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">last_column</arg>&apos; of component &apos;<arg fmt="%s" index="4">vga_timing</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">//fs-caedm/tcowley0/EE 320/Lab5_EE320_Taylor_Cowley/vga_top.vhd</arg>&quot; line <arg fmt="%d" index="2">45</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">last_row</arg>&apos; of component &apos;<arg fmt="%s" index="4">vga_timing</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">vga_timer/last_column</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">vga_top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">vga_timer/last_row</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">vga_top</arg>&gt;.
+</msg>
+
+</messages>
+

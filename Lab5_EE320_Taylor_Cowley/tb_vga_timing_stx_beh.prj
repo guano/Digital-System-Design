@@ -1,0 +1,2 @@
+vhdl isim_temp "vga_timing.vhd"
+vhdl isim_temp "tb_vga_timing.vhd"

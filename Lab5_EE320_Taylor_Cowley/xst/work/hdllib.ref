@@ -1,0 +1,4 @@
+EN vga_timing NULL "//fs-caedm/tcowley0/EE 320/Lab5_EE320_Taylor_Cowley/vga_timing.vhd" sub00/vhpl00 1455827963
+AR vga_timing behavioral "//fs-caedm/tcowley0/EE 320/Lab5_EE320_Taylor_Cowley/vga_timing.vhd" sub00/vhpl01 1455827964
+AR vga_top top_level "//fs-caedm/tcowley0/EE 320/Lab5_EE320_Taylor_Cowley/vga_top.vhd" sub00/vhpl03 1455827966
+EN vga_top NULL "//fs-caedm/tcowley0/EE 320/Lab5_EE320_Taylor_Cowley/vga_top.vhd" sub00/vhpl02 1455827965
